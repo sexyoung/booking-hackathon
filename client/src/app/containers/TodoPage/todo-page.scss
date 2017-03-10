@@ -1,0 +1,42 @@
+.todo-page {
+  padding-top: 20px;
+
+  h1 {
+    margin: 0;
+  }
+
+  form {
+    margin: 10px auto;
+    font-size: 16px;
+
+    input {
+      border: 0;
+      padding: 10px;
+      outline: none;
+    }
+
+    button {
+      border: 0;
+      background-color: #ccc;
+      padding: 10px 15px;
+    }
+  }
+
+  .todo-list {
+    margin: 10px auto;
+  }
+
+  .todo {
+    display: flex;
+    padding: 5px 0;
+
+    .text {
+      flex: 1;
+    }
+
+    .time {
+      color: #999;
+      font-size: 12px;
+    }
+  }
+}

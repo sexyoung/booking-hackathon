@@ -1,0 +1,27 @@
+/**
+ * @module app.scss
+ */
+
+.wrapper {
+  background-color: #eee;
+  padding: 20px;
+  ul {
+
+    font-size: 18px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    li:not(:last-child):after {
+      content: '　|　';
+      margin: 0 5px;
+    }
+    a{
+      color: #000;
+      font-weight: bold;
+      &:hover{
+        color: #666;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/**
+ * @module loader.scss
+ */
+
+:global {
+  .loader {
+    display: none;
+    font-size: $fontSize16;
+    text-align: center;
+  }
+}
+
+.content {
+  padding: 10px;
+}
