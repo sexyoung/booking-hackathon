@@ -120,6 +120,15 @@ export default class App extends React.Component {
       infoWindow.open(map, marker)
     });
 
+    // marker.setMap(null); // Delete marker
+
+    // Adjust +/- position
+    map.setOptions({
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
+    })
   }
 
   render() {
