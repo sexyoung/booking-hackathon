@@ -59,6 +59,23 @@ export default class App extends React.Component {
           });
       })
     })
+
+    const marker = new maps.Marker({
+      position: { lat: 37.775, lng: -122.434 },
+      title: 'Hello World!',
+      // icon: 'path/to/image' or Icon (https://developers.google.com/maps/documentation/javascript/3.exp/reference?hl=zh-tw#Icon)
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: '<h1>Location Info</h1>'
+    });
+
+    marker.setMap(map);
+    marker.addListener('click', () => {
+      infoWindow.open(map, marker)
+    });
+
+    // marker.setMap(null); // Delete marker
   }
 
   render() {
