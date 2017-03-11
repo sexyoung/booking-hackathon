@@ -6,9 +6,22 @@ use Illuminate\Http\Request;
 
 class HotelController extends Controller
 {
-    //
+	protected $auth = 'hacker234:8hqNW6HtfU';
+    public function photo(Request $request, $hotel_id) {
+    	$auth = $this-> auth;
+    	$url = "https://$auth@distribution-xml.booking.com/json/bookings.getHotelDescriptionPhotos?hotel_ids=$hotel_id";
+    	$data = file_get_contents($url);
+    	$result = json_decode($data, true);
+    	if(empty($result)) {
+    		return response()-> json('', 500);
+    	}
+
+    	return redirect($result[0]['url_max300']); 
+    }
+
     public function index(Request $request)
 	{
+		$auth = $this-> auth;
 		$lat = $request-> input('lat');
 		$lng = $request-> input('lng');
 		$checkin = $request-> input('checkin');
@@ -30,7 +43,7 @@ class HotelController extends Controller
 			'radius' => $radius
 		);
 
-		$url = "https://hacker234:8hqNW6HtfU@distribution-xml.booking.com/json/getHotelAvailabilityV2?";
+		$url = "https://$auth@distribution-xml.booking.com/json/getHotelAvailabilityV2?";
 
 		foreach($params as $key => $val) {
 			$url .= "$key=$val&";
@@ -38,18 +51,13 @@ class HotelController extends Controller
 
 		$url = substr($url, 0, -1);
 		// echo $url;
+		// return;
 		$data = file_get_contents($url);
 
 		$result = json_decode($data, true);
 
 		if(empty($result) || !isset($result['hotels'])) {
-			return response()->json(
-				array(
-					'status' => 'fail',
-					'data' => array(),
-					'message' => $result['message']
-				)
-			);
+			return response()->json($result['message'], 500);
 		}
 
 		$parsed_result = array();
@@ -66,17 +74,20 @@ class HotelController extends Controller
 					'location' => array(
 						'lat' => $hotel['location']['latitude'],
 						'lng' => $hotel['location']['longitude']
+					),
+					'detail_type' => 'object',
+					'detail' => array(
+						'rating' => $hotel['review_score_word'],
+						'name' => $hotel['hotel_name'],
+						'photo' => '/api/hotels/photo/' . $hotel['hotel_id'],
+						'price' => $hotel['price'],
+						'link' => ''
 					)
 				);
 			}
 		}
 		
 
-		return response()->json(
-			array(
-				'status' => 'success',
-				'data' => $parsed_result
-			)
-		);
+		return response()->json($parsed_result);
 	}
 }

@@ -4,12 +4,43 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+
 class AttractionController extends Controller
 {
+	protected $_api_key = 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI';
+
+	public function photo(Request $request, $reference) {
+		$api_key = $this-> _api_key;
+		$url = "https://maps.googleapis.com/maps/api/place/photo?key=$api_key&photoreference=$reference&maxwidth=400";
+		return redirect($url); 
+	}
+
+	public function detail(Request $request, $place_id)
+	{
+		$api_key = $this-> _api_key;
+		$url = "https://maps.googleapis.com/maps/api/place/details/json?key=$api_key&placeid=$place_id&language=zh-TW";
+		$data = json_decode(file_get_contents($url), true);
+		
+		if(empty($data) || !isset($data['result']) || empty($data['result'])) {
+			return response()->json('error', 500);
+		}
+		$result = $data['result'];
+		
+		$ret_data = array(
+			'name' => $result['name'],
+			'rating' => $result['rating'],
+			'desc' => $result['vicinity']
+		);
+		if(!empty($result['photos'])) {
+			$ret_data['photo'] = '/api/attractions/photo/' . $result['photos'][0]['photo_reference'];
+		}
+
+		return response()-> json($ret_data);
+	}
+
 	public function index(Request $request)
 	{
-
-
 		$lat = $request-> input('lat');
 		$lng = $request-> input('lng');
 		$radius = $request-> input('radius'); // in m
@@ -30,12 +61,12 @@ class AttractionController extends Controller
 			$parsed_result[] = array(
 				'location' => $attraction['geometry']['location'],
 				'name' => $attraction['name'],
-				'rating' => $attraction['rating']
+				'rating' => $attraction['rating'],
+				'detail' => "/api/attractions/" . $attraction['place_id'],
+				'detail_type' => 'url'
 			);
 		}
-		return response()->json(
-			$parsed_result
-		);
+		return response()->json($parsed_result);
 	}
 
     private function search($params)
@@ -50,7 +81,7 @@ class AttractionController extends Controller
 				$url .= "&$key=$val";
 			}
 		}
-		$url .= "&name=" . urlencode('景點');
+		$url .= "&name=attractions";
 
     	$next_page_token = false;
     	$full_data = array();

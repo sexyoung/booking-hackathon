@@ -28,6 +28,9 @@ Route::post('/todos', function (Request $request) {
 });
 
 Route::get('/attractions', 'AttractionController@index');
+Route::get('/attractions/photo/{reference}', 'AttractionController@photo');
+Route::get('/attractions/{place_id}', 'AttractionController@detail');
 Route::get('/hotels', 'HotelController@index');
+Route::get('/hotels/photo/{hotel_id}', 'HotelController@photo');
 
 
