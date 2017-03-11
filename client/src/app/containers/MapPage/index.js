@@ -30,7 +30,6 @@ const center = {
 class App extends React.Component {
 
   static propTypes = {
-    children:          PropTypes.object,
     isEdit:            PropTypes.boolean,
     center:            PropTypes.number,
     zoom:              PropTypes.number,
@@ -39,7 +38,6 @@ class App extends React.Component {
   };
 
   static defaultProps = {
-    children: null,
     isEdit: false,
     location: null,
     center,
@@ -96,8 +94,10 @@ class App extends React.Component {
 
   render() {
     const {
-      isEdit
+      isEdit,
+      location: { query: { search } }
     } = this.props;
+
     const mapPageClass = cx({
       [style['map-page']]: true,
       [style['at-edit']]: isEdit,
@@ -113,6 +113,7 @@ class App extends React.Component {
               ref={elem => this.input = elem}
               className={style.input}
               placeholder={placeholder}
+              defaultValue={search}
             />
             <button>GO</button>
           </form>
