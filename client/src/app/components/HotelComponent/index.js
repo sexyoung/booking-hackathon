@@ -5,11 +5,12 @@ import style from './style.scss';
 
 class HotelComponent extends React.Component {
   static propTypes = {
-    name: PropTypes.string,
-    imgUrl: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
     description: PropTypes.string,
     price: PropTypes.number,
     bookingUrl: PropTypes.string,
+    FBComments: PropTypes.array,
   }
 
   static defaultProps = {
@@ -19,7 +20,7 @@ class HotelComponent extends React.Component {
   }
 
   render() {
-    const { imgUrl, name, description, price, bookingUrl } = this.props;
+    const { imgUrl, name, description, price, bookingUrl, FBComments } = this.props;
     return (
       <div className={style.container}>
         <img
@@ -40,8 +41,32 @@ class HotelComponent extends React.Component {
             />
         }
         {description}
+        {FBComments.map((comment, idx) => <FBComment key={idx} {...comment} />)}
       </div>
     );
+  }
+}
+
+class FBComment extends React.Component {
+  static propTypes = {
+    content: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    picUrl: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    timestamp: PropTypes.number.isRequired,
+  }
+
+  render() {
+    const {content, name, picUrl, rating, timestamp} = this.props
+    return (
+      <div>
+        <img src={picUrl} />
+        <span>{name}</span>
+        <span>{new Date(timestamp * 1000).toLocaleString()}</span>
+        <p>Rating: {rating}</p>
+        <p>Comment: {content}</p>
+      </div>
+    )
   }
 }
 
