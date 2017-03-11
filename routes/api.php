@@ -26,3 +26,7 @@ Route::post('/todos', function (Request $request) {
       'created_at' => date('Y-m-d H:i'),
     ]);
 });
+
+Route::get('/attractions', 'AttractionController@index');
+
+
