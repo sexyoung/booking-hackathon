@@ -24,7 +24,7 @@ export const stylers = [
   {
     'featureType': 'all',
     'stylers': [
-      { 'saturation': -80 }
+      { 'saturation': -60 }
     ]
   }
 ];
@@ -47,7 +47,7 @@ export const stylers = [
 // ];
 
 export const gradient = [
-  'rgba(254, 187, 2, 0)',
+  'rgba(254, 187, 2, 0.1)',
   '#FEBB02',
   '#FEC102',
   '#FEC702',
