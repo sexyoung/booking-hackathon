@@ -217,6 +217,8 @@ class TestPage extends React.Component {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
                 </div>
               )}
+              price={1000}
+              bookingUrl="http://www.booking.com/hotel/jp/hotel-she-kyoto.en-gb.html?label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmaOcBiAEBmAEuuAEHyAEM2AEB6AEB-AELqAID;sid=a076279596463f5a5d98ee0670a5fae2;all_sr_blocks=171061002_92623723_2_0_0;checkin=2017-03-22;checkout=2017-03-23;dest_id=-235402;dest_type=city;dist=0;group_adults=2;highlighted_blocks=171061002_92623723_2_0_0;hpos=2;no_rooms=1;room1=A%2CA;sb_price_type=total;srfid=b55747ed1e72162560fdf03ee9709b690025fcfcX2;type=total;ucfs=1&"
             />
           </div>
           {this.props.children}
