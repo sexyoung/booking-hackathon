@@ -35,7 +35,7 @@ export default class App extends React.Component {
   static defaultProps = {
     children: null,
     center: center,
-    zoom: 13,
+    zoom: 14,
   }
 
   loaded = ({ map, maps }) => {
@@ -59,21 +59,65 @@ export default class App extends React.Component {
       radius: 3000
     }
     $.get('http://localhost:8000/api/attractions', params, function(data) {
-      const heatmapData = data.data.map((d) => {
-        return new maps.LatLng(d.location.lat, d.location.lng);
+      let raw_data = data.data.slice();
+      let i = 3;
+      const threshold = 0.0001;
+      // while(i-- > 0) {
+      //   data.data.map(function(d) {
+      //     raw_data.push(d);
+      //     raw_data.push({
+      //       location: {
+      //         lat: d.location.lat + i * threshold,
+      //         lng: d.location.lng + i * threshold,
+      //       }
+      //     });
+      //     raw_data.push({
+      //       location: {
+      //         lat: d.location.lat - i * threshold,
+      //         lng: d.location.lng + i * threshold,
+      //       }
+      //     });
+      //     raw_data.push({
+      //       location: {
+      //         lat: d.location.lat - i * threshold,
+      //         lng: d.location.lng - i * threshold,
+      //       }
+      //     });
+      //     raw_data.push({
+      //       location: {
+      //         lat: d.location.lat + i * threshold,
+      //         lng: d.location.lng - i * threshold,
+      //       }
+      //     });
+      //   });
+      // }
+      // console.log(raw_data.length, raw_data)
+      for(var r=0 ; r<5 ; r++) {
+        const heatmapData = raw_data.filter((d) => {
+          return d.rating >= r && d.rating < r+1;
+        }).map((d) => {
+          return {location: new google.maps.LatLng(d.location.lat, d.location.lng), weight: d.rating*10 - 30}
+          // return new maps.LatLng(d.location.lat, d.location.lng);
+        });
+
+        // const heatmapData = points.map((d) => {
+        //   return new maps.LatLng(d.lat, d.lng);
+        // });
+
         
-      });
-      // const heatmapData = points.map((p) => {
-      //   return new maps.LatLng(p.lat, p.lng);
-      // });
+        console.log(heatmapData.length, heatmapData)
 
-      const heatmap = new maps.visualization.HeatmapLayer({
-        data: heatmapData
-      });
+        const heatmap = new maps.visualization.HeatmapLayer({
+          data: heatmapData
+        });
 
-      heatmap.setMap(map);
+        heatmap.setMap(map);
 
-      heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+        heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+        heatmap.set('radius', r * 20 - 30);
+      }
+      
+      // heatmap.set('radius', 50);
 
       map.setOptions({ styles: stylers });
 
