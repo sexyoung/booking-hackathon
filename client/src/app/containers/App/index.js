@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import GoogleMapReact from 'google-map-react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AnyReactComponent from 'components/AnyReactComponent';
 import $ from 'jquery';
 import {
@@ -7,7 +8,9 @@ import {
   gradient,
 } from 'constants/MapStylers';
 import { points } from 'constants/FakeData';
+
 import HotelComponent from 'components/HotelComponent';
+import FilterComponent from 'components/FilterComponent';
 
 import style from './app.scss';
 
@@ -178,6 +181,7 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <MuiThemeProvider>
       <div className={style.wrapper}>
         <div>
           logo, place inputer
@@ -193,6 +197,11 @@ export default class App extends React.Component {
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={this.loaded}
         >
+          <FilterComponent
+            heatChecked={true}
+            scenaryChecked={false}
+            hotelChecked={true}
+          />
           <AnyReactComponent
             lat={25.037529}
             lng={121.5456219}
@@ -213,6 +222,7 @@ export default class App extends React.Component {
         </GoogleMapReact>
         {this.props.children}
       </div>
+      </MuiThemeProvider>
     );
   }
 }

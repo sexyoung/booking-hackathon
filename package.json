@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "google-map-react": "^0.23.0",
-    "react-lite": "^0.15.33"
+    "material-ui": "^0.17.0",
+    "react-lite": "^0.15.33",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }
