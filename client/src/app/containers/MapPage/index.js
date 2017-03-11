@@ -1,8 +1,15 @@
+import cx from 'classnames';
 import React, { PropTypes } from 'react';
 import { is } from 'immutable';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import GoogleMapReact from 'google-map-react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import {
+  HotelComponent,
+  FilterComponent,
+} from 'components';
 
 import {
   stylers,
@@ -24,6 +31,7 @@ class App extends React.Component {
 
   static propTypes = {
     children:          PropTypes.object,
+    isEdit:            PropTypes.boolean,
     center:            PropTypes.number,
     zoom:              PropTypes.number,
     attractionList:    PropTypes.object,
@@ -32,16 +40,27 @@ class App extends React.Component {
 
   static defaultProps = {
     children: null,
+    isEdit: false,
+    location: null,
     center,
     zoom: 13,
     attractionList: {},
     attractionActions: {},
   }
 
+  static contextTypes = {
+    router: PropTypes.object,
+  }
+
   componentDidUpdate(prevProps) {
     if (!is(prevProps.attractionList, this.props.attractionList)) {
       this.updateHeapMap();
     }
+  }
+
+  onSubmit = (e) => {
+    e.preventDefault();
+    this.context.router.push(`edit?search=${this.input.value}`);
   }
 
   updateHeapMap = () => {
@@ -76,28 +95,48 @@ class App extends React.Component {
   }
 
   render() {
+    const {
+      isEdit
+    } = this.props;
+    const mapPageClass = cx({
+      [style['map-page']]: true,
+      [style['at-edit']]: isEdit,
+    });
+    const placeholder = isEdit ?
+      'Destination or address' :
+      'You deserve a vacation - and it start here!';
     return (
-      <div className={style['map-page']}>
-        <div className={style['input-block']}>
-          <input
-            className={style.input}
-            placeholder="You deserve a vacation - and it start here!"
+      <MuiThemeProvider>
+        <div className={mapPageClass}>
+          <form onSubmit={this.onSubmit} className={style['input-block']}>
+            <input
+              ref={elem => this.input = elem}
+              className={style.input}
+              placeholder={placeholder}
+            />
+            <button>GO</button>
+          </form>
+          <GoogleMapReact
+            id="map"
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+            bootstrapURLKeys={{
+              key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
+              language: 'zh',
+              libraries: 'visualization,places',
+            }}
+            yesIWantToUseGoogleMapApiInternals
+            onGoogleApiLoaded={this.loaded}
           />
+          {isEdit &&
+          <FilterComponent
+            heatChecked
+            scenaryChecked={false}
+            hotelChecked
+          />}
+          {isEdit && <HotelComponent />}
         </div>
-        <GoogleMapReact
-          id="map"
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          bootstrapURLKeys={{
-            key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
-            language: 'zh',
-            libraries: 'visualization,places',
-          }}
-          yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={this.loaded}
-        />
-        {this.props.children}
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
@@ -105,6 +144,7 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
+    isEdit: state.routing.locationBeforeTransitions.pathname.includes('edit'),
     attractionList: state.attraction.get('list'),
   };
 }

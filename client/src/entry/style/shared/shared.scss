@@ -5,6 +5,7 @@ $color03: #666;
 $color04: #009;
 $color05: #006;
 $blue1: #003580;
+$blue2: #009de5;
 
 // font-size
 $fontSizeHtml: 62.5%; // 62.5% of 16px = 10px
@@ -36,4 +37,8 @@ $retina: 192dpi;
 
 @mixin border-radius($r: 3px) {
   border-radius: $r;
+}
+
+@mixin box-shadow() {
+  box-shadow: 3px 3px 9px rgba(#000, .5);
 }
