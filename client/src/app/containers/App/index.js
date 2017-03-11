@@ -7,6 +7,7 @@ import {
   gradient,
 } from 'constants/MapStylers';
 import { points } from 'constants/FakeData';
+import { getLocationCenter } from 'utils';
 
 import style from './app.scss';
 
@@ -43,20 +44,32 @@ export default class App extends React.Component {
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
 
     map.setOptions({ styles: stylers });
-    
+
     var params = {
       lat: center.lat,
       lng: center.lng,
       radius: 3000
     }
+
     $.get('http://localhost:8000/api/attractions', params, function(data) {
-        data.data.map((d) => {
-          return new maps.Marker({
-              position: new google.maps.LatLng(d.location.lat, d.location.lng),
-              map: map,
-              title: 'Hello World!'
-          });
+      data.data.map((d) => {
+        return new maps.Marker({
+            position: new google.maps.LatLng(d.location.lat, d.location.lng),
+            map: map,
+            title: 'Hello World!'
+        });
       })
+
+      const [lat, lng] = getLocationCenter(data.data.map(d => d.location))
+      console.log('center: ', lat, lng);
+
+      const avgMarker = new maps.Marker({
+        position: new maps.LatLng(lat, lng),
+        map,
+        title: 'Center'
+      })
+
+      avgMarker.setMap(map)
     })
   }
 

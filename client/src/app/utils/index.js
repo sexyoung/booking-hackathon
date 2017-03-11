@@ -23,7 +23,15 @@ export function getAlbumID(url, type) {
   return false;
 }
 
+export function getLocationCenter(locations) {
+  const lat = locations.reduce((acc, loc, idx, arr) => acc + (loc.lat / arr.length), 0)
+  const lng = locations.reduce((acc, loc, idx, arr) => acc + (loc.lng / arr.length), 0)
+
+  return [lat, lng]
+}
+
 export default {
   isFBAlbumURL,
   getAlbumID,
+  getLocationCenter,
 };
