@@ -8,6 +8,8 @@ class AttractionController extends Controller
 {
 	public function index(Request $request)
 	{
+		
+
 		$lat = $request-> input('lat');
 		$lng = $request-> input('lng');
 		$radius = $request-> input('radius'); // in m
@@ -17,6 +19,7 @@ class AttractionController extends Controller
 			'radius' => $radius
 		);
 		$res = $this-> search($params);
+
 		if(empty($res)) {
 			return response()->json(
 				array(
@@ -28,7 +31,7 @@ class AttractionController extends Controller
 
 		$parsed_result = array();
 
-		foreach($res['results'] as $attraction) {
+		foreach($res as $attraction) {
 			$parsed_result[] = array(
 				'location' => $attraction['geometry']['location'],
 				'name' => $attraction['name'],
@@ -45,7 +48,10 @@ class AttractionController extends Controller
 
     private function search($params)
     {
-		$url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyBvTV47vAYcRpCq8JP-5NiMHz-Gw8SCiB8';
+    	$data = json_decode(file_get_contents(__DIR__ . '/../data/attractions.json'), true);
+		return $data;
+
+    	$url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsmyI6lT8VxDqiGN19T7HQRuGZtqeiehg';
 
 		if(!empty($params)) {
 			foreach($params as $key => $val) {
@@ -53,7 +59,20 @@ class AttractionController extends Controller
 			}
 		}
 		$url .= "&name=" . urlencode('景點');
-		$data = file_get_contents($url);
-		return json_decode($data, true);
+
+    	$next_page_token = false;
+    	$full_data = array();
+    	do {
+    		$data = json_decode(file_get_contents($url), true);
+    		
+    		$next_page_token = false;
+    		if(isset($data['next_page_token']) && !empty($data['next_page_token'])) {
+    			$next_page_token = $data['next_page_token'];
+    		}
+    		$full_data = array_merge($full_data, $data['results']);
+
+    	} while($next_page_token);
+		return $full_data;		
+	
     }
 }
