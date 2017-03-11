@@ -1,17 +1,17 @@
 import {
-  SET_INDEX,
-  GET_LIST,
-  SET_LIST,
-  SET_LOADING,
+  HOTEL_SET_INDEX,
+  HOTEL_GET_LIST,
+  HOTEL_SET_LIST,
+  HOTEL_SET_LOADING,
 } from 'constants/hotelActionTypes';
 
-export const setIndex   = payload => ({ type: SET_INDEX, payload });
+export const setIndex   = payload => ({ type: HOTEL_SET_INDEX, payload });
 
-export const getList    = () => ({ type: GET_LIST });
+export const getList    = ()      => ({ type: HOTEL_GET_LIST });
 
-export const setList    = payload => ({ type: SET_LIST, payload });
+export const setList    = payload => ({ type: HOTEL_SET_LIST, payload });
 
-export const setLoading = payload => ({ type: SET_LOADING, payload });
+export const setLoading = payload => ({ type: HOTEL_SET_LOADING, payload });
 
 const HotelActions = {
   setIndex,

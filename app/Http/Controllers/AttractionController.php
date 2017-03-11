@@ -8,12 +8,12 @@ class AttractionController extends Controller
 {
 	public function index(Request $request)
 	{
-		
+
 
 		$lat = $request-> input('lat');
 		$lng = $request-> input('lng');
 		$radius = $request-> input('radius'); // in m
-		
+
 		$params = array(
 			'location' => "$lat,$lng",
 			'radius' => $radius
@@ -21,12 +21,7 @@ class AttractionController extends Controller
 		$res = $this-> search($params);
 
 		if(empty($res)) {
-			return response()->json(
-				array(
-					'status' => 'fail',
-					'data' => array()
-				)
-			);
+			return response()->json('error', 500);
 		}
 
 		$parsed_result = array();
@@ -39,10 +34,7 @@ class AttractionController extends Controller
 			);
 		}
 		return response()->json(
-			array(
-				'status' => 'success',
-				'data' => $parsed_result
-			)
+			$parsed_result
 		);
 	}
 
@@ -64,7 +56,7 @@ class AttractionController extends Controller
     	$full_data = array();
     	do {
     		$data = json_decode(file_get_contents($url), true);
-    		
+
     		$next_page_token = false;
     		if(isset($data['next_page_token']) && !empty($data['next_page_token'])) {
     			$next_page_token = $data['next_page_token'];
@@ -72,7 +64,7 @@ class AttractionController extends Controller
     		$full_data = array_merge($full_data, $data['results']);
 
     	} while($next_page_token);
-		return $full_data;		
-	
+		return $full_data;
+
     }
 }

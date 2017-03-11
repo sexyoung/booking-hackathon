@@ -1,11 +1,11 @@
-const SET_INDEX   = 'SET_INDEX';
-const GET_LIST    = 'GET_LIST';
-const SET_LIST    = 'SET_LIST';
-const SET_LOADING = 'SET_LOADING';
+export const HOTEL_SET_INDEX   = 'HOTEL_SET_INDEX';
+export const HOTEL_GET_LIST    = 'HOTEL_GET_LIST';
+export const HOTEL_SET_LIST    = 'HOTEL_SET_LIST';
+export const HOTEL_SET_LOADING = 'HOTEL_SET_LOADING';
 
 export default {
-  SET_INDEX,
-  GET_LIST,
-  SET_LIST,
-  SET_LOADING,
+  HOTEL_SET_INDEX,
+  HOTEL_GET_LIST,
+  HOTEL_SET_LIST,
+  HOTEL_SET_LOADING,
 };

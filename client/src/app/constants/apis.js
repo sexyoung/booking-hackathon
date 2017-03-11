@@ -1,8 +1,6 @@
 const baseURL = process.env.baseApiURL;
-export const todosApiURL = () => `${baseURL}todos`;
-export const todoApiURL  = () => `${baseURL}todo`;
+export const attractionsApiURL = () => `${baseURL}attractions`;
 
 export default {
-  todosApiURL,
-  todoApiURL,
+  attractionsApiURL,
 };

@@ -1,11 +1,9 @@
-// import {
-//   watchGetTodos,
-//   watchCreateTodo,
-// } from './todo';
+import {
+  watchGetAttractions,
+} from './attraction';
 
 export default function* rootSaga() {
   yield [
-    // watchGetTodos(),
-    // watchCreateTodo(),
+    watchGetAttractions(),
   ];
 }

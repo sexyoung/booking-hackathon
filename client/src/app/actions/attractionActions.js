@@ -1,17 +1,17 @@
 import {
-  SET_INDEX,
-  GET_LIST,
-  SET_LIST,
-  SET_LOADING,
+  ATTRACTION_SET_INDEX,
+  ATTRACTION_GET_LIST,
+  ATTRACTION_SET_LIST,
+  ATTRACTION_SET_LOADING,
 } from 'constants/attractionActionTypes';
 
-export const setIndex   = payload => ({ type: SET_INDEX, payload });
+export const setIndex   = payload => ({ type: ATTRACTION_SET_INDEX, payload });
 
-export const getList    = () => ({ type: GET_LIST });
+export const getList    = payload => ({ type: ATTRACTION_GET_LIST, payload });
 
-export const setList    = payload => ({ type: SET_LIST, payload });
+export const setList    = payload => ({ type: ATTRACTION_SET_LIST, payload });
 
-export const setLoading = payload => ({ type: SET_LOADING, payload });
+export const setLoading = payload => ({ type: ATTRACTION_SET_LOADING, payload });
 
 const attractionActions = {
   setIndex,
