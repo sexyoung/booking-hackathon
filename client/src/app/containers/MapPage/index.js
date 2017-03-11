@@ -30,6 +30,7 @@ const center = {
 class App extends React.Component {
 
   static propTypes = {
+    location:          PropTypes.object,
     isEdit:            PropTypes.boolean,
     center:            PropTypes.number,
     zoom:              PropTypes.number,
@@ -39,7 +40,7 @@ class App extends React.Component {
 
   static defaultProps = {
     isEdit: false,
-    location: null,
+    location: {},
     center,
     zoom: 13,
     attractionList: {},
@@ -48,6 +49,15 @@ class App extends React.Component {
 
   static contextTypes = {
     router: PropTypes.object,
+  }
+
+  componentDidMount() {
+    if (navigator.geolocation.getCurrentPosition) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.warn(position.coords.latitude);
+        console.warn(position.coords.longitude);
+      });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -123,7 +133,7 @@ class App extends React.Component {
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{
               key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
-              language: 'zh',
+              language: 'zh-TW',
               libraries: 'visualization,places',
             }}
             yesIWantToUseGoogleMapApiInternals
