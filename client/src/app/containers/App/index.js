@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import style from './app.scss';
+import logo from './booking-logo.png';
 
 class App extends React.Component {
 
@@ -16,7 +17,7 @@ class App extends React.Component {
     return (
       <div className={style.app}>
         <header>
-          logo, blablabla
+          <img className={style.logo} src={logo} alt="logo" />
         </header>
         {this.props.children}
       </div>

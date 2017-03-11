@@ -4,4 +4,15 @@
 
 .app{
   height: 100%;
+  align-items: center;
+  justify-content: center;
+  header{
+    height: 46px;
+    padding: 10px 8px 8px;
+    box-sizing: border-box;
+    background-color: $blue1;
+    .logo{
+      width: 150px;
+    }
+  }
 }
