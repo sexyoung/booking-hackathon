@@ -81,7 +81,7 @@ class HotelController extends Controller
 						'name' => $hotel['hotel_name'],
 						'photo' => '/api/hotels/photo/' . $hotel['hotel_id'],
 						'price' => $hotel['price'],
-						'link' => ''
+						'booking_link' => 'TODO'
 					)
 				);
 			}
