@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import GoogleMapReact from 'google-map-react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AnyReactComponent from 'components/AnyReactComponent';
 
 import {
   stylers,
@@ -12,8 +11,10 @@ import {
 } from 'constants/MapStylers';
 import attractionActions from 'actions/attractionActions';
 
-import HotelComponent from 'components/HotelComponent';
-import FilterComponent from 'components/FilterComponent';
+import {
+  HotelComponent,
+  FilterComponent,
+} from 'components';
 
 import style from './app.scss';
 
@@ -102,11 +103,6 @@ class App extends React.Component {
               heatChecked
               scenaryChecked={false}
               hotelChecked
-            />
-            <AnyReactComponent
-              lat={25.037529}
-              lng={121.5456219}
-              text={'Kreyser Avrora'}
             />
             <HotelComponent
               className={style.hotel}
