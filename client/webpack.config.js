@@ -46,7 +46,7 @@ export default {
 
   module: {
     preLoaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: 'eslint' },
+            // { test: /\.js$/, exclude: /node_modules/, loader: 'eslint' },
             { test: /\.html$/, exclude: /node_modules/, loader: 'htmlhint' }
     ],
     loaders: [
