@@ -47,7 +47,7 @@ export const stylers = [
 // ];
 
 export const gradient = [
-  'rgba(254, 187, 2, 0.1)',
+  'rgba(254, 187, 2, 0)',
   '#FEBB02',
   '#FEC102',
   '#FEC702',

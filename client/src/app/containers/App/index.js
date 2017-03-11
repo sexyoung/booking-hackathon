@@ -13,14 +13,15 @@ import style from './app.scss';
 
 import redStart from './red-start-18-pro.png';
 import pinkStart from './pink-start-18-pro.png';
+import pinkNewStart from './pink-start-new-18-pro.png';
 import greenStart from './green-start-18-pro.png';
 
 import blueRoom from './blue-room-18-pro.png';
+import blueBed from './blue-bed-18-pro.png';
 
 const center = {
   // lat: 41.9024427, lng: 12.450028
   lat: 25.0356791, lng: 121.5196742
-  // lat: 25.037529, lng: 121.5456219
 };
 
 /**
@@ -82,7 +83,7 @@ export default class App extends React.Component {
               position: new google.maps.LatLng(d.location.lat, d.location.lng),
               map: map,
               // icon: greenStart,
-              icon: pinkStart,
+              icon: pinkNewStart,
               title: 'Hello World!'
           });
       })
@@ -99,7 +100,7 @@ export default class App extends React.Component {
       var markerRoom = new google.maps.Marker({
         position: {lat: beach[1], lng: beach[2]},
         map: map,
-        icon: blueRoom,
+        icon: blueBed,
       });
     }
 
