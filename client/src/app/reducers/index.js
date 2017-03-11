@@ -1,15 +1,17 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
 
-import counter from './counterReducer';
-import todos from './todoReducer';
+import map from './mapReducer';
+import hotel from './hotelReducer';
+import attraction from './attractionReducer';
 
 /**
  * Combine reducers
  */
 const rootReducer = combineReducers({
-  counter,
-  todos,
+  map,
+  hotel,
+  attraction,
   routing
 });
 

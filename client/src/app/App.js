@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 
 import configureStore from 'store/configureStore';
-import AppActions from 'actions/AppActions';
 import routes from './routes';
 
 
@@ -46,7 +45,7 @@ const App = {
     render(store, history, routes);
 
         // dispatch initialize action
-    store.dispatch(AppActions.initialize());
+    // store.dispatch(AppActions.initialize());
   }
 };
 
