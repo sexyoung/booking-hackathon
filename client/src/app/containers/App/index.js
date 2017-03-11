@@ -7,6 +7,7 @@ import {
   gradient,
 } from 'constants/MapStylers';
 import { points } from 'constants/FakeData';
+import HotelComponent from 'components/HotelComponent';
 
 import style from './app.scss';
 
@@ -43,7 +44,7 @@ export default class App extends React.Component {
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
 
     map.setOptions({ styles: stylers });
-    
+
     var params = {
       lat: center.lat,
       lng: center.lng,
@@ -70,7 +71,7 @@ export default class App extends React.Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{
-            key: 'AIzaSyBvTV47vAYcRpCq8JP-5NiMHz-Gw8SCiB8',
+            key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
             language: 'zh',
             libraries: 'visualization,places',
           }}
@@ -81,6 +82,18 @@ export default class App extends React.Component {
             lat={25.037529}
             lng={121.5456219}
             text={'Kreyser Avrora'}
+          />
+          <HotelComponent
+            className={style.hotel}
+            imgUrl="http://www.thefloridahotelorlando.com/var/floridahotelorlando/storage/images/media/images/photo-gallery/hotel-images/florida-hotel-orlando-night/27177-1-eng-US/Florida-Hotel-Orlando-Night.jpg"
+            name="A Big Hotel"
+            description={(
+              <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
+              </div>
+            )}
           />
         </GoogleMapReact>
         {this.props.children}
