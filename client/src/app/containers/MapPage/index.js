@@ -77,11 +77,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={style.wrapper}>
-        <div>
-            place inputer
-          </div>
+      <div className={style['map-page']}>
+        <div className={style['input-block']}>
+          <input
+            className={style.input}
+            placeholder="You deserve a vacation - and it start here!"
+          />
+        </div>
         <GoogleMapReact
+          id="map"
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{

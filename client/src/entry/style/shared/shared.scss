@@ -33,3 +33,7 @@ $retina: 192dpi;
     background-image: url($image-retina);
   }
 }
+
+@mixin border-radius($r: 3px) {
+  border-radius: $r;
+}
