@@ -16,6 +16,7 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
+    "google-map-react": "^0.23.0",
     "react-lite": "^0.15.33"
   }
 }

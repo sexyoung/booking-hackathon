@@ -16,6 +16,7 @@ export default class App extends React.Component {
     return (
       <div className={style.wrapper}>
         <ul>
+          <li><Link to="map">Map</Link></li>
           <li><Link to="counter">Counter</Link></li>
           <li><Link to="todo">Todo</Link></li>
         </ul>
