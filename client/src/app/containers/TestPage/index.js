@@ -188,17 +188,19 @@ class TestPage extends React.Component {
           <div>
             place inputer
           </div>
-          <GoogleMapReact
-            defaultCenter={this.props.center}
-            defaultZoom={this.props.zoom}
-            bootstrapURLKeys={{
-              key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
-              language: 'zh',
-              libraries: 'visualization,places',
-            }}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={this.loaded}
-          >
+          <div className={style['map-container']}>
+            <GoogleMapReact
+              defaultCenter={this.props.center}
+              defaultZoom={this.props.zoom}
+              bootstrapURLKeys={{
+                key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
+                language: 'zh',
+                libraries: 'visualization,places',
+              }}
+              yesIWantToUseGoogleMapApiInternals
+              onGoogleApiLoaded={this.loaded}
+            >
+            </GoogleMapReact>
             <FilterComponent
               heatChecked
               scenaryChecked={false}
@@ -214,9 +216,9 @@ class TestPage extends React.Component {
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
                 </div>
-            )}
+              )}
             />
-          </GoogleMapReact>
+          </div>
           {this.props.children}
         </div>
       </MuiThemeProvider>
