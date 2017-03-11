@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import TodoActions from '../../actions/TodoActions';
+import TodoActions from 'actions/TodoActions';
 import style from './todo-page.scss';
 
 class TodoPage extends React.Component {

@@ -1,8 +1,4 @@
-import React, { PropTypes } from 'react';
-import GoogleMapReact from 'google-map-react';
-import AnyReactComponent from './AnyReactComponent';
-
-const points = [
+export const points = [
   { lat: 37.782551, lng: -122.445368 },
   { lat: 37.782745, lng: -122.444586 },
   { lat: 37.782842, lng: -122.443688 },
@@ -505,96 +501,6 @@ const points = [
   { lat: 37.751266, lng: -122.403355 }
 ];
 
-const GRADIENT =  [
-  'rgba(0, 255, 255, 0)',
-  'rgba(0, 255, 255, 1)',
-  'rgba(0, 191, 255, 1)',
-  'rgba(0, 127, 255, 1)',
-  'rgba(0, 63, 255, 1)',
-  'rgba(0, 0, 255, 1)',
-  'rgba(0, 0, 223, 1)',
-  'rgba(0, 0, 191, 1)',
-  'rgba(0, 0, 159, 1)',
-  'rgba(0, 0, 127, 1)',
-  'rgba(63, 0, 91, 1)',
-  'rgba(127, 0, 63, 1)',
-  'rgba(191, 0, 31, 1)',
-  'rgba(255, 0, 0, 1)'
-];
-
-const styles = [
-  {
-    stylers: [
-      { hue: '#00ffe6' },
-      { saturation: -20 }
-    ]
-  }, {
-    featureType: 'road',
-    elementType: 'geometry',
-    stylers: [
-      { lightness: 100 },
-      { visibility: 'simplified' }
-    ]
-  }, {
-    featureType: 'road',
-    elementType: 'labels',
-    stylers: [
-      { visibility: 'on' }
-    ]
-  }
-];
-
-class MapPage extends React.Component {
-  static propTypes = {
-    center: PropTypes.number,
-    zoom: PropTypes.number,
-  }
-  static defaultProps = {
-    center:   { lat: 37.775, lng: -122.434 },
-    zoom: 11,
-  };
-  loaded = ({ map, maps }) => {
-    const heatmapData = points.map((p) => {
-      return new maps.LatLng(p.lat, p.lng);
-    });
-
-    const heatmap = new maps.visualization.HeatmapLayer({
-      data: heatmapData
-    });
-
-    heatmap.setMap(map);
-
-    heatmap.set('gradient', heatmap.get('gradient') ? null : GRADIENT);
-
-    map.setOptions({ styles });
-  }
-
-  gradient() {
-
-  }
-  render() {
-    return (
-      <div style={{ width: '100%', height: '400px' }}>
-        <GoogleMapReact
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          bootstrapURLKeys={{
-            key: 'AIzaSyBtBoWF2Wt-_njKZzH9PIx43jShNWS3U54',
-            language: 'zh',
-            libraries: 'visualization',
-          }}
-          yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={this.loaded}
-        >
-          <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={'Kreyser Avrora'}
-          />
-        </GoogleMapReact>
-      </div>
-    );
-  }
-}
-
-export default MapPage;
+export default {
+  points,
+};

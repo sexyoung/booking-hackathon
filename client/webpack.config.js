@@ -7,6 +7,10 @@ import assets from 'postcss-assets';
 import autoprefixer from 'autoprefixer';
 import config from './config.json';
 
+const src = path.join(__dirname, 'src/app');
+
+console.warn(path.join(src, '/components'));
+
 export default {
   output: {
     path: path.resolve(__dirname, config.buildDir),
@@ -26,7 +30,17 @@ export default {
       'createjs-preloadjs$': 'createjs-preloadjs/lib/preloadjs-0.6.2.combined.js',
       modernizr$: path.resolve(__dirname, '.modernizrrc'),
       'react': 'react-lite',
-      'react-dom': 'react-lite'
+      'react-dom': 'react-lite',
+      'components': path.join(src, '/components'),
+      'containers': path.join(src, '/containers'),
+      'constants':  path.join(src, '/constants'),
+      'actions':    path.join(src, '/actions'),
+      'reducers':   path.join(src, '/reducers'),
+      'sagas':      path.join(src, '/sagas'),
+      'store':      path.join(src, '/store'),
+      'selectors':  path.join(src, '/selectors'),
+      'config':     path.join(src, '/config'),
+      'utils':      path.join(src, '/utils'),
     }
   },
 

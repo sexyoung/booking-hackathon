@@ -5,9 +5,10 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 
-import configureStore from './store/configureStore';
+import configureStore from 'store/configureStore';
+import AppActions from 'actions/AppActions';
 import routes from './routes';
-import AppActions from './actions/AppActions';
+
 
 /**
  * Render application

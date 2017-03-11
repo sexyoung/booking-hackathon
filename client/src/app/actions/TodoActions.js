@@ -5,7 +5,7 @@ import {
   CREATE_TODO,
   UPDATE_TODO,
   DESTOLY_TODO,
-} from '../constants/TodoActionTypes';
+} from 'constants/TodoActionTypes';
 
 export const setTodos = payload => ({ type: SET_TODOS, payload });
 

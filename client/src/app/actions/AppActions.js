@@ -1,8 +1,7 @@
 import {
   INITIALIZE,
   PLACEHOLDER,
-} from '../constants/ActionTypes';
-// import WebAPIUtils from '../utils/WebAPIUtils';
+} from 'constants/ActionTypes';
 
 export const initialize = () => ({ type: INITIALIZE });
 

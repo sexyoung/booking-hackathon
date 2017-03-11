@@ -7,21 +7,21 @@ import {
 import {
   GET_TODOS,
   CREATE_TODO,
-} from '../constants/TodoActionTypes';
+} from 'constants/TodoActionTypes';
 
 import {
   addTodo,
   setTodos,
-} from '../actions/TodoActions';
+} from 'actions/TodoActions';
 
 import {
     todosApiURL,
-} from '../constants/apis';
+} from 'constants/apis';
 
 import {
     getApi,
     postApi,
-} from '../utils/api';
+} from 'utils/api';
 
 function* doGetTodos() {
   const result = yield call(

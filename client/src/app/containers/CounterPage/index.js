@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import AppActions from '../../actions/AppActions';
+import AppActions from 'actions/AppActions';
 
-import MyComponent from '../../components/MyComponent';
+import MyComponent from 'components/MyComponent';
 
 import style from './counter-page.scss';
 

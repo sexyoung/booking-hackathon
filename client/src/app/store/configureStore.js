@@ -3,8 +3,8 @@ import createLogger from 'redux-logger';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
-import rootReducer from '../reducers';
-import rootSaga from '../sagas';
+import rootReducer from 'reducers';
+import rootSaga from 'sagas';
 
 /**
  * Create Redux store

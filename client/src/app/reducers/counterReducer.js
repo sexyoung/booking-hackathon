@@ -1,5 +1,5 @@
-import ActionTypes from '../constants/ActionTypes';
-import InitialState from '../constants/InitialState';
+import ActionTypes from 'constants/ActionTypes';
+import InitialState from 'constants/InitialState';
 
 /**
  * Template reducer, increment state

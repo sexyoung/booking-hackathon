@@ -4,7 +4,7 @@ import {
   ADD_TODO,
   UPDATE_TODO,
   DESTOLY_TODO,
-} from '../constants/TodoActionTypes';
+} from 'constants/TodoActionTypes';
 
 const initialState = Immutable.List();
 
