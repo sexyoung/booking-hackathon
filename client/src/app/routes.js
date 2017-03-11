@@ -11,6 +11,7 @@ import TestPage from 'containers/TestPage';
 const routes = (
   <Route path="/" component={App}>
     <IndexRoute component={MapPage} />
+    <Route path="edit" component={MapPage} />
     <Route path="test" component={TestPage} />
   </Route>
 );

@@ -13,6 +13,38 @@
     height: 100%;
     background-color: rgba(#000, .85);
   }
+  &.at-edit{
+    &:before {
+      display: none;
+    }
+    .input-block+div > * {
+      filter: initial;
+    }
+    .input-block {
+      left: 10px;
+      top: 10px;
+      transform: initial;
+      max-width: 330px;
+      @include box-shadow();
+      font-size: 15px;
+      @include border-radius();
+      &:before, &:after {
+        display: none;
+      }
+      .input {
+        width: calc( 100% - 70px );
+        margin: 0;
+        color: #000;
+        background-color: #fff;
+        &::placeholder{
+          color: #999;
+        }
+      }
+      button{
+        width: 70px;
+      }
+    }
+  }
   .input-block {
     z-index: 2;
     position: absolute;
@@ -21,6 +53,8 @@
     transform: translate(-50%, -50%);
     width: calc(100% - 40px);
     max-width: 600px;
+    font-size: 20px;
+    transition: all .3s;
     &:before, &:after {
       margin-left: 15px;
     }
@@ -36,20 +70,34 @@
     .input {
       margin: 8px 0;
       color: #fff;
-      width: 100%;
+      width: calc(100% - 120px);
       outline: none;
-      border: 1px solid rgba(#fff, .2);
-      background-color: transparent;
-      font-size: 20px;
+      border: 1px solid #666;
+      border-right: none;
+      background-color: rgba(#fff, .1);
       padding: 15px;
       transition: all .3s;
+      box-sizing: border-box;
       &::placeholder{
         color: rgba(#fff, .3);
       }
       @include border-radius();
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
       &:focus {
         border-color: rgba(#fff, .5);
       }
+    }
+    button{
+      color: #fff;
+      width: 120px;
+      padding: 15px;
+      background-color: $blue1;
+      border: 1px solid #666;
+      // border-left: none;
+      @include border-radius();
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
   }
   .input-block+div > * {
