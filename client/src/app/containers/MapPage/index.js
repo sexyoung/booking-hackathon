@@ -522,6 +522,28 @@ const GRADIENT =  [
   'rgba(255, 0, 0, 1)'
 ];
 
+const styles = [
+  {
+    stylers: [
+      { hue: '#00ffe6' },
+      { saturation: -20 }
+    ]
+  }, {
+    featureType: 'road',
+    elementType: 'geometry',
+    stylers: [
+      { lightness: 100 },
+      { visibility: 'simplified' }
+    ]
+  }, {
+    featureType: 'road',
+    elementType: 'labels',
+    stylers: [
+      { visibility: 'on' }
+    ]
+  }
+];
+
 class MapPage extends React.Component {
   static propTypes = {
     center: PropTypes.number,
@@ -543,6 +565,8 @@ class MapPage extends React.Component {
     heatmap.setMap(map);
 
     heatmap.set('gradient', heatmap.get('gradient') ? null : GRADIENT);
+
+    map.setOptions({ styles });
   }
 
   gradient() {
