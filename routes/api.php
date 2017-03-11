@@ -28,5 +28,6 @@ Route::post('/todos', function (Request $request) {
 });
 
 Route::get('/attractions', 'AttractionController@index');
+Route::get('/hotels', 'HotelController@index');
 
 
