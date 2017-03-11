@@ -10,6 +10,10 @@ import { points } from 'constants/FakeData';
 
 import style from './app.scss';
 
+const center = {
+  lat: 25.037529, lng: 121.5456219
+};
+
 /**
  * Template React Component
  */
@@ -21,7 +25,7 @@ export default class App extends React.Component {
   };
   static defaultProps = {
     children: null,
-    center: { lat: 25.037529, lng: 121.5456219 },
+    center: center,
     zoom: 13,
   }
 
@@ -41,8 +45,8 @@ export default class App extends React.Component {
     map.setOptions({ styles: stylers });
     
     var params = {
-      lat: 25.037529,
-      lng: 121.5456219,
+      lat: center.lat,
+      lng: center.lng,
       radius: 3000
     }
     $.get('http://localhost:8000/api/attractions', params, function(data) {
