@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import GoogleMapReact from 'google-map-react';
 import AnyReactComponent from 'components/AnyReactComponent';
+import $ from 'jquery';
 import {
   stylers,
   gradient,
@@ -20,8 +21,8 @@ export default class App extends React.Component {
   };
   static defaultProps = {
     children: null,
-    center: { lat: 37.775, lng: -122.434 },
-    zoom: 11,
+    center: { lat: 25.037529, lng: 121.5456219 },
+    zoom: 13,
   }
 
   loaded = ({ map, maps }) => {
@@ -38,6 +39,21 @@ export default class App extends React.Component {
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
 
     map.setOptions({ styles: stylers });
+    
+    var params = {
+      lat: 25.037529,
+      lng: 121.5456219,
+      radius: 3000
+    }
+    $.get('http://localhost:8000/api/attractions', params, function(data) {
+        data.data.map((d) => {
+          return new maps.Marker({
+              position: new google.maps.LatLng(d.location.lat, d.location.lng),
+              map: map,
+              title: 'Hello World!'
+          });
+      })
+    })
   }
 
   render() {
@@ -50,16 +66,16 @@ export default class App extends React.Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{
-            key: 'AIzaSyBtBoWF2Wt-_njKZzH9PIx43jShNWS3U54',
+            key: 'AIzaSyBvTV47vAYcRpCq8JP-5NiMHz-Gw8SCiB8',
             language: 'zh',
-            libraries: 'visualization',
+            libraries: 'visualization,places',
           }}
           yesIWantToUseGoogleMapApiInternals
           onGoogleApiLoaded={this.loaded}
         >
           <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
+            lat={25.037529}
+            lng={121.5456219}
             text={'Kreyser Avrora'}
           />
         </GoogleMapReact>
