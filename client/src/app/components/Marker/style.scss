@@ -1,6 +1,23 @@
+$marker-size: 18px;
+
 .img {
+  box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
-  width: 18px;
-  height: 18px;
+  width: $marker-size;
+  height: $marker-size;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  transition: border-width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+$focused-border-width: 4px;
+
+.focused {
+  border-radius: 50%;
+  border: $focused-border-width solid white;
+  width: $marker-size + 2 * $focused-border-width;
+  height: $marker-size + 2 * $focused-border-width;;
 }

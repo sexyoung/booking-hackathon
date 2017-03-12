@@ -197,8 +197,9 @@ class App extends React.Component {
                     lng={hotel.location.lng}
                     imgSrc={hotelImg}
                     onClick={handleClick}
-                  />
-                );
+                    focused={index === hotelIndex}
+                  ></Marker>
+                )
               }
             )}
             { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction) => {
