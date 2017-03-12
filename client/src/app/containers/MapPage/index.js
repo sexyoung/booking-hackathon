@@ -12,7 +12,10 @@ import Autocomplete from 'react-google-autocomplete';
 import {
   HotelComponent,
   FilterComponent,
+  Marker,
 } from 'components';
+
+import hotelImg from './blue-bed-18-pro.png'
 
 import {
   stylers,
@@ -134,11 +137,11 @@ class App extends React.Component {
     });
 
     // Call Hotel API
-    // this.props.hotelActions.getList({
-    //   lat: 25.0453076,
-    //   lng: 121.53079500000001,
-    //   radius: 10000,
-    // })
+    this.props.hotelActions.getList({
+      lat: 25.0453076,
+      lng: 121.53079500000001,
+      radius: 1,
+    })
   }
 
   updateHeapMap = () => {
@@ -163,7 +166,8 @@ class App extends React.Component {
       isEdit,
       mapLocation,
       mapIsLoading,
-      location: { query: { search } }
+      location: { query: { search } },
+      hotelList,
     } = this.props;
 
     const {
@@ -204,7 +208,15 @@ class App extends React.Component {
             }}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={this.loaded}
-          />
+          >
+            {hotelList.toJS().map(hotel =>
+              <Marker
+                lat={hotel.location.lat}
+                lng={hotel.location.lng}
+                imgSrc={hotelImg}
+              >Test</Marker>
+            )}
+          </GoogleMapReact>
           {isEdit &&
           <FilterComponent
             heatChecked
