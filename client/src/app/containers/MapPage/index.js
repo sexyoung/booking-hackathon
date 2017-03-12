@@ -256,6 +256,7 @@ class App extends React.Component {
               app.hotelChecked && hotelList.size > 0 && hotelList.toJS().map((hotel, index) => {
                 const handleClick = () => {
                   hotelActions.setIndex(index);
+                  attractionActions.setIndex(-1);
                 };
 
                 return (
@@ -272,7 +273,8 @@ class App extends React.Component {
             { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction, index) => {
               const handleClick = () => {
                 attractionActions.setIndex(index);
-              };
+                hotelActions.setIndex(-1);
+              }
 
               return (
                 <Marker
