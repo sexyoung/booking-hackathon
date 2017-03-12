@@ -47,15 +47,11 @@ class HotelComponent extends React.Component {
           alt={name}
         />
         <h1>{name}</h1>
-        <p>
-          <span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
-          {isHotel && <span className={style.price}>NTD {price}</span>}
-        </p>
         {
           isPlace &&
             <RaisedButton
               label="Save"
-              style={{marginRight: '16px'}}
+              style={{float: 'right'}}
               backgroundColor="#febb02"
               labelColor="#FFF"
             />
@@ -64,14 +60,19 @@ class HotelComponent extends React.Component {
           isHotel &&
             <RaisedButton
               label="Book Now!"
-              style={{marginRight: '16px'}}
+              style={{float: 'right'}}
               backgroundColor="#003580"
               labelColor="#FFF"
               href={bookingUrl}
             />
         }
+        <p style={{lineHeight: '36px'}}>
+          <span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
+          {isHotel && <span className={style.price}>NTD {price}</span>}
+        </p>
+        <div style={{clear: 'both'}} />
         <p className={style['desc']}>{description}</p>
-        {isHotel && FBComments.length > 0
+        {FBComments.length > 0
           && (
             <div>
               <h2>Reviews from Facebook Friends</h2>
