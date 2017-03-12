@@ -300,7 +300,7 @@ class App extends React.Component {
               <HotelComponent
                 type="hotel"
                 className={style.hotel}
-                imgUrl={currentHotel.detail.imgUrl}
+                imgUrl={`http://localhost:8000${currentHotel.detail.imgUrl}`}
                 name={currentHotel.name}
                 description={currentHotel.detail.description}
                 rating={currentHotel.detail.rating}
