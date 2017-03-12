@@ -4,7 +4,8 @@ import style from './style.scss'
 
 class Marker extends React.Component {
   static propTypes = {
-    imgSrc: PropTypes.string.isRequired
+    imgSrc: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
   }
 
   render() {
@@ -12,6 +13,7 @@ class Marker extends React.Component {
       <img
         className={style.img}
         src={this.props.imgSrc}
+        onClick={this.props.onClick}
       />
     )
   }
