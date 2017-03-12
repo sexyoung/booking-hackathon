@@ -12,13 +12,15 @@ class AttractionController extends Controller
 
 	public function heatmap() {
 		$data = json_decode(file_get_contents(__DIR__ . '/../data/heat_use.json'), true);
+		return response()->json(array());
 		return response()->json($data);
 	}
 
 	public function photo(Request $request, $reference) {
 		$api_key = $this-> _api_key;
 		$url = "https://maps.googleapis.com/maps/api/place/photo?key=$api_key&photoreference=$reference&maxwidth=400";
-		return redirect($url);
+		readfile($url);
+		// return redirect($url);
 	}
 
 	public function getDetail($place_id) {
@@ -47,8 +49,8 @@ class AttractionController extends Controller
 		}
 
 		// set image
-		if(!empty($result['photos'])) {
-			$ret_data['imgUrl'] = '/api/attractions/photo/' . $result['photos'][0]['photo_reference'];
+		if(!empty($ret_data['photos'])) {
+			$ret_data['imgUrl'] = '/api/attractions/photo/' . $ret_data['photos'][0]['photo_reference'];
 		}
 
 		// friends been here
@@ -104,6 +106,14 @@ class AttractionController extends Controller
 	{
 		
 		$data = json_decode(file_get_contents(__DIR__ . '/../data/full_attractions.json'), true);
+		// read all comments
+		$comments = json_decode(file_get_contents(__DIR__ . "/../data/comments.json"), true);
+		
+		foreach($data as $index => $d) {
+			if(isset($comments[$d['name']])) {
+				$data[$index]['FBComments'] = $comments[$d['name']];
+			}
+		}
 		return response()->json($data);
 		$lat = $request-> input('lat');
 		$lng = $request-> input('lng');
