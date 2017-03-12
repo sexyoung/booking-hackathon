@@ -67,25 +67,28 @@
       font-size: 16px;
       content: 'Near by Booking, here you go!';
     }
-    .input {
-      margin: 8px 0;
-      color: #fff;
-      width: calc(100% - 120px);
-      outline: none;
-      border: 1px solid #666;
-      border-right: none;
-      background-color: rgba(#fff, .1);
-      padding: 15px;
-      transition: all .3s;
-      box-sizing: border-box;
-      &::placeholder{
-        color: rgba(#fff, .3);
-      }
-      @include border-radius();
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
-      &:focus {
-        border-color: rgba(#fff, .5);
+    div{
+      display: inline;
+      .input {
+        margin: 8px 0;
+        color: #fff;
+        width: calc(100% - 120px);
+        outline: none;
+        border: 1px solid #666;
+        border-right: none;
+        background-color: rgba(#fff, .1);
+        padding: 15px;
+        transition: all .3s;
+        box-sizing: border-box;
+        &::placeholder{
+          color: rgba(#fff, .3);
+        }
+        @include border-radius();
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        &:focus {
+          border-color: rgba(#fff, .5);
+        }
       }
     }
     button{
@@ -102,5 +105,14 @@
   }
   .input-block+div > * {
     filter: blur(2px);
+  }
+
+  .is-loading{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(#000, .8);
   }
 }
