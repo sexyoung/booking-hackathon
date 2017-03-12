@@ -1,26 +1,38 @@
 import React, { PropTypes } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import { RaisedButton } from 'material-ui';
+
+import FBComment from './FBComment';
 
 import style from './style.scss';
 
 class HotelComponent extends React.Component {
   static propTypes = {
-    name: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired,
+    name:        PropTypes.string.isRequired,
+    imgUrl:      PropTypes.string.isRequired,
     description: PropTypes.string,
-    price: PropTypes.number,
-    bookingUrl: PropTypes.string,
-    FBComments: PropTypes.array,
+    price:       PropTypes.number,
+    bookingUrl:  PropTypes.string,
+    FBComments:  PropTypes.array,
   }
 
   static defaultProps = {
     name:        '',
     imgUrl:      '',
     description: '',
+    price:       0,
+    bookingUrl:  '',
+    FBComments:  [],
   }
 
   render() {
-    const { imgUrl, name, description, price, bookingUrl, FBComments } = this.props;
+    const {
+      imgUrl,
+      name,
+      description,
+      price,
+      bookingUrl,
+      FBComments,
+    } = this.props;
     return (
       <div className={style.container}>
         <img
@@ -29,44 +41,21 @@ class HotelComponent extends React.Component {
           alt={name}
         />
         <h1>{name}</h1>
-        {typeof price !== 'undefined' && `NTD ${ price }`}
+        {typeof price !== 'undefined' && `NTD ${price}`}
         {
           typeof bookingUrl !== 'undefined' &&
             <RaisedButton
               label="Book Now!"
-              style={{margin: '0 16px'}}
+              style={{ margin: '0 16px' }}
               backgroundColor="#003580"
               labelColor="#FFF"
               href={bookingUrl}
             />
         }
         {description}
-        {FBComments.map((comment, idx) => <FBComment key={idx} {...comment} />)}
+        {FBComments.length > 0 && FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
       </div>
     );
-  }
-}
-
-class FBComment extends React.Component {
-  static propTypes = {
-    content: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    picUrl: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    timestamp: PropTypes.number.isRequired,
-  }
-
-  render() {
-    const {content, name, picUrl, rating, timestamp} = this.props
-    return (
-      <div>
-        <img src={picUrl} />
-        <span>{name}</span>
-        <span>{new Date(timestamp * 1000).toLocaleString()}</span>
-        <p>Rating: {rating}</p>
-        <p>Comment: {content}</p>
-      </div>
-    )
   }
 }
 

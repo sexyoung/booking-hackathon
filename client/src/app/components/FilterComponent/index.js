@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Checkbox from 'material-ui/Checkbox';
+import { Checkbox } from 'material-ui';
 
 import style from './style.scss';
 
