@@ -12,7 +12,7 @@ class AttractionController extends Controller
 
 	public function heatmap() {
 		$data = json_decode(file_get_contents(__DIR__ . '/../data/heat_use.json'), true);
-		return response()->json(array());
+		// return response()->json(array());
 		return response()->json($data);
 	}
 

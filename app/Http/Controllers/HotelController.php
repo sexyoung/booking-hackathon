@@ -21,48 +21,46 @@ class HotelController extends Controller
 
     public function index(Request $request)
 	{
-		$auth = $this-> auth;
-		$lat = $request-> input('lat');
-		$lng = $request-> input('lng');
-		$checkin = $request-> input('checkin');
-		$checkout = $request-> input('checkout');
-		$radius = $request-> input('radius');
+		// $auth = $this-> auth;
+		// $lat = $request-> input('lat');
+		// $lng = $request-> input('lng');
+		// $checkin = $request-> input('checkin');
+		// $checkout = $request-> input('checkout');
+		// $radius = $request-> input('radius');
 
-		if(empty($radius)) $radius = 1;
-		if($radius >= 1000) $radius /= 1000;
-		if(empty($checkin)) $checkin = '2017-06-09';
-		if(empty($checkout)) $checkout = '2017-06-10';
+		// if(empty($radius)) $radius = 1;
+		// if($radius >= 1000) $radius /= 1000;
+		// if(empty($checkin)) $checkin = '2017-06-09';
+		// if(empty($checkout)) $checkout = '2017-06-10';
 
-		$params = array(
-			'room1' => 'A,A',
-			'output' => 'room_details,hotel_details',
-			'latitude' => $lat,
-			'longitude' => $lng,
-			'checkin' => $checkin,
-			'checkout' => $checkout,
-			'radius' => $radius,
-			'lang' => 'zh-tw'
-		);
+		// $params = array(
+		// 	'room1' => 'A,A',
+		// 	'output' => 'room_details,hotel_details',
+		// 	'latitude' => $lat,
+		// 	'longitude' => $lng,
+		// 	'checkin' => $checkin,
+		// 	'checkout' => $checkout,
+		// 	'radius' => $radius
+		// );
 
-		$url = "https://$auth@distribution-xml.booking.com/json/getHotelAvailabilityV2?";
+		// $url = "https://$auth@distribution-xml.booking.com/json/getHotelAvailabilityV2?";
 
-		foreach($params as $key => $val) {
-			$url .= "$key=$val&";
-		}
+		// foreach($params as $key => $val) {
+		// 	$url .= "$key=$val&";
+		// }
 
-		$url = substr($url, 0, -1);
+		// $url = substr($url, 0, -1);
 		
-		// $hotels = json_decode(file_get_contents(__DIR__ . "/../data/hotels.json"), true);
-		// return response()->json($hotels);
+		// $data = file_get_contents($url);
 
-		$data = file_get_contents($url);
+		// $result = json_decode($data, true);
 
-		$result = json_decode($data, true);
+		// if(empty($result) || !isset($result['hotels'])) {
+		// 	return response()->json($result['message'], 500);
+		// }
 
-		if(empty($result) || !isset($result['hotels'])) {
-			return response()->json($result['message'], 500);
-		}
-
+		$hotels = json_decode(file_get_contents(__DIR__ . "/../data/hotels.json"), true);
+// return response()->json($hotels);
 		$parsed_result = array();
 
 		// read all comments
@@ -73,41 +71,46 @@ class HotelController extends Controller
 			'Superb' => 4.4,
 			'Very good' => 4.1
 		);
-		if(isset($result['hotels'])) {
-			foreach($result['hotels'] as $hotel) {
-				$rate_word = $hotel['review_score_word'];
-				$d = array(
-					'price' => $hotel['price'],
-					'address' => $hotel['address'],
-					'name' => $hotel['hotel_name'],
-					'stars' => isset($hotel['stars']) ? $hotel['stars'] : -1, 
-					'review_nr' => $hotel['review_nr'],
-					'currency_code' => $hotel['hotel_currency_code'],
-					'location' => array(
-						'lat' => $hotel['location']['latitude'],
-						'lng' => $hotel['location']['longitude']
-					),
+		// if(isset($result['hotels'])) {
+			foreach($hotels as $index => $hotel) {
+				// print_r($hotel);
+				// // $rate_word = $hotel['review_score_word'];
+				// $d = array(
+				// 	'price' => $hotel['price'],
+				// 	// 'address' => $hotel['address'],
+					// 'name' => $hotel['hotel_name'],
+					// 'stars' => isset($hotel['stars']) ? $hotel['stars'] : -1, 
+					// 'review_nr' => $hotel['review_nr'],
+					// 'currency_code' => $hotel['hotel_currency_code'],
+					// 'location' => array(
+					// 	'lat' => $hotel['location']['latitude'],
+					// 	'lng' => $hotel['location']['longitude']
+					// ),
 
-					'detail_type' => 'object',
-					'detail' => array(
-						'type' => 'hotel',
-						'rating' => isset($rating_mapping[$rate_word]) ? $rating_mapping[$rate_word] : 3.9,
-						'description' => '',
-						'name' => $hotel['hotel_name'],
-						'imgUrl' => '/api/hotels/photo/' . $hotel['hotel_id'],
-						'price' => $hotel['price'],
-						'bookingUrl' => 'TODO',
-						'FBComments' => array()
-					)
-				);
-				if(isset($comments[$d['name']])) {
+					// 'detail_type' => 'object',
+					// 'detail' => array(
+					// 	'type' => 'hotel',
+					// 	'rating' => isset($rating_mapping[$rate_word]) ? $rating_mapping[$rate_word] : 3.9,
+					// 	'description' => '',
+					// 	'name' => $hotel['hotel_name'],
+					// 	'imgUrl' => '/api/hotels/photo/' . $hotel['hotel_id'],
+					// 	'price' => $hotel['price'],
+					// 	'bookingUrl' => 'http://www.booking.com/hotel/tw/sheraton-taipei.zh-tw.html?aid=865866;label=affnetcityadsrs-index-1_pub-4KzT_site-PublisherWebsite_pname-PublisherName_clkid-6MvZ1KymkzZiwaz;sid=8dbc271ac7155999f6124bd56fd88030;all_sr_blocks=33458301_94416473_2_2_0;checkin=2017-06-07;checkout=2017-06-08;dest_id=-2637882;dest_type=city;dist=0;group_adults=2;highlighted_blocks=33458301_94416473_2_2_0;hpos=1;room1=A%2CA;sb_price_type=total;srfid=792fa028770919665c3c286f8a7c28dfa4f5ca1bX1;type=total;ucfs=1&#hotelTmpl',
+					// 	'FBComments' => array()
+					// )
+				// );
+				
+				$hotels[$index]['detail']['bookingUrl'] = 'http://www.booking.com/hotel/tw/sheraton-taipei.zh-tw.html?aid=865866;label=affnetcityadsrs-index-1_pub-4KzT_site-PublisherWebsite_pname-PublisherName_clkid-6MvZ1KymkzZiwaz;sid=8dbc271ac7155999f6124bd56fd88030;all_sr_blocks=33458301_94416473_2_2_0;checkin=2017-06-07;checkout=2017-06-08;dest_id=-2637882;dest_type=city;dist=0;group_adults=2;highlighted_blocks=33458301_94416473_2_2_0;hpos=1;room1=A%2CA;sb_price_type=total;srfid=792fa028770919665c3c286f8a7c28dfa4f5ca1bX1;type=total;ucfs=1&#hotelTmpl';
 
-					$d['FBComments'] = $comments[$d['name']];
+				if(isset($comments[$hotels[$index]['name']])) {
+
+					$hotels[$index]['detail']['fbComments'] = $comments[$hotels[$index]['name']];
+					$hotels[$index]['detail']['FBComments'] = $comments[$hotels[$index]['name']];
 				}
-				$parsed_result[] = $d;
+				// $parsed_result[] = $d;
 			}
-		}
+		// }
 
-		return response()->json($parsed_result);
+		return response()->json($hotels);
 	}
 }

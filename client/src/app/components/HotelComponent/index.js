@@ -42,6 +42,8 @@ class HotelComponent extends React.Component {
     const isHotel = type === 'hotel',
       isPlace = type === 'place';
 
+      console.log(fbComments)
+
     return (
       <div className={style.container}>
         <img
@@ -70,6 +72,7 @@ class HotelComponent extends React.Component {
               backgroundColor="#FF5781"
               labelColor="#FFF"
               hoverColor="rgb(177, 62, 91)"
+              target="_blank"
               href={bookingUrl}
             />
         }

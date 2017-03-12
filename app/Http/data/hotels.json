@@ -1,0 +1,4013 @@
+[
+  {
+    "price": "13005.00",
+    "address": "中華路二段1號, 中正區, 台北市",
+    "name": "台北花園大酒店",
+    "stars": 5,
+    "review_nr": 935,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0365724730557,
+      "lng": 121.506798863411
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北花園大酒店",
+      "imgUrl": "/api/hotels/photo/252201",
+      "price": "13005.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8245.00",
+    "address": "No. 4, Xiushan Street, 中正區, 台北市",
+    "name": "德立莊酒店",
+    "stars": 4,
+    "review_nr": 7786,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0423369017886,
+      "lng": 121.509168446697
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "德立莊酒店",
+      "imgUrl": "/api/hotels/photo/1324124",
+      "price": "8245.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8976.00",
+    "address": "信義路三段11號, 大安區, 台北市",
+    "name": "麗都唯客樂飯店",
+    "stars": 3,
+    "review_nr": 615,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0337740855688,
+      "lng": 121.533776521683
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "麗都唯客樂飯店",
+      "imgUrl": "/api/hotels/photo/298430",
+      "price": "8976.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "13464.00",
+    "address": "林森北路80號, 中山區, 台北市",
+    "name": "天閣酒店台北長安",
+    "stars": 4,
+    "review_nr": 513,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.049788310475,
+      "lng": 121.524538993835
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "天閣酒店台北長安",
+      "imgUrl": "/api/hotels/photo/469954",
+      "price": "13464.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "12285.00",
+    "address": "忠孝西路一段38號, 中正區, 台北市",
+    "name": "台北凱撒大飯店",
+    "stars": 4,
+    "review_nr": 2178,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0463001092889,
+      "lng": 121.516371667385
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北凱撒大飯店",
+      "imgUrl": "/api/hotels/photo/73016",
+      "price": "12285.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6696.00",
+    "address": "漢口街一段64號, 中正區, 台北市",
+    "name": "Hotel M台北門精品旅店",
+    "stars": 3,
+    "review_nr": 3579,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0451247621891,
+      "lng": 121.512621931213
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "Hotel M台北門精品旅店",
+      "imgUrl": "/api/hotels/photo/1700616",
+      "price": "6696.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "15426.00",
+    "address": "市民大道3段83號, 中山區, 台北市",
+    "name": "美麗信花園酒店",
+    "stars": 5,
+    "review_nr": 473,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0448979969771,
+      "lng": 121.537081003189
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "美麗信花園酒店",
+      "imgUrl": "/api/hotels/photo/591772",
+      "price": "15426.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "22559.00",
+    "address": "忠孝東路1段12 號, 中正區, 台北市",
+    "name": "台北喜來登大飯店",
+    "stars": 5,
+    "review_nr": 353,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0445286337,
+      "lng": 121.522092819214
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "五星級豪華台北喜來登大飯店位於市中心，提供美容spa中心、健身設施、室外游泳池、9個餐飲場所、禮賓服務以及覆蓋各處的免費Wi-Fi。  寬敞的客房融合了中式和現代化設計風格，提供37英寸平板有線電視和寬敞的工作區，大型浴室配有浴缸、高級洗浴用品和浴袍。  台北喜來登大飯店位於捷運善導寺火車站旁，距離通往高雄的高鐵站有3分鐘火車車程。距離蔣介石紀念堂500米，距離華西街夜市2公里。  客人可以在spa悠閒地泡澡或使用桑拿浴室。大飯店設有商務中心和會議設施。  大飯店設有十二廚（享有開放式風格並供應豐盛的自助早餐）、素可泰泰式餐廳和請客樓（供應精美中餐）。  ",
+      "name": "台北喜來登大飯店",
+      "imgUrl": "/api/hotels/photo/334583",
+      "price": "22559.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6069.00",
+    "address": "金山南路一段80號, 中正區, 台北市",
+    "name": "星辰飯店",
+    "stars": 3,
+    "review_nr": 1538,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0363974997646,
+      "lng": 121.527636945248
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "星辰飯店",
+      "imgUrl": "/api/hotels/photo/287102",
+      "price": "6069.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7980.00",
+    "address": "懷寧街34號, 中正區, 台北市",
+    "name": "旅樂序精品旅館站前三館",
+    "stars": 3,
+    "review_nr": 1131,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0450709,
+      "lng": 121.514047
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "旅樂序精品旅館站前三館",
+      "imgUrl": "/api/hotels/photo/1455398",
+      "price": "7980.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "10832.00",
+    "address": "金山南路一段71號, 中正區, 台北市",
+    "name": "金來商旅",
+    "stars": 3,
+    "review_nr": 431,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0372529223705,
+      "lng": 121.528181433678
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "金來商旅",
+      "imgUrl": "/api/hotels/photo/184800",
+      "price": "10832.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6593.00",
+    "address": "開封街一段33號, 中正區, 台北市",
+    "name": "台北日記旅店-台北車站館",
+    "stars": 3,
+    "review_nr": 4573,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0460330802488,
+      "lng": 121.513043559524
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北日記旅店-台北車站館",
+      "imgUrl": "/api/hotels/photo/1518894",
+      "price": "6593.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6156.00",
+    "address": "12 F, No. 90, Section 1, Zhonghua Road, 萬華區, 台北市",
+    "name": "西門日記旅店",
+    "stars": 3,
+    "review_nr": 1327,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0446334284928,
+      "lng": 121.508577167988
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門日記旅店",
+      "imgUrl": "/api/hotels/photo/1629879",
+      "price": "6156.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8966.00",
+    "address": "市民大道一段209號1樓, 大同區, 台北市",
+    "name": "京站國際酒店式公寓",
+    "stars": 3,
+    "review_nr": 1068,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.048839422661,
+      "lng": 121.517275571823
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "京站國際酒店式公寓",
+      "imgUrl": "/api/hotels/photo/435467",
+      "price": "8966.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6876.00",
+    "address": "中華路一段152號5F, 萬華區, 台北市",
+    "name": "台北日記",
+    "stars": 3,
+    "review_nr": 1258,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.04276928282,
+      "lng": 121.508043408394
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北日記",
+      "imgUrl": "/api/hotels/photo/432565",
+      "price": "6876.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6606.00",
+    "address": "萬華區中華路一段90號3樓, 萬華區, 台北市",
+    "name": "台北日記旅店-西門捷運館",
+    "stars": 3,
+    "review_nr": 2287,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0446695750817,
+      "lng": 121.508676409721
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北日記旅店-西門捷運館",
+      "imgUrl": "/api/hotels/photo/673875",
+      "price": "6606.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9174.00",
+    "address": "館前路8號11樓, 中正區, 台北市",
+    "name": "旅樂序精品旅館站前一館",
+    "stars": 3,
+    "review_nr": 1084,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0457829253148,
+      "lng": 121.514906063621
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "旅樂序精品旅館站前一館",
+      "imgUrl": "/api/hotels/photo/604572",
+      "price": "9174.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8389.00",
+    "address": "漢口街一段15號, 中正區, 台北市",
+    "name": "旅樂序精品旅館站前二館",
+    "stars": 3,
+    "review_nr": 1381,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0452369098587,
+      "lng": 121.514426082209
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "旅樂序精品旅館站前二館",
+      "imgUrl": "/api/hotels/photo/1135493",
+      "price": "8389.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6336.00",
+    "address": "西寧南路70號6樓, 萬華區, 台北市",
+    "name": "愛客發時尚旅館萬年館",
+    "stars": 3,
+    "review_nr": 809,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0435262441998,
+      "lng": 121.506067961454
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "愛客發時尚旅館萬年館",
+      "imgUrl": "/api/hotels/photo/366304",
+      "price": "6336.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4922.80",
+    "address": "中華路一段21號, 中正區, 台北市",
+    "name": "Hotel Zoo",
+    "stars": 3,
+    "review_nr": 73,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.046357,
+      "lng": 121.509936
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "Hotel Zoo",
+      "imgUrl": "/api/hotels/photo/2119610",
+      "price": "4922.80",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5886.00",
+    "address": "漢中街52號12F(西門町uniqlo旁邊, 絕色電影院的樓上12樓), 萬華區, 台北市",
+    "name": "台北日記旅店- 萬國館",
+    "stars": 3,
+    "review_nr": 944,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0436927021751,
+      "lng": 121.507158279419
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北日記旅店- 萬國館",
+      "imgUrl": "/api/hotels/photo/724154",
+      "price": "5886.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7791.00",
+    "address": "信義路二段73號, 中正區, 台北市",
+    "name": "新尚旅店Hotel73",
+    "stars": 3,
+    "review_nr": 1056,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0346623344523,
+      "lng": 121.526549309492
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "新尚旅店Hotel73",
+      "imgUrl": "/api/hotels/photo/267360",
+      "price": "7791.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7800.00",
+    "address": "中正區襄陽路4號, 中正區, 台北市",
+    "name": "Hotel MEZI 日暉酒店 台北站前",
+    "stars": 3,
+    "review_nr": 79,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0434097,
+      "lng": 121.5150145
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "Hotel MEZI 日暉酒店 台北站前",
+      "imgUrl": "/api/hotels/photo/1931261",
+      "price": "7800.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8959.00",
+    "address": "中華路一段82號, 萬華區, 台北市",
+    "name": "萬事達行旅",
+    "stars": 3,
+    "review_nr": 131,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0453682045392,
+      "lng": 121.50876224041
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "萬事達行旅",
+      "imgUrl": "/api/hotels/photo/244330",
+      "price": "8959.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5610.00",
+    "address": "林森北路85巷23號, 中山區, 台北市",
+    "name": "富裕自由旅店-林森館",
+    "stars": 3,
+    "review_nr": 224,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0496451879865,
+      "lng": 121.525732040373
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "富裕自由旅店-林森館",
+      "imgUrl": "/api/hotels/photo/1898089",
+      "price": "5610.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5240.00",
+    "address": "成都路23号, 萬華區, 台北市",
+    "name": "明日大饭店",
+    "stars": 3,
+    "review_nr": 2072,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0425554373461,
+      "lng": 121.506916880608
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "明日大饭店",
+      "imgUrl": "/api/hotels/photo/775976",
+      "price": "5240.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6055.40",
+    "address": "林森北路107巷16号, 中山區, 台北市",
+    "name": "台北俐仕商旅",
+    "stars": 3,
+    "review_nr": 1538,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0501281495718,
+      "lng": 121.525608139881
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北俐仕商旅",
+      "imgUrl": "/api/hotels/photo/1107074",
+      "price": "6055.40",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6742.50",
+    "address": "信義路三段147巷5弄4號, 大安區, 台北市",
+    "name": "你好咖啡旅館",
+    "stars": 3,
+    "review_nr": 589,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0338969,
+      "lng": 121.542248
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "你好咖啡旅館",
+      "imgUrl": "/api/hotels/photo/1526630",
+      "price": "6742.50",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7446.00",
+    "address": "重慶南路一段20號, 中正區, 台北市",
+    "name": "旅樂序精品旅館站前五館",
+    "stars": 3,
+    "review_nr": 130,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0461247850032,
+      "lng": 121.513097341105
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "旅樂序精品旅館站前五館",
+      "imgUrl": "/api/hotels/photo/1971958",
+      "price": "7446.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6748.00",
+    "address": "中華路一段21號, 中正區, 台北市",
+    "name": "西門儷萊商旅",
+    "stars": 3,
+    "review_nr": 549,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0464434786217,
+      "lng": 121.510055065155
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門儷萊商旅",
+      "imgUrl": "/api/hotels/photo/236043",
+      "price": "6748.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7740.00",
+    "address": "延平南路68号, 中正區, 台北市",
+    "name": "路徒行旅",
+    "stars": 3,
+    "review_nr": 376,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0450519,
+      "lng": 121.510338
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "路徒行旅",
+      "imgUrl": "/api/hotels/photo/1713436",
+      "price": "7740.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5529.00",
+    "address": "重慶南路一段94號, 中正區, 台北市",
+    "name": "敘美行旅",
+    "stars": 3,
+    "review_nr": 500,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.042922,
+      "lng": 121.51303
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "敘美行旅",
+      "imgUrl": "/api/hotels/photo/1471408",
+      "price": "5529.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7436.00",
+    "address": "長安西路77號, 大同區, 台北市",
+    "name": "新驛旅店台北車站三館",
+    "stars": 3,
+    "review_nr": 519,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0510384984432,
+      "lng": 121.516710966825
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "新驛旅店台北車站三館",
+      "imgUrl": "/api/hotels/photo/341427",
+      "price": "7436.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "10700.00",
+    "address": "市民大道一段209號, 大同區, 台北市",
+    "name": "大師商旅",
+    "stars": 3,
+    "review_nr": 370,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.048817553201,
+      "lng": 121.518573984449
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "大師商旅",
+      "imgUrl": "/api/hotels/photo/593989",
+      "price": "10700.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5010.00",
+    "address": "忠孝西路一段41號11樓之五, 中正區, 台北市",
+    "name": "你好台北青年旅舍",
+    "stars": -1,
+    "review_nr": 2698,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0461543097954,
+      "lng": 121.518351137638
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "你好台北青年旅舍",
+      "imgUrl": "/api/hotels/photo/321199",
+      "price": "5010.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4884.00",
+    "address": "中華路１段21號, 中正區, 台北市",
+    "name": "Taipei Play Suites",
+    "stars": 3,
+    "review_nr": 7,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0464618553991,
+      "lng": 121.509746108204
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "Taipei Play Suites",
+      "imgUrl": "/api/hotels/photo/2118598",
+      "price": "4884.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5706.00",
+    "address": "重慶南路一段111號, 中正區, 台北市",
+    "name": "敘美精品旅店",
+    "stars": 3,
+    "review_nr": 685,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0427036711802,
+      "lng": 121.513295173645
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "敘美精品旅店",
+      "imgUrl": "/api/hotels/photo/697514",
+      "price": "5706.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4400.00",
+    "address": "青岛西路11号, 中正區, 台北市",
+    "name": "台湾青旅膠囊旅店",
+    "stars": -1,
+    "review_nr": 192,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0449795796231,
+      "lng": 121.517773457672
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台湾青旅膠囊旅店",
+      "imgUrl": "/api/hotels/photo/2037880",
+      "price": "4400.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4300.00",
+    "address": "華陰街103號, 大同區, 台北市",
+    "name": "夾腳拖的家",
+    "stars": 2,
+    "review_nr": 893,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0498247592843,
+      "lng": 121.517244726419
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "夾腳拖的家",
+      "imgUrl": "/api/hotels/photo/847649",
+      "price": "4300.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2635.00",
+    "address": "中正區開封街1段37號12樓, 中正區, 台北市",
+    "name": "木藝居膠囊旅店",
+    "stars": -1,
+    "review_nr": 843,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.046127,
+      "lng": 121.5126571
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "木藝居膠囊旅店",
+      "imgUrl": "/api/hotels/photo/1752463",
+      "price": "2635.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2908.00",
+    "address": "開封街１段33號, 中正區, 台北市",
+    "name": "下一站台北青年旅店 - 車站館",
+    "stars": -1,
+    "review_nr": 899,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.04614,
+      "lng": 121.512947
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "下一站台北青年旅店 - 車站館",
+      "imgUrl": "/api/hotels/photo/1540149",
+      "price": "2908.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3230.00",
+    "address": "漢中街35號, 萬華區, 台北市",
+    "name": "下一站台北青年旅店-西門町",
+    "stars": -1,
+    "review_nr": 1098,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.044913986934,
+      "lng": 121.507704414104
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "下一站台北青年旅店-西門町",
+      "imgUrl": "/api/hotels/photo/1309744",
+      "price": "3230.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3080.00",
+    "address": "漢中街42號8樓, 萬華區, 台北市",
+    "name": "西門窩青年旅館",
+    "stars": -1,
+    "review_nr": 1243,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0442277201251,
+      "lng": 121.507361457672
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門窩青年旅館",
+      "imgUrl": "/api/hotels/photo/1246970",
+      "price": "3080.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6158.00",
+    "address": "重慶南路1段1號3樓, 中正區, 台北市",
+    "name": "正旅館",
+    "stars": 2,
+    "review_nr": 390,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0467833524494,
+      "lng": 121.513344794512
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "正旅館",
+      "imgUrl": "/api/hotels/photo/1140855",
+      "price": "6158.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2772.00",
+    "address": "重慶南路三段38號, 中正區, 台北市",
+    "name": "悠逸行旅",
+    "stars": -1,
+    "review_nr": 562,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0284095210204,
+      "lng": 121.515507996082
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "悠逸行旅",
+      "imgUrl": "/api/hotels/photo/1671088",
+      "price": "2772.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2998.00",
+    "address": "重慶南路一段100號, 中正區, 台北市",
+    "name": " 台北奧斯金旅店 - 西門館",
+    "stars": -1,
+    "review_nr": 325,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.042622,
+      "lng": 121.513157830688
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": " 台北奧斯金旅店 - 西門館",
+      "imgUrl": "/api/hotels/photo/1730622",
+      "price": "2998.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3100.00",
+    "address": "館前路34號7樓, 中正區, 台北市",
+    "name": "卡夫人背包客棧 台北車站青年館",
+    "stars": 2,
+    "review_nr": 638,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0446196576325,
+      "lng": 121.514883047221
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "卡夫人背包客棧 台北車站青年館",
+      "imgUrl": "/api/hotels/photo/1994987",
+      "price": "3100.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "12686.00",
+    "address": "中華路一段150號, 萬華區, 台北市",
+    "name": "永安棧",
+    "stars": 4,
+    "review_nr": 1072,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0428834955907,
+      "lng": 121.508158743382
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "永安棧",
+      "imgUrl": "/api/hotels/photo/462938",
+      "price": "12686.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    },
+    "FBComments": [
+      {
+        "name": "Shubo",
+        "picUrl": "https://scontent-tpe1-1.xx.fbcdn.net/v/t31.0-8/12240204_10201025484755823_6391494369021442065_o.jpg?oh=8f76c327d6675bea77c6be7dab0bba38&oe=59279BB6",
+        "content": "便宜又舒適，離捷運系統又近、又有早餐",
+        "rating": 3,
+        "time": "2015-06-23 11:23"
+      }
+    ]
+  },
+  {
+    "price": "15246.00",
+    "address": "忠孝東路一段31號, 中正區, 台北市",
+    "name": "和逸台北忠孝館",
+    "stars": 4,
+    "review_nr": 284,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0444751731335,
+      "lng": 121.525445580482
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "和逸台北忠孝館",
+      "imgUrl": "/api/hotels/photo/730324",
+      "price": "15246.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "13500.00",
+    "address": "松江路63號, 中山區, 台北市",
+    "name": "長榮桂冠酒店（台北）",
+    "stars": 5,
+    "review_nr": 658,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0488126933205,
+      "lng": 121.533038914204
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "長榮桂冠酒店（台北）",
+      "imgUrl": "/api/hotels/photo/74809",
+      "price": "13500.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "11067.00",
+    "address": "重慶南路一段21號, 中正區, 台北市",
+    "name": "洛碁驛大飯店",
+    "stars": 4,
+    "review_nr": 895,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.045807,
+      "lng": 121.513372
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "洛碁驛大飯店",
+      "imgUrl": "/api/hotels/photo/1244387",
+      "price": "11067.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "17040.00",
+    "address": "承德路一段3號, 大同區, 台北市",
+    "name": "台北君品酒店",
+    "stars": 5,
+    "review_nr": 547,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0490362476256,
+      "lng": 121.517099887133
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北君品酒店",
+      "imgUrl": "/api/hotels/photo/304974",
+      "price": "17040.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "12300.00",
+    "address": "中華路一段41號, 中正區, 台北市",
+    "name": "捷絲旅西門町館",
+    "stars": 4,
+    "review_nr": 600,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0449368772573,
+      "lng": 121.50982439518
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "捷絲旅西門町館",
+      "imgUrl": "/api/hotels/photo/329800",
+      "price": "12300.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6630.00",
+    "address": "開封街一段35號, 中正區, 台北市",
+    "name": "台北西門享樂文旅開封館",
+    "stars": 3,
+    "review_nr": 599,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0460707951388,
+      "lng": 121.512792151538
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北西門享樂文旅開封館",
+      "imgUrl": "/api/hotels/photo/1388434",
+      "price": "6630.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7312.00",
+    "address": "中華路一段41號13樓, 中正區, 台北市",
+    "name": "洛碁中華大飯店",
+    "stars": 3,
+    "review_nr": 2002,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0449757575252,
+      "lng": 121.509371101856
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "洛碁中華大飯店",
+      "imgUrl": "/api/hotels/photo/852930",
+      "price": "7312.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6500.00",
+    "address": "襄陽路8號, 中正區, 台北市",
+    "name": "台北樂客商旅",
+    "stars": 4,
+    "review_nr": 1591,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0433670761435,
+      "lng": 121.513579487801
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北樂客商旅",
+      "imgUrl": "/api/hotels/photo/379308",
+      "price": "6500.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9072.00",
+    "address": "中華路一段168號, 萬華區, 台北市",
+    "name": "寶格利時尚旅館",
+    "stars": 3,
+    "review_nr": 470,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0412687115376,
+      "lng": 121.507555246353
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "寶格利時尚旅館",
+      "imgUrl": "/api/hotels/photo/345033",
+      "price": "9072.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8330.00",
+    "address": "重慶南路1段60號, 中正區, 台北市",
+    "name": "丰居旅店 - 北車館",
+    "stars": 3,
+    "review_nr": 462,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.043826,
+      "lng": 121.513074
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "丰居旅店 - 北車館",
+      "imgUrl": "/api/hotels/photo/1580975",
+      "price": "8330.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8370.00",
+    "address": "中華路一段178號, 萬華區, 台北市",
+    "name": "富園國際商務飯店",
+    "stars": 3,
+    "review_nr": 298,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0391642356997,
+      "lng": 121.507073789835
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "富園國際商務飯店",
+      "imgUrl": "/api/hotels/photo/383016",
+      "price": "8370.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "11880.00",
+    "address": "信義路三段147巷18號, 大安區, 台北市",
+    "name": "司旅",
+    "stars": 3,
+    "review_nr": 50,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.036086445788,
+      "lng": 121.541738235474
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "司旅",
+      "imgUrl": "/api/hotels/photo/1952681",
+      "price": "11880.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9600.00",
+    "address": "中山北路一段53巷22號, 中山區, 台北市",
+    "name": "柯達大飯店- 天津館",
+    "stars": -1,
+    "review_nr": 20,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0488227,
+      "lng": 121.5232075
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "柯達大飯店- 天津館",
+      "imgUrl": "/api/hotels/photo/2108974",
+      "price": "9600.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9531.00",
+    "address": "西寧南路72-1號5樓, 萬華區, 台北市",
+    "name": "米勒風尚行旅",
+    "stars": 4,
+    "review_nr": 24,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0432347474111,
+      "lng": 121.505993063195
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "米勒風尚行旅",
+      "imgUrl": "/api/hotels/photo/2063811",
+      "price": "9531.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4980.00",
+    "address": "南陽街8號5樓, 中正區, 台北市",
+    "name": "清翼居采風館",
+    "stars": 3,
+    "review_nr": 721,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.04518,
+      "lng": 121.5160103
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "清翼居采風館",
+      "imgUrl": "/api/hotels/photo/1561950",
+      "price": "4980.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8330.00",
+    "address": "信義路二段163號3-12樓, 中正區, 台北市",
+    "name": "謙商旅-東門館",
+    "stars": 3,
+    "review_nr": 431,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0340790800965,
+      "lng": 121.528911776895
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "謙商旅-東門館",
+      "imgUrl": "/api/hotels/photo/604571",
+      "price": "8330.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8076.00",
+    "address": "忠孝東路三段8號, 大安區, 台北市",
+    "name": "凱統飯店",
+    "stars": 3,
+    "review_nr": 383,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0418883828757,
+      "lng": 121.53355255723
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "凱統飯店",
+      "imgUrl": "/api/hotels/photo/242305",
+      "price": "8076.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "11790.00",
+    "address": "忠孝西路一段43號, 中正區, 台北市",
+    "name": "台北天成大飯店",
+    "stars": 4,
+    "review_nr": 1289,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0461883295444,
+      "lng": 121.518208980724
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北天成大飯店",
+      "imgUrl": "/api/hotels/photo/294122",
+      "price": "11790.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7348.00",
+    "address": "中華路一段144號10樓, 萬華區, 台北市",
+    "name": "Hotel Fun-趣旅館",
+    "stars": 4,
+    "review_nr": 186,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0432082797948,
+      "lng": 121.508213542328
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "Hotel Fun-趣旅館",
+      "imgUrl": "/api/hotels/photo/1519242",
+      "price": "7348.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8526.00",
+    "address": "中華路一段114巷17號2樓, 萬華區, 台北市",
+    "name": "丰居旅店- 西門館",
+    "stars": 3,
+    "review_nr": 1372,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0439575764436,
+      "lng": 121.507772505283
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "丰居旅店- 西門館",
+      "imgUrl": "/api/hotels/photo/393631",
+      "price": "8526.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9310.00",
+    "address": "信義路三段33號, 大安區, 台北市",
+    "name": "丹迪酒店大安森林公園店",
+    "stars": 4,
+    "review_nr": 1167,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0337631494959,
+      "lng": 121.534559726715
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "丹迪酒店大安森林公園店",
+      "imgUrl": "/api/hotels/photo/255650",
+      "price": "9310.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5900.00",
+    "address": "長安西路122號, 大同區, 台北市",
+    "name": "夾腳拖的家- 長安122",
+    "stars": 2,
+    "review_nr": 389,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0505395,
+      "lng": 121.518145
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "夾腳拖的家- 長安122",
+      "imgUrl": "/api/hotels/photo/1843606",
+      "price": "5900.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7204.00",
+    "address": "館前路8號6樓, 中正區, 台北市",
+    "name": "詩曼精品旅馆",
+    "stars": 3,
+    "review_nr": 594,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0457831,
+      "lng": 121.5148402
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "詩曼精品旅馆",
+      "imgUrl": "/api/hotels/photo/1308459",
+      "price": "7204.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6340.00",
+    "address": "漢中街36號, 萬華區, 台北市",
+    "name": "長虹飯店",
+    "stars": 3,
+    "review_nr": 256,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0444921833163,
+      "lng": 121.507425159216
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "長虹飯店",
+      "imgUrl": "/api/hotels/photo/580457",
+      "price": "6340.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5600.00",
+    "address": "延平南路101巷4號, 中正區, 台北市",
+    "name": "西門棧",
+    "stars": -1,
+    "review_nr": 230,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.042594,
+      "lng": 121.510942
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門棧",
+      "imgUrl": "/api/hotels/photo/1561965",
+      "price": "5600.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "13260.00",
+    "address": "中山北路一段83巷15號, 中山區, 台北市",
+    "name": "天閣酒店台北林森",
+    "stars": 4,
+    "review_nr": 148,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0500738258574,
+      "lng": 121.524378061295
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "天閣酒店台北林森",
+      "imgUrl": "/api/hotels/photo/377268",
+      "price": "13260.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5600.00",
+    "address": "懷寧街30號, 中正區, 台北市",
+    "name": "花華大飯店- 本館",
+    "stars": 3,
+    "review_nr": 161,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0452425797482,
+      "lng": 121.514040828836
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "花華大飯店- 本館",
+      "imgUrl": "/api/hotels/photo/1779151",
+      "price": "5600.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9500.00",
+    "address": "西寧南路155號3樓, 萬華區, 台北市",
+    "name": "東驛商旅 西寧館",
+    "stars": 3,
+    "review_nr": 220,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0435309,
+      "lng": 121.506284
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "東驛商旅 西寧館",
+      "imgUrl": "/api/hotels/photo/1542928",
+      "price": "9500.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "10588.00",
+    "address": "天津街70號, 中山區, 台北市",
+    "name": "丹迪旅店天津店",
+    "stars": 3,
+    "review_nr": 431,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0515840089257,
+      "lng": 121.523342728615
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "丹迪旅店天津店",
+      "imgUrl": "/api/hotels/photo/374491",
+      "price": "10588.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "10395.00",
+    "address": "林森北路83號4-12樓, 中山區, 台北市",
+    "name": "老爺會館台北林森",
+    "stars": 3,
+    "review_nr": 277,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0496704592509,
+      "lng": 121.524839401245
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "老爺會館台北林森",
+      "imgUrl": "/api/hotels/photo/585197",
+      "price": "10395.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6112.00",
+    "address": "開封街一段41號, 中正區, 台北市",
+    "name": "福泰桔子商旅-開封店",
+    "stars": 3,
+    "review_nr": 139,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0461567397884,
+      "lng": 121.512576341629
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "福泰桔子商旅-開封店",
+      "imgUrl": "/api/hotels/photo/639813",
+      "price": "6112.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9095.00",
+    "address": "龍泉街, 大安區, 台北市",
+    "name": "大安會館",
+    "stars": -1,
+    "review_nr": 78,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0261659886915,
+      "lng": 121.529337465763
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "大安會館",
+      "imgUrl": "/api/hotels/photo/1640953",
+      "price": "9095.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5700.00",
+    "address": "忠孝西路一段72號4F, 中正區, 台北市",
+    "name": "全家歡旅店",
+    "stars": 2,
+    "review_nr": 471,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0468612798748,
+      "lng": 121.513993006746
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "全家歡旅店",
+      "imgUrl": "/api/hotels/photo/1380314",
+      "price": "5700.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7719.00",
+    "address": "信義路二段255號, 中正區, 台北市",
+    "name": "方舟旅店",
+    "stars": 3,
+    "review_nr": 327,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0337935274736,
+      "lng": 121.531464457512
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "方舟旅店",
+      "imgUrl": "/api/hotels/photo/676788",
+      "price": "7719.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4300.00",
+    "address": "重慶南路一段1號, 中正區, 台北市",
+    "name": "華美大飯店",
+    "stars": 2,
+    "review_nr": 942,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0467652860263,
+      "lng": 121.513395387731
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "華美大飯店",
+      "imgUrl": "/api/hotels/photo/1055331",
+      "price": "4300.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3897.00",
+    "address": "漢口街2段34巷17號, 萬華區, 台北市",
+    "name": "台北西門町熊熊民宿",
+    "stars": 2,
+    "review_nr": 1202,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0449138,
+      "lng": 121.5072234
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北西門町熊熊民宿",
+      "imgUrl": "/api/hotels/photo/1245995",
+      "price": "3897.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9240.00",
+    "address": "中華路一段166號之2, 萬華區, 台北市",
+    "name": "福泰桔子商旅- 西門店",
+    "stars": 3,
+    "review_nr": 300,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.041391,
+      "lng": 121.507625
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "福泰桔子商旅- 西門店",
+      "imgUrl": "/api/hotels/photo/546787",
+      "price": "9240.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6760.00",
+    "address": "中山區新生北路１段66號, 中山區, 台北市",
+    "name": "俏行旅",
+    "stars": 3,
+    "review_nr": 158,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0469155,
+      "lng": 121.5305123
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "俏行旅",
+      "imgUrl": "/api/hotels/photo/1475796",
+      "price": "6760.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6730.50",
+    "address": "華陰街50號4樓, 大同區, 台北市",
+    "name": "信星青年旅館- 台北車站",
+    "stars": -1,
+    "review_nr": 3768,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.050247685928,
+      "lng": 121.515278369958
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "信星青年旅館- 台北車站",
+      "imgUrl": "/api/hotels/photo/1119679",
+      "price": "6730.50",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6340.00",
+    "address": "懷寧街1號2樓, 中正區, 台北市",
+    "name": "懷寧旅店",
+    "stars": -1,
+    "review_nr": 159,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0464016750112,
+      "lng": 121.514326060783
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "懷寧旅店",
+      "imgUrl": "/api/hotels/photo/2001990",
+      "price": "6340.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5390.00",
+    "address": "西寧南路215號, 萬華區, 台北市",
+    "name": "落腳台北",
+    "stars": 3,
+    "review_nr": 389,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0408616708176,
+      "lng": 121.506139039993
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "落腳台北",
+      "imgUrl": "/api/hotels/photo/414518",
+      "price": "5390.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5004.00",
+    "address": "懷寧街92-2號, 中正區, 台北市",
+    "name": "台北天晴青年旅店",
+    "stars": -1,
+    "review_nr": 603,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0426669,
+      "lng": 121.513943
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北天晴青年旅店",
+      "imgUrl": "/api/hotels/photo/1640965",
+      "price": "5004.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6800.00",
+    "address": "南昌路一段31巷5號, 中正區, 台北市",
+    "name": "雲鼎商務旅店",
+    "stars": 3,
+    "review_nr": 308,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0320449588322,
+      "lng": 121.517180353403
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "雲鼎商務旅店",
+      "imgUrl": "/api/hotels/photo/651963",
+      "price": "6800.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "10080.00",
+    "address": "金山北路1號, 中正區, 台北市",
+    "name": "華山文旅",
+    "stars": -1,
+    "review_nr": 28,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0442437204369,
+      "lng": 121.530369562566
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "華山文旅",
+      "imgUrl": "/api/hotels/photo/2039978",
+      "price": "10080.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5616.00",
+    "address": "重慶南路一段86號7-11樓, 中正區, 台北市",
+    "name": "謙商旅-總統府館",
+    "stars": 3,
+    "review_nr": 372,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0430390191926,
+      "lng": 121.513104736805
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "謙商旅-總統府館",
+      "imgUrl": "/api/hotels/photo/752439",
+      "price": "5616.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5591.00",
+    "address": "南陽街13號4樓, 中正區, 台北市",
+    "name": "約克設計旅店",
+    "stars": 3,
+    "review_nr": 835,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.044981,
+      "lng": 121.516174
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "約克設計旅店",
+      "imgUrl": "/api/hotels/photo/1121904",
+      "price": "5591.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7240.00",
+    "address": "懷寧街5號之1, 中正區, 台北市",
+    "name": "皇家飯店",
+    "stars": 2,
+    "review_nr": 641,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0465856327947,
+      "lng": 121.514292955399
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "皇家飯店",
+      "imgUrl": "/api/hotels/photo/582759",
+      "price": "7240.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6740.00",
+    "address": "重慶南路一段18號, 中正區, 台北市",
+    "name": "和昌商旅-站前館",
+    "stars": 3,
+    "review_nr": 580,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0463754389592,
+      "lng": 121.513102054596
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "和昌商旅-站前館",
+      "imgUrl": "/api/hotels/photo/357580",
+      "price": "6740.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6600.00",
+    "address": "林森北路139號, 中山區, 台北市",
+    "name": "福泰桔子商旅- 林森店",
+    "stars": 3,
+    "review_nr": 80,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.051272983202,
+      "lng": 121.525257825851
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "福泰桔子商旅- 林森店",
+      "imgUrl": "/api/hotels/photo/315766",
+      "price": "6600.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6282.00",
+    "address": "成都路27巷6號, 萬華區, 台北市",
+    "name": "璞麗商旅",
+    "stars": 3,
+    "review_nr": 146,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0428980759367,
+      "lng": 121.506817638874
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "璞麗商旅",
+      "imgUrl": "/api/hotels/photo/330802",
+      "price": "6282.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8910.00",
+    "address": "中山北路一段105巷15號, 中山區, 台北市",
+    "name": "舞衣新宿",
+    "stars": 3,
+    "review_nr": 343,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0507687796686,
+      "lng": 121.523653864861
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "舞衣新宿",
+      "imgUrl": "/api/hotels/photo/354674",
+      "price": "8910.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5364.00",
+    "address": "新生北路一段106號七樓, 中山區, 台北市",
+    "name": "H106 好駐旅館",
+    "stars": 3,
+    "review_nr": 642,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0495599723347,
+      "lng": 121.528341309509
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "H106 好駐旅館",
+      "imgUrl": "/api/hotels/photo/1513886",
+      "price": "5364.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7506.00",
+    "address": "林森北路133巷8號, 中山區, 台北市",
+    "name": "玫瑰精品旅館林森會館",
+    "stars": 3,
+    "review_nr": 273,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0509844332409,
+      "lng": 121.525495201349
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "玫瑰精品旅館林森會館",
+      "imgUrl": "/api/hotels/photo/783560",
+      "price": "7506.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4689.00",
+    "address": "南陽街1號3樓, 中正區, 台北市",
+    "name": "南陽街壹號旅店 NYS LOFT HOTEL",
+    "stars": 2,
+    "review_nr": 698,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0457437,
+      "lng": 121.5161821
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "南陽街壹號旅店 NYS LOFT HOTEL",
+      "imgUrl": "/api/hotels/photo/1908549",
+      "price": "4689.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6366.00",
+    "address": "中华路1段90号6楼, 萬華區, 台北市",
+    "name": "俪夏商旅-西门町中华馆",
+    "stars": 3,
+    "review_nr": 151,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0446161145767,
+      "lng": 121.508703231812
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "俪夏商旅-西门町中华馆",
+      "imgUrl": "/api/hotels/photo/556866",
+      "price": "6366.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5730.00",
+    "address": "中華路一段21號6樓, 中正區, 台北市",
+    "name": "悅來精品旅館",
+    "stars": 3,
+    "review_nr": 231,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0464037401468,
+      "lng": 121.509861775394
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "悅來精品旅館",
+      "imgUrl": "/api/hotels/photo/1788931",
+      "price": "5730.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4812.00",
+    "address": "重慶南路一段39號, 中正區, 台北市",
+    "name": "鉑泊客旅店",
+    "stars": -1,
+    "review_nr": 1361,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0450469987461,
+      "lng": 121.513378728836
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "鉑泊客旅店",
+      "imgUrl": "/api/hotels/photo/1501908",
+      "price": "4812.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7600.00",
+    "address": "信義路三段73號, 大安區, 台北市",
+    "name": "多郎明哥商務旅館",
+    "stars": 3,
+    "review_nr": 163,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0337631494959,
+      "lng": 121.536925435066
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "多郎明哥商務旅館",
+      "imgUrl": "/api/hotels/photo/327938",
+      "price": "7600.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5619.00",
+    "address": "開封街一段36號, 中正區, 台北市",
+    "name": "清翼居童話館",
+    "stars": 2,
+    "review_nr": 272,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0458992524967,
+      "lng": 121.512446585896
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "清翼居童話館",
+      "imgUrl": "/api/hotels/photo/1393967",
+      "price": "5619.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "9300.00",
+    "address": "林森北路117號3樓, 中山區, 台北市",
+    "name": "捷絲旅林森館",
+    "stars": 4,
+    "review_nr": 180,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.050574387391,
+      "lng": 121.525123715401
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "捷絲旅林森館",
+      "imgUrl": "/api/hotels/photo/329801",
+      "price": "9300.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5434.00",
+    "address": "2F., No.1, Section. 1, Chongqing S. Road, 中正區, 台北市",
+    "name": "台北旅‧晨行旅",
+    "stars": -1,
+    "review_nr": 155,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0469134398252,
+      "lng": 121.513412528836
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北旅‧晨行旅",
+      "imgUrl": "/api/hotels/photo/1675033",
+      "price": "5434.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6707.00",
+    "address": "No. 3, Huayin Street, 中山區, 台北市",
+    "name": "玫瑰精品會館台北站",
+    "stars": 3,
+    "review_nr": 441,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.049009518328,
+      "lng": 121.52072891593
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "玫瑰精品會館台北站",
+      "imgUrl": "/api/hotels/photo/471439",
+      "price": "6707.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8100.00",
+    "address": "中華路一段144號8樓, 萬華區, 台北市",
+    "name": "頭等艙飯店台北‧中華館",
+    "stars": 3,
+    "review_nr": 472,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.043201832752,
+      "lng": 121.508193612099
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "頭等艙飯店台北‧中華館",
+      "imgUrl": "/api/hotels/photo/358331",
+      "price": "8100.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5580.00",
+    "address": "衡陽路51號3樓, 中正區, 台北市",
+    "name": "三漾旅店",
+    "stars": 2,
+    "review_nr": 226,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0423830039231,
+      "lng": 121.512205917375
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "三漾旅店",
+      "imgUrl": "/api/hotels/photo/629492",
+      "price": "5580.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5128.00",
+    "address": "華陰街28號, 中山區, 台北市",
+    "name": "尤利西斯酒店- 台北車站",
+    "stars": 3,
+    "review_nr": 831,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0492002681881,
+      "lng": 121.519698947668
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "尤利西斯酒店- 台北車站",
+      "imgUrl": "/api/hotels/photo/374882",
+      "price": "5128.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5840.00",
+    "address": "漢口街一段4號, 中正區, 台北市",
+    "name": "名邑旅店",
+    "stars": 2,
+    "review_nr": 58,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0450146377808,
+      "lng": 121.514802575111
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "名邑旅店",
+      "imgUrl": "/api/hotels/photo/396016",
+      "price": "5840.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3920.00",
+    "address": "2 Floor, No. 6, Lane 107, Linsen North Road, 中山區, 台北市",
+    "name": "氧氣旅店-林森M12館",
+    "stars": -1,
+    "review_nr": 22,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0501978606987,
+      "lng": 121.525303864418
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "氧氣旅店-林森M12館",
+      "imgUrl": "/api/hotels/photo/2051425",
+      "price": "3920.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7644.00",
+    "address": "懷寧街7號, 中正區, 台北市",
+    "name": "新驛旅店台北車站一館",
+    "stars": 3,
+    "review_nr": 475,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0463426341085,
+      "lng": 121.514229923487
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "新驛旅店台北車站一館",
+      "imgUrl": "/api/hotels/photo/324310",
+      "price": "7644.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6597.00",
+    "address": "漢口街二段23號, 萬華區, 台北市",
+    "name": "東龍大飯店",
+    "stars": 3,
+    "review_nr": 108,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.045522,
+      "lng": 121.507964
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "東龍大飯店",
+      "imgUrl": "/api/hotels/photo/1354569",
+      "price": "6597.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "11940.00",
+    "address": "仁愛路3段8號, 大安區, 台北市",
+    "name": "松哖酒店",
+    "stars": -1,
+    "review_nr": 44,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0378749849215,
+      "lng": 121.533594288955
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "松哖酒店",
+      "imgUrl": "/api/hotels/photo/1675098",
+      "price": "11940.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7678.00",
+    "address": "寶慶路63號, 中正區, 台北市",
+    "name": "新驛旅店西門捷運店",
+    "stars": 3,
+    "review_nr": 434,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0418069752511,
+      "lng": 121.509336233139
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "新驛旅店西門捷運店",
+      "imgUrl": "/api/hotels/photo/266427",
+      "price": "7678.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5000.00",
+    "address": "南京西路18巷30號, 大同區, 台北市",
+    "name": "紫園旅店",
+    "stars": -1,
+    "review_nr": 100,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0505715607579,
+      "lng": 121.520046728836
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "紫園旅店",
+      "imgUrl": "/api/hotels/photo/1760678",
+      "price": "5000.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "15885.00",
+    "address": "No. 266, Section 1, Jianguo South Road, 大安區, 台北市",
+    "name": "福容大飯店台北一館",
+    "stars": 5,
+    "review_nr": 76,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.036640518157,
+      "lng": 121.537196338177
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "福容大飯店台北一館",
+      "imgUrl": "/api/hotels/photo/175170",
+      "price": "15885.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8972.00",
+    "address": "承德路一段一號, 大同區, 台北市",
+    "name": "京站美麗住宿",
+    "stars": -1,
+    "review_nr": 511,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0493618,
+      "lng": 121.5168299
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "京站美麗住宿",
+      "imgUrl": "/api/hotels/photo/1362661",
+      "price": "8972.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7670.00",
+    "address": "華陰街46號3樓, 大同區, 台北市",
+    "name": "璞麗商務旅館台北車站店",
+    "stars": 3,
+    "review_nr": 222,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0502030289428,
+      "lng": 121.515296772122
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "璞麗商務旅館台北車站店",
+      "imgUrl": "/api/hotels/photo/1041630",
+      "price": "7670.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5436.00",
+    "address": "中華路1段78號4樓, 萬華區, 台北市",
+    "name": "西門大飯店",
+    "stars": 3,
+    "review_nr": 407,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0457132652722,
+      "lng": 121.508895009756
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門大飯店",
+      "imgUrl": "/api/hotels/photo/393610",
+      "price": "5436.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3000.00",
+    "address": "忠孝西路一段23号, 中正區, 台北市",
+    "name": "米尼旅店",
+    "stars": -1,
+    "review_nr": 1499,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0460357399644,
+      "lng": 121.5189813
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "米尼旅店",
+      "imgUrl": "/api/hotels/photo/1675043",
+      "price": "3000.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3526.00",
+    "address": "漢口街一段45號5樓, 中正區, 台北市",
+    "name": "品格子旅店 - 3S馆",
+    "stars": -1,
+    "review_nr": 1885,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.04527859794,
+      "lng": 121.51260048151
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "品格子旅店 - 3S馆",
+      "imgUrl": "/api/hotels/photo/1333617",
+      "price": "3526.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6526.00",
+    "address": "林森北路98號, 中山區, 台北市",
+    "name": "亞士都飯店",
+    "stars": 3,
+    "review_nr": 101,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.050150368166,
+      "lng": 121.524754911661
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "亞士都飯店",
+      "imgUrl": "/api/hotels/photo/280053",
+      "price": "6526.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "12500.00",
+    "address": "萬華區程都路67號11樓, 萬華區, 台北市",
+    "name": "時尚名家萬華館",
+    "stars": -1,
+    "review_nr": 14,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0429491,
+      "lng": 121.5056906
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "時尚名家萬華館",
+      "imgUrl": "/api/hotels/photo/2003370",
+      "price": "12500.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4024.00",
+    "address": "重慶南路一段37號, 中正區, 台北市",
+    "name": "悅樂國際青年商旅",
+    "stars": -1,
+    "review_nr": 1072,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.045347,
+      "lng": 121.513369
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "悅樂國際青年商旅",
+      "imgUrl": "/api/hotels/photo/1491159",
+      "price": "4024.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7005.00",
+    "address": "重慶南路一段1號5樓, 中正區, 台北市",
+    "name": "氧氣旅店台北車站館",
+    "stars": 3,
+    "review_nr": 39,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0469332796472,
+      "lng": 121.51337627791
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "氧氣旅店台北車站館",
+      "imgUrl": "/api/hotels/photo/2005486",
+      "price": "7005.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6540.00",
+    "address": "紹興北街31巷26號, 中正區, 台北市",
+    "name": "台北群来商旅",
+    "stars": 2,
+    "review_nr": 230,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0451069783384,
+      "lng": 121.526204645634
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北群来商旅",
+      "imgUrl": "/api/hotels/photo/327939",
+      "price": "6540.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5160.00",
+    "address": "西寧南路112號, 萬華區, 台北市",
+    "name": "內江商旅",
+    "stars": 3,
+    "review_nr": 89,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0415710963897,
+      "lng": 121.505914387732
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "內江商旅",
+      "imgUrl": "/api/hotels/photo/1413132",
+      "price": "5160.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "10800.00",
+    "address": "北平東路12號, 中正區, 台北市",
+    "name": "家美飯店",
+    "stars": 3,
+    "review_nr": 42,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0460801949864,
+      "lng": 121.524439752102
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "家美飯店",
+      "imgUrl": "/api/hotels/photo/352602",
+      "price": "10800.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "7640.00",
+    "address": "館前路22號, 中正區, 台北市",
+    "name": "福泰桔子商旅- 館前店",
+    "stars": -1,
+    "review_nr": 155,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0449823143965,
+      "lng": 121.514755258266
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "福泰桔子商旅- 館前店",
+      "imgUrl": "/api/hotels/photo/1166204",
+      "price": "7640.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5726.00",
+    "address": "新生北路一段122號, 中山區, 台北市",
+    "name": "台北新月商旅",
+    "stars": 3,
+    "review_nr": 151,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0508246673914,
+      "lng": 121.527787148952
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北新月商旅",
+      "imgUrl": "/api/hotels/photo/340512",
+      "price": "5726.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3394.00",
+    "address": "衡陽路51號2F-2, 中正區, 台北市",
+    "name": "天使青旅台北西門",
+    "stars": -1,
+    "review_nr": 910,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0423932797303,
+      "lng": 121.512222457672
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "天使青旅台北西門",
+      "imgUrl": "/api/hotels/photo/1519228",
+      "price": "3394.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4200.00",
+    "address": "汉中街147巷6号, 萬華區, 台北市",
+    "name": "银河迷你旅店",
+    "stars": 2,
+    "review_nr": 555,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0414521831817,
+      "lng": 121.507512331009
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "银河迷你旅店",
+      "imgUrl": "/api/hotels/photo/789096",
+      "price": "4200.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3280.00",
+    "address": "公園路13號10樓, 中正區, 台北市",
+    "name": "品格子旅店北車館",
+    "stars": -1,
+    "review_nr": 2046,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0455808301057,
+      "lng": 121.517390906811
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "品格子旅店北車館",
+      "imgUrl": "/api/hotels/photo/505264",
+      "price": "3280.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4127.50",
+    "address": "重慶南路一段7號, 中正區, 台北市",
+    "name": "璞邸城市膠囊行旅",
+    "stars": 2,
+    "review_nr": 1001,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0462150597537,
+      "lng": 121.513335299387
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "璞邸城市膠囊行旅",
+      "imgUrl": "/api/hotels/photo/1339707",
+      "price": "4127.50",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5100.00",
+    "address": "忠孝西路一段50號22樓之2, 中正區, 台北市",
+    "name": "阿羅國際旅館",
+    "stars": -1,
+    "review_nr": 1476,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0462818843616,
+      "lng": 121.515892893076
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "阿羅國際旅館",
+      "imgUrl": "/api/hotels/photo/424967",
+      "price": "5100.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4539.00",
+    "address": "仁愛路１段55號, 中正區, 台北市",
+    "name": "百花商務旅館",
+    "stars": 2,
+    "review_nr": 177,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0386005,
+      "lng": 121.524787
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "百花商務旅館",
+      "imgUrl": "/api/hotels/photo/1513900",
+      "price": "4539.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5570.00",
+    "address": "鄭州路21巷12號, 大同區, 台北市",
+    "name": "梅樓驛站",
+    "stars": 3,
+    "review_nr": 732,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0496898986359,
+      "lng": 121.514244675636
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "梅樓驛站",
+      "imgUrl": "/api/hotels/photo/890872",
+      "price": "5570.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3200.00",
+    "address": "衡陽路51號B1, 中正區, 台北市",
+    "name": "太空艙旅舍衡陽店",
+    "stars": -1,
+    "review_nr": 3484,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0423846,
+      "lng": 121.5121864
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "太空艙旅舍衡陽店",
+      "imgUrl": "/api/hotels/photo/1181809",
+      "price": "3200.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "8850.00",
+    "address": "市民大道１段205號, 大同區, 台北市",
+    "name": "台北京站豪美酒店式公寓",
+    "stars": -1,
+    "review_nr": 24,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0490989907379,
+      "lng": 121.517681101852
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北京站豪美酒店式公寓",
+      "imgUrl": "/api/hotels/photo/1769417",
+      "price": "8850.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5770.00",
+    "address": "臨沂街76號2樓, 中正區, 台北市",
+    "name": "東門旅店",
+    "stars": 2,
+    "review_nr": 414,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0345140908997,
+      "lng": 121.527838110924
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "東門旅店",
+      "imgUrl": "/api/hotels/photo/881059",
+      "price": "5770.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2520.00",
+    "address": "7F, No. 37,Section 1, Kaifeng Street, 中正區, 台北市",
+    "name": "台北真心4U青年旅館",
+    "stars": -1,
+    "review_nr": 86,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.046127,
+      "lng": 121.5126571
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北真心4U青年旅館",
+      "imgUrl": "/api/hotels/photo/1954456",
+      "price": "2520.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5960.00",
+    "address": "漢中街42號9樓, 萬華區, 台北市",
+    "name": "小王子甜蜜旅店",
+    "stars": -1,
+    "review_nr": 14,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0440453614821,
+      "lng": 121.507243774831
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "小王子甜蜜旅店",
+      "imgUrl": "/api/hotels/photo/2011286",
+      "price": "5960.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5400.00",
+    "address": "漢中街35號3樓之一, 萬華區, 台北市",
+    "name": "台北西門美棧",
+    "stars": -1,
+    "review_nr": 0,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0442543442966,
+      "lng": 121.507464051247
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北西門美棧",
+      "imgUrl": "/api/hotels/photo/2224408",
+      "price": "5400.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2950.00",
+    "address": "太原路28巷11号, 大同區, 台北市",
+    "name": "嘉荣青年旅舍",
+    "stars": -1,
+    "review_nr": 411,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0500629962931,
+      "lng": 121.51489929652
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "嘉荣青年旅舍",
+      "imgUrl": "/api/hotels/photo/1696868",
+      "price": "2950.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5848.00",
+    "address": "台北市中正區重慶南路一段63號2F, 中正區, 台北市",
+    "name": "棧留台北",
+    "stars": -1,
+    "review_nr": 258,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.044871683988,
+      "lng": 121.513360542328
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "棧留台北",
+      "imgUrl": "/api/hotels/photo/1754595",
+      "price": "5848.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5540.00",
+    "address": "忠孝東路3段219號, 大安區, 台北市",
+    "name": "最愛商務飯店",
+    "stars": 2,
+    "review_nr": 55,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0418069752512,
+      "lng": 121.539812564915
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "最愛商務飯店",
+      "imgUrl": "/api/hotels/photo/604584",
+      "price": "5540.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3000.00",
+    "address": "許昌街40號6樓, 中正區, 台北市",
+    "name": "這裡那裡青年旅館站前店",
+    "stars": -1,
+    "review_nr": 708,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0455091,
+      "lng": 121.5156647
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "這裡那裡青年旅館站前店",
+      "imgUrl": "/api/hotels/photo/1448459",
+      "price": "3000.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2552.00",
+    "address": "懷寧街84號, 中正區, 台北市",
+    "name": "貝殼窩青年旅舍- 台北",
+    "stars": -1,
+    "review_nr": 1722,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0430220088083,
+      "lng": 121.513957679272
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "貝殼窩青年旅舍- 台北",
+      "imgUrl": "/api/hotels/photo/753196",
+      "price": "2552.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2530.00",
+    "address": "昆明街316號, 萬華區, 台北市",
+    "name": "西門大可居青年旅館",
+    "stars": -1,
+    "review_nr": 632,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.035814,
+      "lng": 121.5032759
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門大可居青年旅館",
+      "imgUrl": "/api/hotels/photo/1557736",
+      "price": "2530.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2944.00",
+    "address": "重慶南路一段 49號9樓, 中正區, 台北市",
+    "name": "枕頭旅宿",
+    "stars": -1,
+    "review_nr": 732,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0449607724234,
+      "lng": 121.513137146612
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "枕頭旅宿",
+      "imgUrl": "/api/hotels/photo/1930793",
+      "price": "2944.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4860.00",
+    "address": "成都路27巷10號5樓, 萬華區, 台北市",
+    "name": "西門町古奈堡旅店",
+    "stars": 3,
+    "review_nr": 133,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0431722671094,
+      "lng": 121.506803110187
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門町古奈堡旅店",
+      "imgUrl": "/api/hotels/photo/628537",
+      "price": "4860.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4240.00",
+    "address": "長沙街２段11號2樓, 萬華區, 台北市",
+    "name": "406 Inn -女生宿舍",
+    "stars": -1,
+    "review_nr": 215,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0407719,
+      "lng": 121.506922
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "406 Inn -女生宿舍",
+      "imgUrl": "/api/hotels/photo/1467452",
+      "price": "4240.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5600.00",
+    "address": "漢口街一段36號, 中正區, 台北市",
+    "name": "花華大飯店-分館",
+    "stars": -1,
+    "review_nr": 30,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0451071601685,
+      "lng": 121.513853728836
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "花華大飯店-分館",
+      "imgUrl": "/api/hotels/photo/1781653",
+      "price": "5600.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3135.00",
+    "address": "成都路27巷10號4樓, 萬華區, 台北市",
+    "name": "西門街角旅店",
+    "stars": -1,
+    "review_nr": 618,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0431932040073,
+      "lng": 121.506789771164
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "西門街角旅店",
+      "imgUrl": "/api/hotels/photo/1251649",
+      "price": "3135.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6500.00",
+    "address": "內江街55巷11號, 萬華區, 台北市",
+    "name": "夜光商旅",
+    "stars": 3,
+    "review_nr": 109,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0422443887185,
+      "lng": 121.505267322063
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "夜光商旅",
+      "imgUrl": "/api/hotels/photo/1003114",
+      "price": "6500.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "5000.00",
+    "address": "金山南路二段7號, 大安區, 台北市",
+    "name": "香蕉客人",
+    "stars": -1,
+    "review_nr": 615,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0336154818356,
+      "lng": 121.527367656588
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "香蕉客人",
+      "imgUrl": "/api/hotels/photo/1516157",
+      "price": "5000.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2774.00",
+    "address": "延平南路21號2樓, 中正區, 台北市",
+    "name": "瘋台北青旅 - 群悅486",
+    "stars": -1,
+    "review_nr": 690,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0456772708661,
+      "lng": 121.51069611311
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "瘋台北青旅 - 群悅486",
+      "imgUrl": "/api/hotels/photo/1119346",
+      "price": "2774.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3100.00",
+    "address": "信義路二段110號, 台北市",
+    "name": "東門3號膠囊旅店",
+    "stars": -1,
+    "review_nr": 219,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0337950463723,
+      "lng": 121.527756471187
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "東門3號膠囊旅店",
+      "imgUrl": "/api/hotels/photo/1905214",
+      "price": "3100.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4740.00",
+    "address": "天津街43號, 中山區, 台北市",
+    "name": "旅人日誌青年旅館",
+    "stars": -1,
+    "review_nr": 257,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0499996645431,
+      "lng": 121.523077523314
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "旅人日誌青年旅館",
+      "imgUrl": "/api/hotels/photo/1508169",
+      "price": "4740.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4480.00",
+    "address": "公園路13號9樓, 中正區, 台北市",
+    "name": "Work Inn 窩客",
+    "stars": -1,
+    "review_nr": 774,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0456090789032,
+      "lng": 121.517482101917
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "Work Inn 窩客",
+      "imgUrl": "/api/hotels/photo/1445839",
+      "price": "4480.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4680.00",
+    "address": "信義路三段, 大安區, 台北市",
+    "name": "一點Homestay",
+    "stars": -1,
+    "review_nr": 104,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0334106171397,
+      "lng": 121.542457761552
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "一點Homestay",
+      "imgUrl": "/api/hotels/photo/1812989",
+      "price": "4680.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4710.00",
+    "address": "長安西路172巷5弄7號, 大同區, 台北市",
+    "name": "台北CT屋",
+    "stars": -1,
+    "review_nr": 28,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0506646102894,
+      "lng": 121.515799469906
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北CT屋",
+      "imgUrl": "/api/hotels/photo/1526915",
+      "price": "4710.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3426.00",
+    "address": "羅斯福路三段240巷, 中正區, 台北市",
+    "name": "家旅館",
+    "stars": -1,
+    "review_nr": 16,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0175119,
+      "lng": 121.5291649
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "家旅館",
+      "imgUrl": "/api/hotels/photo/2086808",
+      "price": "3426.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3100.00",
+    "address": "泰順街44巷17號3楼, 大安區, 台北市",
+    "name": "星辰小屋",
+    "stars": -1,
+    "review_nr": 151,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.023839,
+      "lng": 121.530294
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "星辰小屋",
+      "imgUrl": "/api/hotels/photo/1954490",
+      "price": "3100.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3780.00",
+    "address": "廣州街95-3號2樓, 萬華區, 台北市",
+    "name": "台北加州客棧",
+    "stars": -1,
+    "review_nr": 263,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0366395,
+      "lng": 121.503664111639
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "台北加州客棧",
+      "imgUrl": "/api/hotels/photo/1753423",
+      "price": "3780.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "6000.00",
+    "address": "林森北路72號, 中山區, 台北市",
+    "name": "斯格加旅店",
+    "stars": -1,
+    "review_nr": 64,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0495477823628,
+      "lng": 121.524559150262
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "斯格加旅店",
+      "imgUrl": "/api/hotels/photo/1873222",
+      "price": "6000.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "3800.00",
+    "address": "寧波東街9巷13-1號, 中正區, 台北市",
+    "name": "貓草堂女舍",
+    "stars": -1,
+    "review_nr": 99,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0328250738416,
+      "lng": 121.519466936588
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "貓草堂女舍",
+      "imgUrl": "/api/hotels/photo/1644530",
+      "price": "3800.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "4240.00",
+    "address": "漢中街191號2樓, 萬華區, 台北市",
+    "name": "長漢青旅",
+    "stars": -1,
+    "review_nr": 30,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.041036,
+      "lng": 121.506802
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "長漢青旅",
+      "imgUrl": "/api/hotels/photo/1949164",
+      "price": "4240.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  },
+  {
+    "price": "2640.00",
+    "address": "華陰街179號3樓, 大同區, 台北市",
+    "name": "獅城旅店",
+    "stars": -1,
+    "review_nr": 386,
+    "currency_code": "TWD",
+    "location": {
+      "lat": 25.0503567571354,
+      "lng": 121.515318253967
+    },
+    "detail_type": "object",
+    "detail": {
+      "type": "hotel",
+      "rating": 3.9,
+      "description": "",
+      "name": "獅城旅店",
+      "imgUrl": "/api/hotels/photo/1285232",
+      "price": "2640.00",
+      "bookingUrl": "TODO",
+      "FBComments": []
+    }
+  }
+]

@@ -230,6 +230,9 @@ class App extends React.Component {
 
     const currentHotel = hotelIndex >= 0 ? hotelList.get(hotelIndex).toJS() : null;
     const currentAttraction = attractionIndex >= 0 ? attractionList.get(attractionIndex).toJS() : null;
+
+    console.log(currentHotel)
+
     return (
       <MuiThemeProvider>
         <div className={mapPageClass}>
@@ -306,7 +309,7 @@ class App extends React.Component {
                 rating={currentHotel.detail.rating}
                 price={currentHotel.price}
                 bookingUrl={currentHotel.detail.bookingUrl}
-                FBComments={currentHotel.detail.FBComments}
+                fbComments={currentHotel.detail.FBComments}
                 onClose={() => hotelActions.setIndex(-1)}
               />
           }

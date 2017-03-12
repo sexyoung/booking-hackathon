@@ -29,7 +29,7 @@ export default class FBComment extends React.Component {
     const { content, name, picUrl, rating, time } = this.props;
     return (
       <div className={style['fb-container']}>
-        <img className={style['fb-img']} src={picUrl} alt={name} />
+        <img style={{minWidth: '50px', height:"50px"}} className={style['fb-img']} src={picUrl} alt={name} />
         <div className={style['fb-text']}>
           <div className={style['fb-name']}>{name}</div>
           {/* <span>{new Date(timestamp * 1000).toLocaleString()}</span> */}
@@ -37,7 +37,7 @@ export default class FBComment extends React.Component {
             <span className={style['fb-rating']}>{toStar(rating)}</span>
             <span className={style['fb-time']}>&nbsp;·&nbsp;{time}</span>
           </p>
-          <p>Comment: {content}</p>
+          <p>{content}</p>
         </div>
       </div>
     );
