@@ -88,6 +88,11 @@ class App extends React.Component {
     if (!is(prevProps.heatList, this.props.heatList)) {
       this.updateHeatMap();
     }
+
+    if (this.props.isEdit !== prevProps.isEdit && !this.props.isEdit) {
+      this.props.hotelActions.setIndex(-1);
+      this.props.attractionActions.setIndex(-1);
+    }
   }
 
   onSubmit = (e) => {
@@ -288,9 +293,8 @@ class App extends React.Component {
           {isEdit &&
           <FilterComponent {...app} />}
           {mapIsLoading && <div className={style['is-loading']}>Loading...</div>}
-          {/* {isEdit && <HotelComponent />} */}
           {
-            currentHotel &&
+            isEdit && currentHotel &&
               <HotelComponent
                 type="hotel"
                 className={style.hotel}
@@ -305,7 +309,7 @@ class App extends React.Component {
               />
           }
           {
-            currentAttraction &&
+            isEdit && currentAttraction &&
               <HotelComponent
                 type="place"
                 className={style.hotel}
