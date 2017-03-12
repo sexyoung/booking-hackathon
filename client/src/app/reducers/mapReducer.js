@@ -6,7 +6,10 @@ import {
 
 const initialState = Immutable.fromJS({
   zoom:     null,
-  location: {},
+  location: {
+    lat: 25.0356791,
+    lng: 121.5196742,
+  },
 });
 
 export default function mapReducer(state = initialState, action) {
@@ -14,7 +17,7 @@ export default function mapReducer(state = initialState, action) {
     case SET_ZOOM:
       return state.set('zoom', action.payload);
     case SET_LOCATION:
-      return state.set('location', action.payload);
+      return state.merge({ 'location': action.payload });
     default:
       return state;
   }

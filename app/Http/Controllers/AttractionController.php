@@ -13,7 +13,7 @@ class AttractionController extends Controller
 	public function photo(Request $request, $reference) {
 		$api_key = $this-> _api_key;
 		$url = "https://maps.googleapis.com/maps/api/place/photo?key=$api_key&photoreference=$reference&maxwidth=400";
-		return redirect($url); 
+		return redirect($url);
 	}
 
 	public function detail(Request $request, $place_id)
@@ -21,12 +21,12 @@ class AttractionController extends Controller
 		$api_key = $this-> _api_key;
 		$url = "https://maps.googleapis.com/maps/api/place/details/json?key=$api_key&placeid=$place_id&language=zh-TW";
 		$data = json_decode(file_get_contents($url), true);
-		
+
 		if(empty($data) || !isset($data['result']) || empty($data['result'])) {
 			return response()->json('error', 500);
 		}
 		$result = $data['result'];
-		
+
 		$ret_data = array(
 			'name' => $result['name'],
 			'rating' => $result['rating'],
@@ -61,7 +61,7 @@ class AttractionController extends Controller
 			$parsed_result[] = array(
 				'location' => $attraction['geometry']['location'],
 				'name' => $attraction['name'],
-				'rating' => $attraction['rating'],
+				'rating' => isset($attraction['rating'])? $attraction['rating']: null,
 				'detail' => "/api/attractions/" . $attraction['place_id'],
 				'detail_type' => 'url'
 			);
@@ -71,10 +71,10 @@ class AttractionController extends Controller
 
     private function search($params)
     {
-    	$data = json_decode(file_get_contents(__DIR__ . '/../data/attractions.json'), true);
-		return $data;
+    	// $data = json_decode(file_get_contents(__DIR__ . '/../data/attractions.json'), true);
+		// return $data;
 
-    	$url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDsmyI6lT8VxDqiGN19T7HQRuGZtqeiehg';
+    	$url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI';
 
 		if(!empty($params)) {
 			foreach($params as $key => $val) {
@@ -85,7 +85,7 @@ class AttractionController extends Controller
 
     	$next_page_token = false;
     	$full_data = array();
-    	do {
+    	 //do {
     		$data = json_decode(file_get_contents($url), true);
 
     		$next_page_token = false;
@@ -94,7 +94,7 @@ class AttractionController extends Controller
     		}
     		$full_data = array_merge($full_data, $data['results']);
 
-    	} while($next_page_token);
+    	// } while($next_page_token);
 		return $full_data;
 
     }
