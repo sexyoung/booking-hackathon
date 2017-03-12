@@ -315,28 +315,11 @@ class App extends React.Component {
               <HotelComponent
                 type="place"
                 className={style.hotel}
-                imgUrl={currentAttraction.detail}
+                imgUrl={`http://localhost:8000${currentAttraction.detail.imgUrl}`}
                 name={currentAttraction.name}
-                description={(
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
-                )}
-                rating={4.1}
-                FBComments={[
-                  {
-                    picUrl: 'https://dummyimage.com/48x48/',
-                    name: 'Shubo Chao',
-                    rating: 4,
-                    time: 'February 3, 2017',
-                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
-                  },
-                  {
-                    picUrl: 'https://dummyimage.com/48x48/',
-                    name: 'Shubo Chao',
-                    rating: 4,
-                    time: 'February 3, 2017',
-                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
-                  }
-                ]}
+                description={currentAttraction.detail.description}
+                rating={currentAttraction.detail.rating}
+                FBComments={currentAttraction.detail.FBComments}
               />
           }
         </div>
