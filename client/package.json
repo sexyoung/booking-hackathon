@@ -92,6 +92,7 @@
     "normalize.css": "^5.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-google-autocomplete": "^1.0.12",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-lite": "^0.15.33",
     "react-redux": "^5.0.2",

@@ -10,6 +10,7 @@ import {
 
 import {
   setList,
+  setLoading,
 } from 'actions/attractionActions';
 
 import {
@@ -21,11 +22,18 @@ import {
 } from 'utils/api';
 
 function* doGetAttractions({ payload }) {
-  const result = yield call(
-    getApi,
-    `${attractionsApiURL()}?lat=${payload.lat}&lng=${payload.lng}&radius=${payload.radius}`
-  );
-  yield put(setList(result));
+  try {
+    yield put(setLoading(true));
+    const result = yield call(
+      getApi,
+      `${attractionsApiURL()}?lat=${payload.lat}&lng=${payload.lng}&radius=${payload.radius}`
+    );
+    yield put(setList(result));
+  } catch (e) {
+    console.error(e);
+  } finally {
+    yield put(setLoading(false));
+  }
 }
 
 export function* watchGetAttractions() {

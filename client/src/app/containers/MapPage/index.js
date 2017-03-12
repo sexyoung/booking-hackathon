@@ -4,7 +4,10 @@ import { is } from 'immutable';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import GoogleMapReact from 'google-map-react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { MuiThemeProvider } from 'material-ui/styles';
+import { mapKey } from 'constants';
+
+import Autocomplete from 'react-google-autocomplete';
 
 import {
   HotelComponent,
@@ -15,48 +18,60 @@ import {
   stylers,
   gradient,
 } from 'constants/MapStylers';
+
+import mapActions from 'actions/mapActions';
 import attractionActions from 'actions/attractionActions';
+import hotelActions from 'actions/hotelActions';
 
 import style from './map-page.scss';
 
 const center = {
-  // lat: 41.9024427, lng: 12.450028
   lat: 25.0356791, lng: 121.5196742
 };
 
-/**
- * Template React Component
- */
 class App extends React.Component {
 
   static propTypes = {
     location:          PropTypes.object,
+    mapIsLoading:      PropTypes.boolean,
+    mapLocation:       PropTypes.boolean,
     isEdit:            PropTypes.boolean,
-    center:            PropTypes.number,
+    mapActions:        PropTypes.object,
     zoom:              PropTypes.number,
     attractionList:    PropTypes.object,
     attractionActions: PropTypes.object,
+    hotelList:         PropTypes.object,
+    hotelActions:      PropTypes.object,
   };
 
   static defaultProps = {
     isEdit: false,
     location: {},
-    center,
+    mapIsLoading: false,
+    mapLocation: {},
+    mapActions: {},
     zoom: 13,
     attractionList: {},
     attractionActions: {},
+    hotelList: {},
+    hotelActions: {},
   }
 
   static contextTypes = {
     router: PropTypes.object,
   }
 
+  constructor() {
+    super();
+    this.state = {
+      mapApiLoaded: false,
+    };
+  }
+
   componentDidMount() {
-    if (navigator.geolocation.getCurrentPosition) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        console.warn(position.coords.latitude);
-        console.warn(position.coords.longitude);
-      });
+    const { location: { query: { search } } } = this.props;
+    if (search) {
+      this.checkGeocoder(search);
     }
   }
 
@@ -68,7 +83,62 @@ class App extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    this.context.router.push(`edit?search=${this.input.value}`);
+    const { refs: { input: { value } } } = this.input;
+    this.goPlace(value);
+    this.context.router.push(`edit?search=${value}`);
+  }
+
+  checkGeocoder(search) {
+    if (!this.geocoder) {
+      setTimeout(() => {
+        this.checkGeocoder(search);
+      }, 300);
+    } else {
+      this.goPlace(search);
+    }
+  }
+
+  goPlace = (address) => {
+    this.geocoder.geocode({ address }, (results, status) => {
+      if (status === 'OK') {
+        const location = {
+          lat: results[0].geometry.location.lat(),
+          lng: results[0].geometry.location.lng(),
+        };
+        this.props.mapActions.setLocation(location);
+        this.props.attractionActions.getList({
+          ...location,
+          radius: 10000,
+        });
+      }
+    });
+  }
+
+  loaded = ({ map, maps }) => {
+    this.map = map;
+    this.maps = maps;
+
+    this.map.setOptions({ styles: stylers });
+
+    this.geocoder = new this.maps.Geocoder();
+
+    this.setState({
+      mapApiLoaded: true,
+    });
+
+    // 抓測試用景點
+    this.props.attractionActions.getList({
+      lat: 25.0453076,
+      lng: 121.53079500000001,
+      radius: 10000,
+    });
+
+    // Call Hotel API
+    // this.props.hotelActions.getList({
+    //   lat: 25.0453076,
+    //   lng: 121.53079500000001,
+    //   radius: 10000,
+    // })
   }
 
   updateHeapMap = () => {
@@ -88,25 +158,17 @@ class App extends React.Component {
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
   }
 
-  loaded = ({ map, maps }) => {
-    this.map = map;
-    this.maps = maps;
-
-    this.map.setOptions({ styles: stylers });
-
-    // 抓測試用景點
-    this.props.attractionActions.getList({
-      lat: 25.0453076,
-      lng: 121.53079500000001,
-      radius: 10000,
-    });
-  }
-
   render() {
     const {
       isEdit,
+      mapLocation,
+      mapIsLoading,
       location: { query: { search } }
     } = this.props;
+
+    const {
+      mapApiLoaded,
+    } = this.state;
 
     const mapPageClass = cx({
       [style['map-page']]: true,
@@ -115,24 +177,28 @@ class App extends React.Component {
     const placeholder = isEdit ?
       'Destination or address' :
       'You deserve a vacation - and it start here!';
+
     return (
       <MuiThemeProvider>
         <div className={mapPageClass}>
-          <form onSubmit={this.onSubmit} className={style['input-block']}>
-            <input
+          { mapApiLoaded && <form onSubmit={this.onSubmit} className={style['input-block']}>
+            <Autocomplete
               ref={elem => this.input = elem}
               className={style.input}
               placeholder={placeholder}
               defaultValue={search}
             />
             <button>GO</button>
-          </form>
+          </form>}
           <GoogleMapReact
             id="map"
-            defaultCenter={this.props.center}
+            center={{
+              lat: mapLocation.get('lat'),
+              lng: mapLocation.get('lng'),
+            }}
             defaultZoom={this.props.zoom}
             bootstrapURLKeys={{
-              key: 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI',
+              key: mapKey,
               language: 'zh-TW',
               libraries: 'visualization,places',
             }}
@@ -145,7 +211,8 @@ class App extends React.Component {
             scenaryChecked={false}
             hotelChecked
           />}
-          {isEdit && <HotelComponent />}
+          {mapIsLoading && <div className={style['is-loading']}>Loading...</div>}
+          {/* {isEdit && <HotelComponent />} */}
         </div>
       </MuiThemeProvider>
     );
@@ -155,14 +222,19 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
+    mapLocation: state.map.get('location'),
+    mapIsLoading: state.map.get('isLoading', false),
     isEdit: state.routing.locationBeforeTransitions.pathname.includes('edit'),
     attractionList: state.attraction.get('list'),
+    hotelList: state.hotel.get('list'),
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
+    mapActions: bindActionCreators(mapActions, dispatch),
     attractionActions: bindActionCreators(attractionActions, dispatch),
+    hotelActions: bindActionCreators(hotelActions, dispatch),
   };
 }
 
