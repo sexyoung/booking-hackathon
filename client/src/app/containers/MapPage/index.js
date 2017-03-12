@@ -16,8 +16,6 @@ import {
   AnyReactComponent,
 } from 'components';
 
-import hotelImg from './blue-bed-18-pro.png';
-import attractionImg from './green-start-18-pro.png';
 
 import {
   stylers,
@@ -31,6 +29,7 @@ import hotelActions from 'actions/hotelActions';
 
 import style from './map-page.scss';
 import hotelImg from './blue-bed-18-pro.png';
+import attractionImg from './green-start-18-pro.png';
 
 class App extends React.Component {
 
@@ -226,9 +225,6 @@ class App extends React.Component {
 
     const currentHotel = hotelIndex >= 0 ? hotelList.get(hotelIndex).toJS() : null;
     const currentAttraction = attractionIndex >= 0 ? attractionList.get(attractionIndex).toJS() : null;
-
-    console.log(currentAttraction);
-
     return (
       <MuiThemeProvider>
         <div className={mapPageClass}>
