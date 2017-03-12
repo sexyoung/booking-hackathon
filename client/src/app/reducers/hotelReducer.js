@@ -1,4 +1,4 @@
-import Immutable from 'immutable';
+import Immutable, {List} from 'immutable';
 import {
   HOTEL_SET_LIST,
   HOTEL_SET_INDEX,
@@ -6,7 +6,7 @@ import {
 } from 'constants/hotelActionTypes';
 
 const initialState = Immutable.fromJS({
-  list: [],
+  list: List(),
   index: -1,
 });
 
@@ -15,7 +15,7 @@ export default function hotelReducer(state = initialState, action) {
     case HOTEL_SET_INDEX:
       return state.set('index', action.payload);
     case HOTEL_SET_LIST:
-      return state.set('list', action.payload);
+      return state.merge({'list': action.payload});
     case HOTEL_SET_LOADING:
       return state.set('loading', action.payload);
     default:

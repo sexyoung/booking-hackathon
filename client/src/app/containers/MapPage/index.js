@@ -12,7 +12,10 @@ import Autocomplete from 'react-google-autocomplete';
 import {
   HotelComponent,
   FilterComponent,
+  Marker,
 } from 'components';
+
+import hotelImg from './blue-bed-18-pro.png'
 
 import {
   stylers,
@@ -42,6 +45,7 @@ class App extends React.Component {
     attractionActions: PropTypes.object,
     hotelList:         PropTypes.object,
     hotelActions:      PropTypes.object,
+    hotelIndex:        PropTypes.number.isRequired,
   };
 
   static defaultProps = {
@@ -134,11 +138,11 @@ class App extends React.Component {
     });
 
     // Call Hotel API
-    // this.props.hotelActions.getList({
-    //   lat: 25.0453076,
-    //   lng: 121.53079500000001,
-    //   radius: 10000,
-    // })
+    this.props.hotelActions.getList({
+      lat: 25.0453076,
+      lng: 121.53079500000001,
+      radius: 1,
+    })
   }
 
   updateHeapMap = () => {
@@ -163,7 +167,10 @@ class App extends React.Component {
       isEdit,
       mapLocation,
       mapIsLoading,
-      location: { query: { search } }
+      location: { query: { search } },
+      hotelList,
+      hotelActions,
+      hotelIndex,
     } = this.props;
 
     const {
@@ -177,6 +184,11 @@ class App extends React.Component {
     const placeholder = isEdit ?
       'Destination or address' :
       'You deserve a vacation - and it start here!';
+
+    const currentHotel = hotelIndex >= 0 ? hotelList.get(hotelIndex).toJS() : null;
+    console.log(hotelIndex);
+    console.log(hotelList);
+    console.log(currentHotel);
 
     return (
       <MuiThemeProvider>
@@ -204,7 +216,24 @@ class App extends React.Component {
             }}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={this.loaded}
-          />
+          >
+            {
+              hotelList.toJS().map((hotel, index) => {
+                const handleClick = () => {
+                  hotelActions.setIndex(index)
+                }
+
+                return (
+                  <Marker
+                    lat={hotel.location.lat}
+                    lng={hotel.location.lng}
+                    imgSrc={hotelImg}
+                    onClick={handleClick}
+                  ></Marker>
+                )
+              }
+            )}
+          </GoogleMapReact>
           {isEdit &&
           <FilterComponent
             heatChecked
@@ -213,6 +242,20 @@ class App extends React.Component {
           />}
           {mapIsLoading && <div className={style['is-loading']}>Loading...</div>}
           {/* {isEdit && <HotelComponent />} */}
+          {
+            currentHotel &&
+              <HotelComponent
+                type="hotel"
+                className={style.hotel}
+                imgUrl={currentHotel.detail.imgUrl}
+                name={currentHotel.name}
+                description={currentHotel.detail.description}
+                rating={currentHotel.detail.rating}
+                price={currentHotel.price}
+                bookingUrl={currentHotel.detail.bookingUrl}
+                FBComments={currentHotel.detail.FBComments}
+              />
+          }
         </div>
       </MuiThemeProvider>
     );
@@ -227,6 +270,7 @@ function mapStateToProps(state) {
     isEdit: state.routing.locationBeforeTransitions.pathname.includes('edit'),
     attractionList: state.attraction.get('list'),
     hotelList: state.hotel.get('list'),
+    hotelIndex: state.hotel.get('index'),
   };
 }
 
