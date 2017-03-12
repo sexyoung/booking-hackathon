@@ -319,7 +319,7 @@ class App extends React.Component {
                 name={currentAttraction.name}
                 description={currentAttraction.detail.description}
                 rating={currentAttraction.detail.rating}
-                FBComments={currentAttraction.detail.FBComments}
+                fbComments={currentAttraction.FBComments}
               />
           }
         </div>

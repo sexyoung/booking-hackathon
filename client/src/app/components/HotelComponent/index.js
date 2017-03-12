@@ -15,7 +15,7 @@ class HotelComponent extends React.Component {
     price: PropTypes.number,
     rating: PropTypes.number,
     bookingUrl: PropTypes.string,
-    FBComments: PropTypes.array,
+    fbComments: PropTypes.array,
   }
 
   static defaultProps = {
@@ -24,7 +24,7 @@ class HotelComponent extends React.Component {
     description: '',
     price:       0,
     bookingUrl:  '',
-    FBComments:  [],
+    fbComments:  [],
   }
 
   render() {
@@ -35,7 +35,7 @@ class HotelComponent extends React.Component {
       description,
       price,
       bookingUrl,
-      FBComments,
+      fbComments,
       rating,
       onClose,
     } = this.props;
@@ -79,11 +79,11 @@ class HotelComponent extends React.Component {
         </p>
         <div style={{ clear: 'both' }} />
         <p style={{ lineHeight: '16px' }} className={style.desc}>{description}</p>
-        {FBComments.length > 0
+        {fbComments.length > 0
           && (
             <div>
               <h2>Reviews from Friends</h2>
-              {FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
+              {fbComments.map(comment => <FBComment key={comment.name} {...comment} />)}
             </div>
           )}
       </div>
