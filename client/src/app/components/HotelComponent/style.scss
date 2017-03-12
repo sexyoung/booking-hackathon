@@ -14,6 +14,17 @@ h1 {
   overflow-y: scroll;
   font-size: 12px;
   z-index: 2;
+
+  animation-duration: 0.3s;
+  animation-name: slidein;
+  @keyframes slidein {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0;
+    }
+  }
 }
 
 .img {
