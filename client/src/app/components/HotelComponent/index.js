@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { RaisedButton } from 'material-ui';
+import { FlatButton } from 'material-ui';
 
 import FBComment from './FBComment';
 
@@ -43,7 +44,6 @@ class HotelComponent extends React.Component {
 
     return (
       <div className={style.container}>
-        <button onClick={onClose}>Close</button>
         <img
           className={style.img}
           src={imgUrl}
@@ -54,20 +54,22 @@ class HotelComponent extends React.Component {
         </div>
         {
           isPlace &&
-            <RaisedButton
+            <FlatButton
               label="Save"
-              style={{ float: 'right' }}
-              backgroundColor="#febb02"
+              style={{float: 'right', color:'#FFF'}}
+              backgroundColor="#FF5781"
               labelColor="#FFF"
+              hoverColor="rgb(177, 62, 91)"
             />
         }
         {
           isHotel &&
-            <RaisedButton
+            <FlatButton
               label="Book Now!"
-              style={{ float: 'right' }}
+              style={{float: 'right', color:'#FFF'}}
               backgroundColor="#FF5781"
               labelColor="#FFF"
+              hoverColor="rgb(177, 62, 91)"
               href={bookingUrl}
             />
         }
