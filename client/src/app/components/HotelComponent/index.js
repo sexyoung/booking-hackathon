@@ -44,7 +44,6 @@ class HotelComponent extends React.Component {
 
     return (
       <div className={style.container}>
-        <button onClick={onClose}>Close</button>
         <img
           className={style.img}
           src={imgUrl}
