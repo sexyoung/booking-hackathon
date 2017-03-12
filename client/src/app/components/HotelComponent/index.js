@@ -68,14 +68,13 @@ class HotelComponent extends React.Component {
         }
         <p style={{lineHeight: '36px'}}>
           <span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
-          {isHotel && <span className={style.price}>NTD {price}</span>}
+          {isHotel && <span className={style.price}>TWD {price}</span>}
         </p>
         <div style={{clear: 'both'}} />
         <p className={style['desc']}>{description}</p>
         {FBComments.length > 0
           && (
             <div>
-              <h2>Reviews from Facebook Friends</h2>
               {FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
             </div>
           )}

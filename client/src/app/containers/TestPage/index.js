@@ -192,10 +192,10 @@ class TestPage extends React.Component {
             <HotelComponent
               type="hotel"
               className={style.hotel}
-              imgUrl="http://www.thefloridahotelorlando.com/var/floridahotelorlando/storage/images/media/images/photo-gallery/hotel-images/florida-hotel-orlando-night/27177-1-eng-US/Florida-Hotel-Orlando-Night.jpg"
-              name="A Big Hotel"
+              imgUrl="http://img.gq.com.tw/userfiles/sm/sm645_images_A1/8025/2012031342922521.jpg"
+              name="松山文創園區"
               description={(
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
+                <p>位於台灣台北市信義區，建於1937年，前身為台灣日治時期「台灣總督府專賣局松山菸草工場」，1945年更名為「台灣省專賣局松山菸草工廠」，1947年又更名為「台灣省菸酒公賣局松山菸廠」，1998年停止生產，2001年由台北市政府指定為第99處市定古蹟，並於2010年正式轉型定名「松山文創園區」。松山菸廠在戰後種植大量植栽，景觀優美，停產後已經成為台北市東區最大的綠地。除 松山文創園區，松山菸廠舊址目前還有臺北文創大樓及興建中的台北大巨蛋，與松山文創園區分屬不同管理單位；且臺北文創大樓為BOT模式獨立經營，不屬於松山文創園區營運範圍，兩者亦互不隸屬。</p>
               )}
               rating={4.1}
               price={1000}
