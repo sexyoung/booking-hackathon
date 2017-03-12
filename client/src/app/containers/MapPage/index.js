@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { is } from 'immutable';
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -15,18 +16,18 @@ import {
   AnyReactComponent,
 } from 'components';
 
-import hotelImg from './blue-bed-18-pro.png';
-
 import {
   stylers,
   gradient,
 } from 'constants/MapStylers';
 
 import mapActions from 'actions/mapActions';
+import heatActions from 'actions/heatActions';
 import attractionActions from 'actions/attractionActions';
 import hotelActions from 'actions/hotelActions';
 
 import style from './map-page.scss';
+import hotelImg from './blue-bed-18-pro.png';
 
 class App extends React.Component {
 
@@ -40,9 +41,11 @@ class App extends React.Component {
     zoom:              PropTypes.number,
     attractionList:    PropTypes.object,
     attractionActions: PropTypes.object,
+    heatActions:       PropTypes.object,
     hotelList:         PropTypes.object,
     hotelActions:      PropTypes.object,
     hotelIndex:        PropTypes.number.isRequired,
+    heatList:          PropTypes.array,
   };
 
   static defaultProps = {
@@ -55,8 +58,10 @@ class App extends React.Component {
     zoom: 13,
     attractionList: {},
     attractionActions: {},
+    heatActions: {},
     hotelList: {},
     hotelActions: {},
+    heatList: [],
   }
 
   static contextTypes = {
@@ -77,11 +82,63 @@ class App extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (!is(prevProps.heatList, this.props.heatList)) {
+      this.updateHeatMap();
+    }
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
     const { refs: { input: { value } } } = this.input;
     this.goPlace(value);
     this.context.router.push(`edit?search=${value}`);
+  }
+
+  addHeatMap = (data, opts) => {
+    opts = opts || {};
+    const heatmapData = data.map((d) => {
+      return new this.maps.LatLng(d.lat, d.lng);
+    });
+    const heatmap = new this.maps.visualization.HeatmapLayer({
+      data: heatmapData
+    });
+
+    heatmap.setMap(this.map);
+
+    heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
+
+    Object.keys(opts).map((opt_key) => {
+      heatmap.set(opt_key, opts[opt_key]);
+    });
+  }
+
+  updateHeatMap = () => {
+    const heatmapData = this.props.heatList.toJS().map((d) => {
+      return new this.maps.LatLng(d.lat, d.lng);
+    });
+    const heatmap = new this.maps.visualization.HeatmapLayer({
+      data: heatmapData
+    });
+
+    heatmap.setMap(this.map);
+    // 放大
+    const rated_data = {};
+    const attraction_heat_data = this.props.attractionList.toJS().map((data) => {
+      if (data.rating) {
+        const key = `${Math.ceil(data.rating)}`;
+        if (!rated_data[key]) {
+          rated_data[key] = [];
+        }
+        rated_data[key].push({ lat: data.location.lat + 0.0007, lng: data.location.lng });
+      }
+    });
+
+    Object.keys(rated_data).map((rating) => {
+      this.addHeatMap(rated_data[rating], { radius: parseInt(rating) * 20 - 60 });
+    });
+
+    heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
   }
 
   checkGeocoder(search) {
@@ -103,6 +160,11 @@ class App extends React.Component {
         };
         this.props.mapActions.setLocation(location);
         this.props.attractionActions.getList({
+          ...location,
+          radius: 10000,
+        });
+
+        this.props.heatActions.getList({
           ...location,
           radius: 10000,
         });
@@ -198,8 +260,8 @@ class App extends React.Component {
                     imgSrc={hotelImg}
                     onClick={handleClick}
                     focused={index === hotelIndex}
-                  ></Marker>
-                )
+                  />
+                );
               }
             )}
             { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction) => {
@@ -246,12 +308,14 @@ function mapStateToProps(state) {
     attractionList: state.attraction.get('list'),
     hotelList: state.hotel.get('list'),
     hotelIndex: state.hotel.get('index'),
+    heatList: state.heat.get('list'),
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     mapActions: bindActionCreators(mapActions, dispatch),
+    heatActions: bindActionCreators(heatActions, dispatch),
     attractionActions: bindActionCreators(attractionActions, dispatch),
     hotelActions: bindActionCreators(hotelActions, dispatch),
   };

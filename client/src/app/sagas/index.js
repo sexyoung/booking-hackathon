@@ -4,11 +4,16 @@ import {
 
 import {
   watchGetHotels
-} from './hotels'
+} from './hotels';
+
+import {
+  watchGetHeats
+} from './heat';
 
 export default function* rootSaga() {
   yield [
     watchGetAttractions(),
     watchGetHotels(),
+    watchGetHeats(),
   ];
 }
