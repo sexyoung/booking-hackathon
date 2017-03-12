@@ -125,6 +125,20 @@ class App extends React.Component {
     this.setState({
       mapApiLoaded: true,
     });
+
+    // 抓測試用景點
+    this.props.attractionActions.getList({
+      lat: 25.0453076,
+      lng: 121.53079500000001,
+      radius: 10000,
+    });
+
+    // Call Hotel API
+    // this.props.hotelActions.getList({
+    //   lat: 25.0453076,
+    //   lng: 121.53079500000001,
+    //   radius: 10000,
+    // })
   }
 
   updateHeapMap = () => {
@@ -142,27 +156,6 @@ class App extends React.Component {
 
     heatmap.setMap(this.map);
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
-  }
-
-  loaded = ({ map, maps }) => {
-    this.map = map;
-    this.maps = maps;
-
-    this.map.setOptions({ styles: stylers });
-
-    // 抓測試用景點
-    this.props.attractionActions.getList({
-      lat: 25.0453076,
-      lng: 121.53079500000001,
-      radius: 10000,
-    });
-
-    // Call Hotel API
-    // this.props.hotelActions.getList({
-    //   lat: 25.0453076,
-    //   lng: 121.53079500000001,
-    //   radius: 10000,
-    // })
   }
 
   render() {
