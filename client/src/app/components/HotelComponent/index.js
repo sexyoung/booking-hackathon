@@ -47,12 +47,12 @@ class HotelComponent extends React.Component {
           alt={name}
         />
         <h1>{name}</h1>
-        <div>
+        <p>
           <span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
           {isHotel && <span className={style.price}>NTD {price}</span>}
-        </div>
+        </p>
         {
-          isHotel &&
+          isPlace &&
             <RaisedButton
               label="Save"
               style={{marginRight: '16px'}}
@@ -70,9 +70,14 @@ class HotelComponent extends React.Component {
               href={bookingUrl}
             />
         }
-        {description}
+        <p className={style['desc']}>{description}</p>
         {isHotel && FBComments.length > 0
-          && FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
+          && (
+            <div>
+              <h2>Reviews from Facebook Friends</h2>
+              {FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
+            </div>
+          )}
       </div>
     );
   }

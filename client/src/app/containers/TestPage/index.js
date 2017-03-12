@@ -226,19 +226,29 @@ class TestPage extends React.Component {
                 {
                   picUrl: 'https://dummyimage.com/48x48/',
                   name: 'Shubo Chao',
-                  rating: '4',
-                  timestamp: 1489248756,
+                  rating: 4,
+                  time: 'February 3, 2017',
                   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
                 },
                 {
                   picUrl: 'https://dummyimage.com/48x48/',
                   name: 'Shubo Chao',
-                  rating: '4',
-                  timestamp: 1489248756,
+                  rating: 4,
+                  time: 'February 3, 2017',
                   content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
                 }
               ]}
             />
+            {/* <HotelComponent
+              type="place"
+              className={style.hotel}
+              imgUrl="http://visit-miyajima-japan.com/en/assets/images/torii-brume-big.jpg"
+              name="A Nice Place"
+              description={(
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
+              )}
+              rating={4.1}
+            /> */}
           </div>
           {this.props.children}
         </div>
