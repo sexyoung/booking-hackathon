@@ -7,7 +7,7 @@ import {
 
 export const setIndex   = payload => ({ type: HOTEL_SET_INDEX, payload });
 
-export const getList    = ()      => ({ type: HOTEL_GET_LIST });
+export const getList    = payload => ({ type: HOTEL_GET_LIST, payload });
 
 export const setList    = payload => ({ type: HOTEL_SET_LIST, payload });
 

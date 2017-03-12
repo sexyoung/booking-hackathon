@@ -21,6 +21,7 @@ import {
 
 import mapActions from 'actions/mapActions';
 import attractionActions from 'actions/attractionActions';
+import hotelActions from 'actions/hotelActions';
 
 import style from './map-page.scss';
 
@@ -39,6 +40,8 @@ class App extends React.Component {
     zoom:              PropTypes.number,
     attractionList:    PropTypes.object,
     attractionActions: PropTypes.object,
+    hotelList:         PropTypes.object,
+    hotelActions:      PropTypes.object,
   };
 
   static defaultProps = {
@@ -50,6 +53,8 @@ class App extends React.Component {
     zoom: 13,
     attractionList: {},
     attractionActions: {},
+    hotelList: {},
+    hotelActions: {},
   }
 
   static contextTypes = {
@@ -139,6 +144,27 @@ class App extends React.Component {
     heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
   }
 
+  loaded = ({ map, maps }) => {
+    this.map = map;
+    this.maps = maps;
+
+    this.map.setOptions({ styles: stylers });
+
+    // 抓測試用景點
+    this.props.attractionActions.getList({
+      lat: 25.0453076,
+      lng: 121.53079500000001,
+      radius: 10000,
+    });
+
+    // Call Hotel API
+    // this.props.hotelActions.getList({
+    //   lat: 25.0453076,
+    //   lng: 121.53079500000001,
+    //   radius: 10000,
+    // })
+  }
+
   render() {
     const {
       isEdit,
@@ -207,6 +233,7 @@ function mapStateToProps(state) {
     mapIsLoading: state.map.get('isLoading', false),
     isEdit: state.routing.locationBeforeTransitions.pathname.includes('edit'),
     attractionList: state.attraction.get('list'),
+    hotelList: state.hotel.get('list'),
   };
 }
 
@@ -214,6 +241,7 @@ function mapDispatchToProps(dispatch) {
   return {
     mapActions: bindActionCreators(mapActions, dispatch),
     attractionActions: bindActionCreators(attractionActions, dispatch),
+    hotelActions: bindActionCreators(hotelActions, dispatch),
   };
 }
 
