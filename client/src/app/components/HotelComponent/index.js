@@ -37,17 +37,20 @@ class HotelComponent extends React.Component {
       bookingUrl,
       FBComments,
       rating,
+      onClose,
     } = this.props;
-    const isHotel = type === 'hotel', isPlace = type === 'place'
+    const isHotel = type === 'hotel',
+      isPlace = type === 'place';
 
     return (
       <div className={style.container}>
+        <button onClick={onClose}>Close</button>
         <img
           className={style.img}
           src={imgUrl}
           alt={name}
         />
-        <div style={{margin: '0.3em 0'}}>
+        <div style={{ margin: '0.3em 0' }}>
           <h1>{name} </h1><span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
         </div>
         {
@@ -71,12 +74,12 @@ class HotelComponent extends React.Component {
               href={bookingUrl}
             />
         }
-        <p style={{lineHeight: '26px'}}>
-          
+        <p style={{ lineHeight: '26px' }}>
+
           {isHotel && <span className={style.price}>TWD {price}</span>}
         </p>
-        <div style={{clear: 'both'}} />
-        <p style={{lineHeight: '16px'}} className={style['desc']}>{description}</p>
+        <div style={{ clear: 'both' }} />
+        <p style={{ lineHeight: '16px' }} className={style.desc}>{description}</p>
         {FBComments.length > 0
           && (
             <div>

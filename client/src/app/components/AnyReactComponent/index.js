@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import greenStar from './green-pin.png';
+
 export default class AnyReactComponent extends React.Component {
   static propTypes = {
     text: PropTypes.string,
@@ -8,9 +10,8 @@ export default class AnyReactComponent extends React.Component {
     text: '',
   };
   render() {
-    const { text } = this.props;
     return (
-      <div>{text}</div>
+      <img src={greenStar} alt={greenStar} />
     );
   }
 }

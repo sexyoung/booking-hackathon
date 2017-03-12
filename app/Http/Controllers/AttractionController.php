@@ -21,8 +21,7 @@ class AttractionController extends Controller
 		return redirect($url);
 	}
 
-	public function detail(Request $request, $place_id)
-	{
+	public function getDetail($place_id) {
 		$api_key = $this-> _api_key;
 		$url = "https://maps.googleapis.com/maps/api/place/details/json?key=$api_key&placeid=$place_id&language=zh-TW";
 		$data = json_decode(file_get_contents($url), true);
@@ -47,8 +46,55 @@ class AttractionController extends Controller
 			$ret_data['FBComments'] = $comments[$ret_data['name']];
 		}
 
+		// set image
 		if(!empty($result['photos'])) {
 			$ret_data['imgUrl'] = '/api/attractions/photo/' . $result['photos'][0]['photo_reference'];
+		}
+
+		// friends been here
+		$friendsLog = json_decode(file_get_contents(__DIR__ . "/../data/here.json"), true);
+		if(isset($friendsLog[$ret_data['name']])) {
+			$ret_data['friendsLog'] = $friendsLog[$ret_data['name']];
+		}
+		return $ret_data;
+	}
+
+	public function detail(Request $request, $place_id)
+	{
+
+		$api_key = $this-> _api_key;
+		$url = "https://maps.googleapis.com/maps/api/place/details/json?key=$api_key&placeid=$place_id&language=zh-TW";
+		$data = json_decode(file_get_contents($url), true);
+		if(empty($data) || !isset($data['result']) || empty($data['result'])) {
+			return response()->json('error', 500);
+		}
+		$result = $data['result'];
+
+		$ret_data = array(
+			'id' => $result['id'],
+			'name' => $result['name'],
+			'rating' => $result['rating'],
+			'description' => $result['vicinity'],
+			// 'geometry' => $result['geometry'],
+			'type' => 'place',
+			'FBComments' => array()
+		);
+
+		// read all comments
+		$comments = json_decode(file_get_contents(__DIR__ . "/../data/comments.json"), true);
+		if(isset($comments[$ret_data['name']])) {
+			$ret_data['FBComments'] = $comments[$ret_data['name']];
+		}
+
+		// set image
+		if(!empty($result['photos'])) {
+			$ret_data['imgUrl'] = '/api/attractions/photo/' . $result['photos'][0]['photo_reference'];
+		}
+
+		// friends been here
+		$friendsLog = json_decode(file_get_contents(__DIR__ . "/../data/here.json"), true);
+		if(isset($friendsLog[$ret_data['name']])) {
+			$ret_data['friendsLog'] = $friendsLog[$ret_data['name']];
 		}
 
 		return response()-> json($ret_data);
@@ -56,6 +102,9 @@ class AttractionController extends Controller
 
 	public function index(Request $request)
 	{
+		
+		$data = json_decode(file_get_contents(__DIR__ . '/../data/full_attractions.json'), true);
+		return response()->json($data);
 		$lat = $request-> input('lat');
 		$lng = $request-> input('lng');
 		$radius = $request-> input('radius'); // in m
@@ -78,7 +127,8 @@ class AttractionController extends Controller
 				'name' => $attraction['name'],
 				'rating' => isset($attraction['rating']) ? $attraction['rating'] : 3.7,
 				'detail' => "/api/attractions/" . $attraction['place_id'],
-				'detail_type' => 'url'
+				'detail_type' => 'object',
+				'detail' => $this-> getDetail($attraction['place_id'])
 			);
 		}
 		return response()->json($parsed_result);
@@ -100,15 +150,14 @@ class AttractionController extends Controller
 
     	$next_page_token = false;
     	$full_data = array();
-    		$data = json_decode(file_get_contents($url), true);
+		$data = json_decode(file_get_contents($url), true);
 
-    		$next_page_token = false;
-    		if(isset($data['next_page_token']) && !empty($data['next_page_token'])) {
-    			$next_page_token = $data['next_page_token'];
-    		}
-    		$full_data = array_merge($full_data, $data['results']);
+		$next_page_token = false;
+		if(isset($data['next_page_token']) && !empty($data['next_page_token'])) {
+			$next_page_token = $data['next_page_token'];
+		}
+		$full_data = array_merge($full_data, $data['results']);
 
-    	// } while($next_page_token);
 		return $full_data;
 
     }
