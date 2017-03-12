@@ -226,6 +226,7 @@ class App extends React.Component {
                 price={currentHotel.price}
                 bookingUrl={currentHotel.detail.bookingUrl}
                 FBComments={currentHotel.detail.FBComments}
+                onClose={() => hotelActions.setIndex(-1)}
               />
           }
         </div>
