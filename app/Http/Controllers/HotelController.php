@@ -50,8 +50,7 @@ class HotelController extends Controller
 		}
 
 		$url = substr($url, 0, -1);
-		// echo $url;
-		// return;
+		
 		$data = file_get_contents($url);
 
 		$result = json_decode($data, true);
@@ -62,9 +61,18 @@ class HotelController extends Controller
 
 		$parsed_result = array();
 
+		// read all comments
+		$comments = json_decode(file_get_contents(__DIR__ . "/../data/comments.json"), true);
+
+		$rating_mapping = array(
+			'Fabulous' => 4.8,
+			'Superb' => 4.4,
+			'Very good' => 4.1
+		);
 		if(isset($result['hotels'])) {
 			foreach($result['hotels'] as $hotel) {
-				$parsed_result[] = array(
+				$rate_word = $hotel['review_score_word'];
+				$d = array(
 					'price' => $hotel['price'],
 					'address' => $hotel['address'],
 					'name' => $hotel['hotel_name'],
@@ -75,18 +83,26 @@ class HotelController extends Controller
 						'lat' => $hotel['location']['latitude'],
 						'lng' => $hotel['location']['longitude']
 					),
+
 					'detail_type' => 'object',
 					'detail' => array(
-						'rating' => $hotel['review_score_word'],
+						'type' => 'hotel',
+						'rating' => isset($rating_mapping[$rate_word]) ? $rating_mapping[$rate_word] : 3.9,
+						'description' => '',
 						'name' => $hotel['hotel_name'],
-						'photo' => '/api/hotels/photo/' . $hotel['hotel_id'],
+						'imgUrl' => '/api/hotels/photo/' . $hotel['hotel_id'],
 						'price' => $hotel['price'],
-						'booking_link' => 'TODO'
+						'bookingUrl' => 'TODO',
+						'FBComments' => array()
 					)
 				);
+				if(isset($comments[$d['name']])) {
+
+					$d['FBComments'] = $comments[$d['name']];
+				}
+				$parsed_result[] = $d;
 			}
 		}
-		
 
 		return response()->json($parsed_result);
 	}
