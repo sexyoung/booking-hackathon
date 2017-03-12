@@ -4,9 +4,10 @@
   right: 0;
   bottom: 0;
   position: absolute;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   padding: 16px;
   overflow-y: scroll;
+  font-size: 12px;
 }
 
 .img {
@@ -23,4 +24,42 @@
 
 .star {
   color: #febb02;
+}
+
+.fb-container {
+  display: flex;
+}
+
+.fb-img {
+  float: left;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  height: 48px;
+  width: 48px;
+}
+
+.fb-text {
+  float: right;
+  display: inline-block;
+}
+
+.fb-name {
+  font-size: 14px;
+  color: #365899;
+  margin-bottom: 5px;
+}
+
+.fb-rating, .fb-time {
+  color: #90949c;
+  margin-bottom: 5px;
+}
+
+.fb-blue-star {
+  color: #4080ff;
+  font-size: 16px;
+}
+
+.fb-gray-star {
+  color: #90949c;
+  font-size: 16px;
 }
