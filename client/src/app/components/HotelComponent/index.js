@@ -7,12 +7,14 @@ import style from './style.scss';
 
 class HotelComponent extends React.Component {
   static propTypes = {
-    name:        PropTypes.string.isRequired,
-    imgUrl:      PropTypes.string.isRequired,
+    type: PropTypes.oneOf(['hotel', 'place']).isRequired,
+    name: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
     description: PropTypes.string,
-    price:       PropTypes.number,
-    bookingUrl:  PropTypes.string,
-    FBComments:  PropTypes.array,
+    price: PropTypes.number,
+    rating: PropTypes.number,
+    bookingUrl: PropTypes.string,
+    FBComments: PropTypes.array,
   }
 
   static defaultProps = {
@@ -26,13 +28,17 @@ class HotelComponent extends React.Component {
 
   render() {
     const {
+      type,
       imgUrl,
       name,
       description,
       price,
       bookingUrl,
       FBComments,
+      rating,
     } = this.props;
+    const isHotel = type === 'hotel', isPlace = type === 'place'
+
     return (
       <div className={style.container}>
         <img
@@ -41,19 +47,32 @@ class HotelComponent extends React.Component {
           alt={name}
         />
         <h1>{name}</h1>
-        {typeof price !== 'undefined' && `NTD ${price}`}
+        <div>
+          <span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
+          {isHotel && <span className={style.price}>NTD {price}</span>}
+        </div>
         {
-          typeof bookingUrl !== 'undefined' &&
+          isHotel &&
+            <RaisedButton
+              label="Save"
+              style={{marginRight: '16px'}}
+              backgroundColor="#febb02"
+              labelColor="#FFF"
+            />
+        }
+        {
+          isHotel &&
             <RaisedButton
               label="Book Now!"
-              style={{ margin: '0 16px' }}
+              style={{marginRight: '16px'}}
               backgroundColor="#003580"
               labelColor="#FFF"
               href={bookingUrl}
             />
         }
         {description}
-        {FBComments.length > 0 && FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
+        {isHotel && FBComments.length > 0
+          && FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
       </div>
     );
   }
