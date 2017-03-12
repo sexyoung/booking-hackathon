@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import $ from 'jquery';
 import { connect } from 'react-redux';
+import { points2 } from 'constants/FakeData';
 import { bindActionCreators } from 'redux';
 import GoogleMapReact from 'google-map-react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -33,8 +34,7 @@ import greenStar from './green-start-18-pro.png';
 // }
 
 const center = {
-  // lat: 41.9024427, lng: 12.450028
-  lat: 25.0356791, lng: 121.5196742
+  lat: 25.039348, lng: 121.549604
 };
 
 /**
@@ -53,78 +53,15 @@ class TestPage extends React.Component {
   static defaultProps = {
     children: null,
     center,
-    zoom: 14,
+    zoom: 13,
   }
 
   loaded = ({ map, maps }) => {
-    // const heatmapData = points.map((p) => {
-    //   return new maps.LatLng(p.lat, p.lng);
-    // });
-
-    // const heatmap = new maps.visualization.HeatmapLayer({
-    //   data: heatmapData
-    // });
-
-    // heatmap.setMap(map);
-
-    // heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
-
-    map.setOptions({ styles: stylers });
-
-    const params = {
-      lat: center.lat,
-      lng: center.lng,
-      radius: 3000
-    };
-    $.get('http://localhost:8000/api/attractions', params, (data) => {
-      const raw_data = data.slice();
-      const i = 3;
-      const threshold = 0.0001;
-      // while(i-- > 0) {
-      //   data.data.map(function(d) {
-      //     raw_data.push(d);
-      //     raw_data.push({
-      //       location: {
-      //         lat: d.location.lat + i * threshold,
-      //         lng: d.location.lng + i * threshold,
-      //       }
-      //     });
-      //     raw_data.push({
-      //       location: {
-      //         lat: d.location.lat - i * threshold,
-      //         lng: d.location.lng + i * threshold,
-      //       }
-      //     });
-      //     raw_data.push({
-      //       location: {
-      //         lat: d.location.lat - i * threshold,
-      //         lng: d.location.lng - i * threshold,
-      //       }
-      //     });
-      //     raw_data.push({
-      //       location: {
-      //         lat: d.location.lat + i * threshold,
-      //         lng: d.location.lng - i * threshold,
-      //       }
-      //     });
-      //   });
-      // }
-      // console.log(raw_data.length, raw_data)
-      for (let r = 0; r < 5; r++) {
-        const heatmapData = raw_data.filter((d) => {
-          return d.rating >= r && d.rating < r + 1;
-        }).map((d) => {
-          return { location: new google.maps.LatLng(d.location.lat, d.location.lng), weight: d.rating * 10 - 30 };
-          // return new maps.LatLng(d.location.lat, d.location.lng);
+    function addHeatMap(map, data, opts) {
+        opts = opts || {};
+        const heatmapData = data.map((d) => {
+          return new maps.LatLng(d.lat, d.lng);
         });
-
-        // const heatmapData = points.map((d) => {
-        //   return new maps.LatLng(d.lat, d.lng);
-        // });
-
-
-        console.log(heatmapData.length, heatmapData);
-
         const heatmap = new maps.visualization.HeatmapLayer({
           data: heatmapData
         });
@@ -132,22 +69,78 @@ class TestPage extends React.Component {
         heatmap.setMap(map);
 
         heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
-        heatmap.set('radius', r * 20 - 30);
-      }
+        
+        Object.keys(opts).map(function(opt_key) {
+          heatmap.set(opt_key, opts[opt_key]);  
+        })
+    }
 
-      // heatmap.set('radius', 50);
+    const params = {
+      lat: center.lat,
+      lng: center.lng,
+      radius: 3000
+    };
+    $.get('http://localhost:8000/api/attractions', params, (data) => {
+        const raw_data = data.slice();
+        
+        // const i = 10;
+        const threshold = 0.004;
 
-      map.setOptions({ styles: stylers });
-
-      data.map((d) => {
-        return new maps.Marker({
-          position: new google.maps.LatLng(d.location.lat, d.location.lng),
-          map,
-              // icon: greenStart,
-          icon: greenStar,
-          title: 'Hello World!'
+        // attraction heatmap
+        const rated_data = {};
+        console.log('raw_data', raw_data)
+        const attraction_heat_data = raw_data.map((data) => {
+            if(data.rating) {
+              const key = "" + Math.ceil(data.rating)
+              if(!rated_data[key]) {
+                rated_data[key] = [];
+              }
+              rated_data[key].push({ lat: data.location.lat + 0.0007, lng: data.location.lng });
+            }
+            // return { lat: data.location.lat, lng: data.location.lng };
+        })
+        // base heatmap
+        const base_heat_data = []; //points2.slice();
+        points2.map(function(d) {
+          base_heat_data.push(d);
+          // heat_data.push(d);
+          // heat_data.push(d);
+          // heat_data.push(d);
+          let i=3;
+          while(i-- > 0) {
+            // console.log({
+            //   location: {
+            //     lat: d.lat + (Math.random() - 0.5) * threshold,
+            //     lng: d.lng + (Math.random() - 0.5) * threshold,
+            //   }
+            // })
+            
+            base_heat_data.push({
+              lat: d.lat + (Math.random() - 0.5) * threshold,
+              lng: d.lng + (Math.random() - 0.5) * threshold,
+            });
+          }
         });
-      });
+        console.log('rated_data', rated_data)
+        Object.keys(rated_data).map((rating) => {
+          console.log('rated_data[rating]', rated_data[rating])
+          addHeatMap(map, rated_data[rating], {radius: parseInt(rating) * 20 - 60});
+        })
+        // addHeatMap(map, attraction_heat_data, {radius: 40});
+        // addHeatMap(map, base_heat_data, {radius: 15});
+        addHeatMap(map, base_heat_data, {});
+
+        map.setOptions({ styles: stylers });
+
+        raw_data.map((d) => {
+          return new maps.Marker({
+            position: new google.maps.LatLng(d.location.lat, d.location.lng),
+            map,
+                // icon: greenStart,
+            icon: greenStar,
+            title: 'Hello World!'
+          });
+        });
     });
 
     const rooms = [
