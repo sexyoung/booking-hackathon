@@ -300,7 +300,7 @@ class App extends React.Component {
               <HotelComponent
                 type="hotel"
                 className={style.hotel}
-                imgUrl={currentHotel.detail.imgUrl}
+                imgUrl={`http://localhost:8000${currentHotel.detail.imgUrl}`}
                 name={currentHotel.name}
                 description={currentHotel.detail.description}
                 rating={currentHotel.detail.rating}
@@ -319,7 +319,7 @@ class App extends React.Component {
                 name={currentAttraction.name}
                 description={currentAttraction.detail.description}
                 rating={currentAttraction.detail.rating}
-                FBComments={currentAttraction.detail.FBComments}
+                fbComments={currentAttraction.FBComments}
               />
           }
         </div>
