@@ -46,7 +46,9 @@ class HotelComponent extends React.Component {
           src={imgUrl}
           alt={name}
         />
-        <h1>{name}</h1>
+        <div style={{margin: '0.3em 0'}}>
+          <h1>{name} </h1><span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
+        </div>
         {
           isPlace &&
             <RaisedButton
@@ -61,20 +63,21 @@ class HotelComponent extends React.Component {
             <RaisedButton
               label="Book Now!"
               style={{float: 'right'}}
-              backgroundColor="#003580"
+              backgroundColor="#FF5781"
               labelColor="#FFF"
               href={bookingUrl}
             />
         }
-        <p style={{lineHeight: '36px'}}>
-          <span className={style.rating}>{rating}<span className={style.star}>&#9733;&nbsp;</span></span>
+        <p style={{lineHeight: '26px'}}>
+          
           {isHotel && <span className={style.price}>TWD {price}</span>}
         </p>
         <div style={{clear: 'both'}} />
-        <p className={style['desc']}>{description}</p>
+        <p style={{lineHeight: '16px'}} className={style['desc']}>{description}</p>
         {FBComments.length > 0
           && (
             <div>
+              <h2>Reviews from Friends</h2>
               {FBComments.map(comment => <FBComment key={comment.name} {...comment} />)}
             </div>
           )}

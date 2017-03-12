@@ -1,3 +1,8 @@
+h1 {
+  // margin: 0.3em 0px;
+  display: inline;
+}
+
 .container {
   width: 320px;
   top: 0;
@@ -16,11 +21,13 @@
 
 .rating {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .price {
+  // font-weight: bold;
   font-size: 1.5em;
+  color: #003580;
 }
 
 .star {
@@ -47,7 +54,8 @@
 .fb-name {
   font-size: 14px;
   color: #365899;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
+  margin-top: 4px;
 }
 
 .fb-rating, .fb-time {
@@ -64,3 +72,4 @@
   color: #90949c;
   font-size: 16px;
 }
+

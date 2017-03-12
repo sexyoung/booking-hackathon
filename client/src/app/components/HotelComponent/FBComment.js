@@ -33,7 +33,7 @@ export default class FBComment extends React.Component {
         <div className={style['fb-text']}>
           <div className={style['fb-name']}>{name}</div>
           {/* <span>{new Date(timestamp * 1000).toLocaleString()}</span> */}
-          <p>
+          <p style={{margin: '0.5em 0'}}>
             <span className={style['fb-rating']}>{toStar(rating)}</span>
             <span className={style['fb-time']}>&nbsp;·&nbsp;{time}</span>
           </p>

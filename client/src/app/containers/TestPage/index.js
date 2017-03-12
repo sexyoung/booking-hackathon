@@ -198,7 +198,7 @@ class TestPage extends React.Component {
                 <p>位於台灣台北市信義區，建於1937年，前身為台灣日治時期「台灣總督府專賣局松山菸草工場」，1945年更名為「台灣省專賣局松山菸草工廠」，1947年又更名為「台灣省菸酒公賣局松山菸廠」，1998年停止生產，2001年由台北市政府指定為第99處市定古蹟，並於2010年正式轉型定名「松山文創園區」。松山菸廠在戰後種植大量植栽，景觀優美，停產後已經成為台北市東區最大的綠地。除 松山文創園區，松山菸廠舊址目前還有臺北文創大樓及興建中的台北大巨蛋，與松山文創園區分屬不同管理單位；且臺北文創大樓為BOT模式獨立經營，不屬於松山文創園區營運範圍，兩者亦互不隸屬。</p>
               )}
               rating={4.1}
-              price={1000}
+              price={"1,000"}
               bookingUrl="http://www.booking.com/hotel/jp/hotel-she-kyoto.en-gb.html?label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmaOcBiAEBmAEuuAEHyAEM2AEB6AEB-AELqAID;sid=a076279596463f5a5d98ee0670a5fae2;all_sr_blocks=171061002_92623723_2_0_0;checkin=2017-03-22;checkout=2017-03-23;dest_id=-235402;dest_type=city;dist=0;group_adults=2;highlighted_blocks=171061002_92623723_2_0_0;hpos=2;no_rooms=1;room1=A%2CA;sb_price_type=total;srfid=b55747ed1e72162560fdf03ee9709b690025fcfcX2;type=total;ucfs=1&"
               FBComments={[
                 {
