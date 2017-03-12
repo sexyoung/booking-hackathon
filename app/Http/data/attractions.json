@@ -418,5 +418,29 @@
 		"lng": 121.5606419
       }
     }
+  },
+    {
+    "id": "2f3b78bc5e41f235bf44195c7dacc2530e0c15c9",
+    "name": "台北霞海城隍廟",
+    "place_id": "ChIJ58RTchSpQjQR0nPhT8U-bWk",
+    "rating": 4.4,
+    "geometry": {
+      "location": {
+        "lat": 25.0556001,
+		"lng": 121.510168
+      }
+    }
+  },
+    {
+    "id": "18b25203d9b6d2a4eccdf40a2c1664ed55752271",
+    "name": "松山機場觀景台",
+    "place_id": "ChIJXd9DqPGrQjQRSQOKxx5Ns34",
+    "rating": 4.3,
+    "geometry": {
+      "location": {
+        "lat": 25.0642238,
+		"lng": 121.5508248
+      }
+    }
   }
 ]
