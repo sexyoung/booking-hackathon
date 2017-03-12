@@ -21,19 +21,30 @@ class AttractionController extends Controller
 		$api_key = $this-> _api_key;
 		$url = "https://maps.googleapis.com/maps/api/place/details/json?key=$api_key&placeid=$place_id&language=zh-TW";
 		$data = json_decode(file_get_contents($url), true);
-		
+		// echo json_encode($data);
+		// return;
 		if(empty($data) || !isset($data['result']) || empty($data['result'])) {
 			return response()->json('error', 500);
 		}
 		$result = $data['result'];
-		
+
 		$ret_data = array(
+			'id' => $result['id'],
 			'name' => $result['name'],
 			'rating' => $result['rating'],
-			'desc' => $result['vicinity']
+			'description' => $result['vicinity'],
+			'type' => 'place',
+			'FBComments' => array()
 		);
+
+		// read all comments
+		$comments = json_decode(file_get_contents(__DIR__ . "/../data/comments.json"), true);
+		if(isset($comments[$ret_data['name']])) {
+			$ret_data['FBComments'] = $comments[$ret_data['name']];
+		}
+      
 		if(!empty($result['photos'])) {
-			$ret_data['photo'] = '/api/attractions/photo/' . $result['photos'][0]['photo_reference'];
+			$ret_data['imgUrl'] = '/api/attractions/photo/' . $result['photos'][0]['photo_reference'];
 		}
 
 		return response()-> json($ret_data);
@@ -61,7 +72,7 @@ class AttractionController extends Controller
 			$parsed_result[] = array(
 				'location' => $attraction['geometry']['location'],
 				'name' => $attraction['name'],
-				'rating' => $attraction['rating'],
+				'rating' => isset($attraction['rating']) ? $attraction['rating'] : 3.7,
 				'detail' => "/api/attractions/" . $attraction['place_id'],
 				'detail_type' => 'url'
 			);
@@ -85,7 +96,7 @@ class AttractionController extends Controller
 
     	$next_page_token = false;
     	$full_data = array();
-    	do {
+    	// do {
     		$data = json_decode(file_get_contents($url), true);
 
     		$next_page_token = false;
@@ -94,7 +105,7 @@ class AttractionController extends Controller
     		}
     		$full_data = array_merge($full_data, $data['results']);
 
-    	} while($next_page_token);
+    	// } while($next_page_token);
 		return $full_data;
 
     }
