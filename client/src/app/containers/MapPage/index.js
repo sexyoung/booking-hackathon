@@ -16,6 +16,7 @@ import {
 } from 'components';
 
 import hotelImg from './blue-bed-18-pro.png';
+import attractionImg from './green-start-18-pro.png'
 
 import {
   stylers,
@@ -142,6 +143,8 @@ class App extends React.Component {
       hotelActions,
       hotelIndex,
       attractionList,
+      attractionActions,
+      attractionIndex,
     } = this.props;
 
     const {
@@ -158,6 +161,10 @@ class App extends React.Component {
       'You deserve a vacation - and it start here!';
 
     const currentHotel = hotelIndex >= 0 ? hotelList.get(hotelIndex).toJS() : null;
+    const currentAttraction = attractionIndex >= 0 ? attractionList.get(attractionIndex).toJS() : null;
+
+    console.log(currentAttraction);
+
     return (
       <MuiThemeProvider>
         <div className={mapPageClass}>
@@ -202,11 +209,18 @@ class App extends React.Component {
                 )
               }
             )}
-            { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction) => {
+            { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction, index) => {
+              const handleClick = () => {
+                attractionActions.setIndex(index);
+              }
+
               return (
-                <AnyReactComponent
+                <Marker
                   lat={attraction.location.lat}
                   lng={attraction.location.lng}
+                  imgSrc={attractionImg}
+                  onClick={handleClick}
+                  focused={index === attractionIndex}
                 />
               );
             })}
@@ -230,6 +244,35 @@ class App extends React.Component {
                 onClose={() => hotelActions.setIndex(-1)}
               />
           }
+          {
+            currentAttraction &&
+              <HotelComponent
+                type="place"
+                className={style.hotel}
+                imgUrl={currentAttraction.detail}
+                name={currentAttraction.name}
+                description={(
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
+                )}
+                rating={4.1}
+                FBComments={[
+                  {
+                    picUrl: 'https://dummyimage.com/48x48/',
+                    name: 'Shubo Chao',
+                    rating: 4,
+                    time: 'February 3, 2017',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
+                  },
+                  {
+                    picUrl: 'https://dummyimage.com/48x48/',
+                    name: 'Shubo Chao',
+                    rating: 4,
+                    time: 'February 3, 2017',
+                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
+                  }
+                ]}
+              />
+          }
         </div>
       </MuiThemeProvider>
     );
@@ -244,6 +287,7 @@ function mapStateToProps(state) {
     mapIsLoading: state.map.get('isLoading', false),
     isEdit: state.routing.locationBeforeTransitions.pathname.includes('edit'),
     attractionList: state.attraction.get('list'),
+    attractionIndex: state.attraction.get('index'),
     hotelList: state.hotel.get('list'),
     hotelIndex: state.hotel.get('index'),
   };
