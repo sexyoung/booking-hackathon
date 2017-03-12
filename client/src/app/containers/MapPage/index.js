@@ -88,6 +88,11 @@ class App extends React.Component {
     if (!is(prevProps.heatList, this.props.heatList)) {
       this.updateHeatMap();
     }
+
+    if (this.props.isEdit !== prevProps.isEdit && !this.props.isEdit) {
+      this.props.hotelActions.setIndex(-1);
+      this.props.attractionActions.setIndex(-1);
+    }
   }
 
   onSubmit = (e) => {
@@ -256,6 +261,7 @@ class App extends React.Component {
               app.hotelChecked && hotelList.size > 0 && hotelList.toJS().map((hotel, index) => {
                 const handleClick = () => {
                   hotelActions.setIndex(index);
+                  attractionActions.setIndex(-1);
                 };
 
                 return (
@@ -272,7 +278,8 @@ class App extends React.Component {
             { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction, index) => {
               const handleClick = () => {
                 attractionActions.setIndex(index);
-              };
+                hotelActions.setIndex(-1);
+              }
 
               return (
                 <Marker
@@ -288,9 +295,8 @@ class App extends React.Component {
           {isEdit &&
           <FilterComponent {...app} />}
           {mapIsLoading && <div className={style['is-loading']}>Loading...</div>}
-          {/* {isEdit && <HotelComponent />} */}
           {
-            currentHotel &&
+            isEdit && currentHotel &&
               <HotelComponent
                 type="hotel"
                 className={style.hotel}
@@ -305,32 +311,15 @@ class App extends React.Component {
               />
           }
           {
-            currentAttraction &&
+            isEdit && currentAttraction &&
               <HotelComponent
                 type="place"
                 className={style.hotel}
-                imgUrl={currentAttraction.detail}
+                imgUrl={`http://localhost:8000${currentAttraction.detail.imgUrl}`}
                 name={currentAttraction.name}
-                description={(
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.</p>
-                )}
-                rating={4.1}
-                FBComments={[
-                  {
-                    picUrl: 'https://dummyimage.com/48x48/',
-                    name: 'Shubo Chao',
-                    rating: 4,
-                    time: 'February 3, 2017',
-                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
-                  },
-                  {
-                    picUrl: 'https://dummyimage.com/48x48/',
-                    name: 'Shubo Chao',
-                    rating: 4,
-                    time: 'February 3, 2017',
-                    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit purus neque, sed fermentum mauris tincidunt a. Sed vulputate scelerisque sem, quis venenatis elit elementum ut. Vivamus venenatis dolor lorem, vel finibus nunc accumsan vel. Nunc commodo facilisis condimentum. Nulla sed lobortis tellus. Suspendisse nec purus quis neque mollis porttitor. Phasellus sed augue risus. Donec id dignissim odio. Duis in aliquam ipsum. Maecenas tincidunt nibh et tortor sagittis pellentesque.',
-                  }
-                ]}
+                description={currentAttraction.detail.description}
+                rating={currentAttraction.detail.rating}
+                FBComments={currentAttraction.detail.FBComments}
               />
           }
         </div>
