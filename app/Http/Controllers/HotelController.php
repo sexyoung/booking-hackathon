@@ -40,7 +40,8 @@ class HotelController extends Controller
 			'longitude' => $lng,
 			'checkin' => $checkin,
 			'checkout' => $checkout,
-			'radius' => $radius
+			'radius' => $radius,
+			'lang' => 'zh-tw'
 		);
 
 		$url = "https://$auth@distribution-xml.booking.com/json/getHotelAvailabilityV2?";
@@ -51,6 +52,9 @@ class HotelController extends Controller
 
 		$url = substr($url, 0, -1);
 		
+		// $hotels = json_decode(file_get_contents(__DIR__ . "/../data/hotels.json"), true);
+		// return response()->json($hotels);
+
 		$data = file_get_contents($url);
 
 		$result = json_decode($data, true);
