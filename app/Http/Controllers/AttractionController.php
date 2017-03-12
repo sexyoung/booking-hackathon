@@ -10,6 +10,11 @@ class AttractionController extends Controller
 {
 	protected $_api_key = 'AIzaSyDrsuNPWMH0mBz-IsGg2T3UnppKcjTbMXI';
 
+	public function heatmap() {
+		$data = json_decode(file_get_contents(__DIR__ . '/../data/heat_use.json'), true);
+		return response()->json($data);
+	}
+
 	public function photo(Request $request, $reference) {
 		$api_key = $this-> _api_key;
 		$url = "https://maps.googleapis.com/maps/api/place/photo?key=$api_key&photoreference=$reference&maxwidth=400";
@@ -31,6 +36,7 @@ class AttractionController extends Controller
 			'name' => $result['name'],
 			'rating' => $result['rating'],
 			'description' => $result['vicinity'],
+			// 'geometry' => $result['geometry'],
 			'type' => 'place',
 			'FBComments' => array()
 		);

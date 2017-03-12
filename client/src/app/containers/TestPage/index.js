@@ -59,6 +59,8 @@ class TestPage extends React.Component {
   }
 
   loaded = ({ map, maps }) => {
+
+    // =========== Important heatmap codes =========== // 
     function addHeatMap(map, data, opts) {
         opts = opts || {};
         const heatmapData = data.map((d) => {
@@ -77,6 +79,10 @@ class TestPage extends React.Component {
         })
     }
 
+    $.getJSON('http://localhost:8000/api/attractions/heatmap', (data) => {
+        addHeatMap(map, data, {radius: 10});
+    });
+
     const params = {
       lat: center.lat,
       lng: center.lng,
@@ -84,13 +90,10 @@ class TestPage extends React.Component {
     };
     $.get('http://localhost:8000/api/attractions', params, (data) => {
         const raw_data = data.slice();
-        
-        // const i = 10;
         const threshold = 0.004;
 
         // attraction heatmap
         const rated_data = {};
-        console.log('raw_data', raw_data)
         const attraction_heat_data = raw_data.map((data) => {
             if(data.rating) {
               const key = "" + Math.ceil(data.rating)
@@ -99,38 +102,11 @@ class TestPage extends React.Component {
               }
               rated_data[key].push({ lat: data.location.lat + 0.0007, lng: data.location.lng });
             }
-            // return { lat: data.location.lat, lng: data.location.lng };
         })
-        // base heatmap
-        const base_heat_data = []; //points2.slice();
-        points2.map(function(d) {
-          base_heat_data.push(d);
-          // heat_data.push(d);
-          // heat_data.push(d);
-          // heat_data.push(d);
-          let i=3;
-          while(i-- > 0) {
-            // console.log({
-            //   location: {
-            //     lat: d.lat + (Math.random() - 0.5) * threshold,
-            //     lng: d.lng + (Math.random() - 0.5) * threshold,
-            //   }
-            // })
-            
-            base_heat_data.push({
-              lat: d.lat + (Math.random() - 0.5) * threshold,
-              lng: d.lng + (Math.random() - 0.5) * threshold,
-            });
-          }
-        });
-        console.log('rated_data', rated_data)
+        
         Object.keys(rated_data).map((rating) => {
-          console.log('rated_data[rating]', rated_data[rating])
           addHeatMap(map, rated_data[rating], {radius: parseInt(rating) * 20 - 60});
         })
-        // addHeatMap(map, attraction_heat_data, {radius: 40});
-        // addHeatMap(map, base_heat_data, {radius: 15});
-        addHeatMap(map, base_heat_data, {});
 
         map.setOptions({ styles: stylers });
 
@@ -138,12 +114,12 @@ class TestPage extends React.Component {
           return new maps.Marker({
             position: new google.maps.LatLng(d.location.lat, d.location.lng),
             map,
-                // icon: greenStart,
-            icon: greenStar,
-            title: 'Hello World!'
+            icon: greenStar
           });
         });
     });
+
+    // =========== END Important heatmap codes =========== // 
 
     const rooms = [
       ['Bondi Beach', 25.0381671, 121.5189017, 1],
