@@ -22,7 +22,8 @@ import blueBed from './blue-bed.png';
 import pinkNewStart from './pink-start-new.png';
 // import blueHotel from './blue-hotel-icon.svg';
 import blueHotel from './blue-bed-18-pro.png';
-import greenStar from './green-start-18-pro.png';
+// import greenStar from './green-start-18-pro.png';
+import greenStar from './green-pin.png';
 
 // var blueHotel = {
 //     path: 'M450.125,400.125c0,27.611-22.385,50-50,50c-27.614,0-50-22.389-50-50c0-27.617,22.386-50,50-50 C427.74,350.125,450.125,372.508,450.125,400.125z',
@@ -34,7 +35,8 @@ import greenStar from './green-start-18-pro.png';
 // }
 
 const center = {
-  lat: 25.039348, lng: 121.549604
+  // lat: 25.039348, lng: 121.549604
+  lat: 25.041143, lng: 121.578569
 };
 
 /**
