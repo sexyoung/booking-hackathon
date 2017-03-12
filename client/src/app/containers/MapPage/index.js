@@ -1,6 +1,5 @@
 import cx from 'classnames';
 import React, { PropTypes } from 'react';
-import { is } from 'immutable';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import GoogleMapReact from 'google-map-react';
@@ -13,9 +12,10 @@ import {
   HotelComponent,
   FilterComponent,
   Marker,
+  AnyReactComponent,
 } from 'components';
 
-import hotelImg from './blue-bed-18-pro.png'
+import hotelImg from './blue-bed-18-pro.png';
 
 import {
   stylers,
@@ -28,13 +28,10 @@ import hotelActions from 'actions/hotelActions';
 
 import style from './map-page.scss';
 
-const center = {
-  lat: 25.0356791, lng: 121.5196742
-};
-
 class App extends React.Component {
 
   static propTypes = {
+    app:               PropTypes.object,
     location:          PropTypes.object,
     mapIsLoading:      PropTypes.boolean,
     mapLocation:       PropTypes.boolean,
@@ -49,6 +46,7 @@ class App extends React.Component {
   };
 
   static defaultProps = {
+    app: {},
     isEdit: false,
     location: {},
     mapIsLoading: false,
@@ -76,12 +74,6 @@ class App extends React.Component {
     const { location: { query: { search } } } = this.props;
     if (search) {
       this.checkGeocoder(search);
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (!is(prevProps.attractionList, this.props.attractionList)) {
-      this.updateHeapMap();
     }
   }
 
@@ -130,40 +122,18 @@ class App extends React.Component {
       mapApiLoaded: true,
     });
 
-    // 抓測試用景點
-    this.props.attractionActions.getList({
-      lat: 25.0453076,
-      lng: 121.53079500000001,
-      radius: 10000,
-    });
 
-    // Call Hotel API
+    // 預設 call 台北 hotel
     this.props.hotelActions.getList({
       lat: 25.0453076,
       lng: 121.53079500000001,
       radius: 1,
-    })
-  }
-
-  updateHeapMap = () => {
-    const { attractionList } = this.props;
-    const heatmapData = attractionList.toJS().map((a) => {
-      return new this.maps.LatLng(
-        a.location.lat,
-        a.location.lng,
-      );
     });
-
-    const heatmap = new this.maps.visualization.HeatmapLayer({
-      data: heatmapData
-    });
-
-    heatmap.setMap(this.map);
-    heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
   }
 
   render() {
     const {
+      app,
       isEdit,
       mapLocation,
       mapIsLoading,
@@ -171,6 +141,7 @@ class App extends React.Component {
       hotelList,
       hotelActions,
       hotelIndex,
+      attractionList,
     } = this.props;
 
     const {
@@ -181,15 +152,12 @@ class App extends React.Component {
       [style['map-page']]: true,
       [style['at-edit']]: isEdit,
     });
+
     const placeholder = isEdit ?
       'Destination or address' :
       'You deserve a vacation - and it start here!';
 
     const currentHotel = hotelIndex >= 0 ? hotelList.get(hotelIndex).toJS() : null;
-    console.log(hotelIndex);
-    console.log(hotelList);
-    console.log(currentHotel);
-
     return (
       <MuiThemeProvider>
         <div className={mapPageClass}>
@@ -218,10 +186,10 @@ class App extends React.Component {
             onGoogleApiLoaded={this.loaded}
           >
             {
-              hotelList.toJS().map((hotel, index) => {
+              app.hotelChecked && hotelList.size > 0 && hotelList.toJS().map((hotel, index) => {
                 const handleClick = () => {
-                  hotelActions.setIndex(index)
-                }
+                  hotelActions.setIndex(index);
+                };
 
                 return (
                   <Marker
@@ -229,17 +197,21 @@ class App extends React.Component {
                     lng={hotel.location.lng}
                     imgSrc={hotelImg}
                     onClick={handleClick}
-                  ></Marker>
-                )
+                  />
+                );
               }
             )}
+            { app.scenaryChecked && attractionList.size > 0 && attractionList.toJS().map((attraction) => {
+              return (
+                <AnyReactComponent
+                  lat={attraction.location.lat}
+                  lng={attraction.location.lng}
+                />
+              );
+            })}
           </GoogleMapReact>
           {isEdit &&
-          <FilterComponent
-            heatChecked
-            scenaryChecked={false}
-            hotelChecked
-          />}
+          <FilterComponent {...app} />}
           {mapIsLoading && <div className={style['is-loading']}>Loading...</div>}
           {/* {isEdit && <HotelComponent />} */}
           {
@@ -265,6 +237,7 @@ class App extends React.Component {
 
 function mapStateToProps(state) {
   return {
+    app: state.app.toJS(),
     mapLocation: state.map.get('location'),
     mapIsLoading: state.map.get('isLoading', false),
     isEdit: state.routing.locationBeforeTransitions.pathname.includes('edit'),
