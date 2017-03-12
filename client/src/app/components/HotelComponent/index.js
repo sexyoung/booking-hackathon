@@ -70,6 +70,7 @@ class HotelComponent extends React.Component {
               backgroundColor="#FF5781"
               labelColor="#FFF"
               hoverColor="rgb(177, 62, 91)"
+              target="_blank"
               href={bookingUrl}
             />
         }
